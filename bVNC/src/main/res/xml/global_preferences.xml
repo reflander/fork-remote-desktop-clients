@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     android:paddingRight="26dip"
     >
@@ -7,69 +8,105 @@
         android:key="preferenceSpacerTop" />
     <SwitchPreferenceCompat
         android:defaultValue="false"
+        android:icon="@drawable/ic_pref_fullscreen"
         android:key="disableImmersive"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/immersive_mode_disable" />
     <SwitchPreferenceCompat
         android:defaultValue="false"
+        android:icon="@drawable/ic_pref_screen"
         android:key="keepScreenOn"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/keep_screen_awake_enable" />
     <SwitchPreferenceCompat
         android:defaultValue="true"
+        android:icon="@drawable/ic_pref_network"
         android:key="keepBackgroundConnection"
-        android:summary="@string/keep_background_connection_summary"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/keep_background_connection_enable" />
     <SwitchPreferenceCompat
         android:defaultValue="false"
+        android:icon="@drawable/ic_pref_landscape"
         android:key="forceLandscape"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/landscape_force" />
     <SwitchPreferenceCompat
         android:defaultValue="false"
+        android:icon="@drawable/ic_pref_hand"
         android:key="leftHandedModeTag"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/left_handed_mode" />
     <SwitchPreferenceCompat
         android:defaultValue="false"
+        android:icon="@drawable/ic_pref_debug"
         android:key="moreDebugLoggingTag"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/more_debug_logging" />
     <SwitchPreferenceCompat
         android:defaultValue="false"
+        android:icon="@drawable/ic_pref_no_thumb"
         android:key="doNotShowDesktopThumbnails"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/hide_connection_thumbnails" />
     <SwitchPreferenceCompat
         android:defaultValue="false"
+        android:icon="@drawable/ic_pref_label"
         android:key="showOnlyConnectionNicknames"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/show_only_connection_nicknames" />
     <ListPreference
         android:defaultValue="@string/pref_keyboard_type_TYPE_NULL_value"
         android:entries="@array/pref_keyboard_type_option_labels"
         android:entryValues="@array/pref_keyboard_type_option_values"
+        android:icon="@drawable/ic_pref_keyboard"
         android:key="softwareKeyboardType"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/keyboard_type" />
     <SeekBarPreference
         android:defaultValue="6"
+        android:icon="@drawable/ic_pref_speed"
         android:key="scrollSpeed"
         android:max="20"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/scroll_speed" />
     <SeekBarPreference
         android:defaultValue="4"
+        android:icon="@drawable/ic_pref_touchpad"
         android:key="touchpadSensitivity"
         android:max="11"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/touchpad_sensitivity" />
     <SwitchPreferenceCompat
         android:defaultValue="false"
+        android:icon="@drawable/ic_pref_cursor"
         android:key="disablePointerOffsetCalculation"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/disable_pointer_offset_correction" />
     <SwitchPreferenceCompat
         android:defaultValue="true"
+        android:icon="@drawable/ic_pref_clipboard"
         android:key="localToRemoteClipboardIntegration"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/local_clipboard_integration" />
     <SwitchPreferenceCompat
         android:defaultValue="true"
+        android:icon="@drawable/ic_pref_clipboard_down"
         android:key="remoteToLocalClipboardIntegration"
+        app:iconTint="?android:attr/colorControlNormal"
         android:title="@string/remote_clipboard_integration" />
+    <ListPreference
+        android:defaultValue="follow_system"
+        android:entries="@array/pref_theme_option_labels"
+        android:entryValues="@array/pref_theme_option_values"
+        android:icon="@drawable/ic_pref_palette"
+        android:key="appTheme"
+        app:iconTint="?android:attr/colorControlNormal"
+        android:title="@string/theme_title" />
     <PreferenceCategory android:title="@string/applies_to_new_connections_only">
         <Preference
+            android:icon="@drawable/ic_pref_gear"
             android:key="openDefaultConnectionSettings"
-            android:title="@string/default_connection_settings"
-            android:summary="@string/default_connection_settings_redirect_summary" />
+            app:iconTint="?android:attr/colorControlNormal"
+            android:title="@string/default_connection_settings" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -35,6 +35,20 @@ public class App extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+        // FanRDP: apply the user-selected UI theme before any activity is created.
+        String theme = Utils.querySharedPreferenceString(
+                getApplicationContext(), Constants.appThemeTag, "follow_system");
+        switch (theme) {
+            case "light":
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                break;
+            case "dark":
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                break;
+            default:
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+                break;
+        }
         Constants.DEFAULT_PROTOCOL_PORT = Utils.getDefaultPort(this);
         database = new Database(this);
         context = new WeakReference<Context>(this);

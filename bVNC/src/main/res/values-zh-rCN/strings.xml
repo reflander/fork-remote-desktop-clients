@@ -356,6 +356,14 @@ bVNC对应的功能如下：
 
     <string name="keep_password_button">保存</string>
     <string name="keep_screen_awake_enable">使休眠模式无效</string>
+    <string name="keep_background_connection_enable">后台保持连接</string>
+    <string name="keep_alive_notification_title">FanRDP 会话进行中</string>
+    <string name="keep_alive_notification_text">正在后台保持远程连接</string>
+    <string name="keep_alive_channel_name">远程会话保活</string>
+    <string name="theme_title">界面主题</string>
+    <string name="theme_follow_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
     <string name="keys_caption">键</string>
     <string name="landscape_force">强行横放设定</string>
     <string name="left_handed_mode">左手模式</string>

@@ -38,4 +38,14 @@
         <item>@string/fit_to_screen</item>
         <item>@string/one_to_one</item>
     </string-array>
+    <string-array name="pref_theme_option_labels">
+        <item>@string/theme_follow_system</item>
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+    </string-array>
+    <string-array name="pref_theme_option_values">
+        <item>follow_system</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
 </resources>

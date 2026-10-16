@@ -488,6 +488,13 @@ Known issues:
 
     <string name="keep_background_connection_enable">Keep Background Connection</string>
     <string name="keep_background_connection_summary">Keep the remote session alive when the app is in the background or the screen turns off</string>
+    <string name="keep_alive_notification_title">FanRDP session active</string>
+    <string name="keep_alive_notification_text">Keeping the remote connection alive in the background</string>
+    <string name="keep_alive_channel_name">RDP session keep-alive</string>
+    <string name="theme_title">UI Theme</string>
+    <string name="theme_follow_system">Follow System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
 
     <string name="keys_caption">Keys</string>
 

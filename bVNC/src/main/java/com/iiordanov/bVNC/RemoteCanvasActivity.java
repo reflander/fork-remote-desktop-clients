@@ -390,6 +390,10 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
                 this, Constants.keepBackgroundConnectionTag, Constants.keepBackgroundConnectionDefault)) {
             return;
         }
+        // Keep the whole process in the foreground state so the OS does not suspend or kill it
+        // while the session runs in the background. Also request notification permission (API 33+)
+        // so the persistent keep-alive notification is visible.
+        startKeepAliveService();
         try {
             if (mSessionWakeLock == null) {
                 PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -402,6 +406,32 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
             }
         } catch (Exception e) {
             Log.w(TAG, "Could not acquire session wake lock", e);
+        }
+    }
+
+    /** FanRDP: start the foreground keep-alive service (guarded so it never crashes the app). */
+    private void startKeepAliveService() {
+        try {
+            if (Build.VERSION.SDK_INT >= 33) {
+                requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, 1001);
+            }
+            Intent svc = new Intent(this, SessionKeepAliveService.class);
+            if (Build.VERSION.SDK_INT >= 26) {
+                startForegroundService(svc);
+            } else {
+                startService(svc);
+            }
+            Log.d(TAG, "Keep-alive service started.");
+        } catch (Exception e) {
+            Log.w(TAG, "Could not start keep-alive service", e);
+        }
+    }
+
+    private void stopKeepAliveService() {
+        try {
+            stopService(new Intent(this, SessionKeepAliveService.class));
+        } catch (Exception e) {
+            Log.w(TAG, "Could not stop keep-alive service", e);
         }
     }
 
@@ -1226,6 +1256,7 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
             remoteConnection.closeConnection();
         }
         releaseSessionWakeLock();
+        stopKeepAliveService();
         Utils.justFinish(this);
     }
 
@@ -1279,6 +1310,7 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         super.onDestroy();
         Log.i(TAG, "onDestroy called.");
         releaseSessionWakeLock();
+        stopKeepAliveService();
         if (remoteConnection != null)
             remoteConnection.closeConnection();
         System.gc();
