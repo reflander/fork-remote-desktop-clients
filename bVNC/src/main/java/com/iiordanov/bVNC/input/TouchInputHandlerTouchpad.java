@@ -70,6 +70,10 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     // True while the second tap of a double-tap is on the screen.
     private boolean doubleTapActive = false;
     private long doubleTapDownTime = 0;
+    // Fixed position used for the two clicks of a double-click, so the mouse never
+    // moves/jitters between them or across consecutive double-clicks.
+    private int doubleTapX = 0;
+    private int doubleTapY = 0;
 
     @Override
     public boolean onDoubleTap(MotionEvent e) {
@@ -83,31 +87,46 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
             return true;
         }
 
-        // Second tap went down: press the left button. If the finger is lifted quickly this
-        // becomes a double-click; if it is held (or dragged), it becomes a left-button hold/drag.
+        // Second tap went down: press the left button at a FIXED position. We deliberately do NOT
+        // enter drag mode here, so a quick double-tap never moves the mouse even if the finger
+        // wiggles. Only if the finger is held long enough does it become a left-button drag.
         doubleTapActive = true;
         doubleTapDownTime = SystemClock.uptimeMillis();
-        dragMode = true;
-        remoteInput.getPointer().leftButtonDown(getX(e), getY(e), metaState);
+        doubleTapX = getX(e);
+        doubleTapY = getY(e);
+        remoteInput.getPointer().leftButtonDown(doubleTapX, doubleTapY, metaState);
         viewable.movePanToMakePointerVisible();
         return true;
     }
 
     @Override
     public boolean onDoubleTapEvent(MotionEvent e) {
-        if (e.getAction() == MotionEvent.ACTION_UP && doubleTapActive) {
-            // The second tap finished. If it was a quick tap (finger left the screen quickly),
-            // synthesize the missing click so the pair becomes a double-click. Otherwise it was a
-            // left-button hold/drag (the base handler already released the button).
-            if (SystemClock.uptimeMillis() - doubleTapDownTime <= DOUBLE_CLICK_MAX_HOLD_MS) {
-                GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTapEvent: quick double-tap -> double-click");
-                int metaState = e.getMetaState();
-                remoteInput.getPointer().leftButtonDown(getX(e), getY(e), metaState);
-                SystemClock.sleep(50);
-                remoteInput.getPointer().releaseButton(getX(e), getY(e), metaState);
-                viewable.movePanToMakePointerVisible();
+        int action = e.getAction();
+        int metaState = e.getMetaState();
+        if (doubleTapActive) {
+            if (action == MotionEvent.ACTION_UP) {
+                // The second tap finished. If it was a quick tap (finger left the screen quickly),
+                // complete a double-click at the fixed position (the base handler already released
+                // the press from onDoubleTap, so we just add the missing second click). If it was a
+                // held tap, it became a left-button drag and the base handler releases the button.
+                if (SystemClock.uptimeMillis() - doubleTapDownTime <= DOUBLE_CLICK_MAX_HOLD_MS) {
+                    GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTapEvent: quick double-tap -> double-click");
+                    remoteInput.getPointer().leftButtonDown(doubleTapX, doubleTapY, metaState);
+                    SystemClock.sleep(50);
+                    remoteInput.getPointer().releaseButton(doubleTapX, doubleTapY, metaState);
+                    viewable.movePanToMakePointerVisible();
+                }
+                doubleTapActive = false;
+            } else if (action == MotionEvent.ACTION_MOVE) {
+                // If the second finger has been held long enough, this is now a left-button hold/drag:
+                // enter drag mode and start dragging from the current position.
+                if (!dragMode && SystemClock.uptimeMillis() - doubleTapDownTime > DOUBLE_CLICK_MAX_HOLD_MS) {
+                    GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTapEvent: held second tap -> left drag");
+                    dragMode = true;
+                    remoteInput.getPointer().moveMouseButtonDown(getX(e), getY(e), metaState);
+                    viewable.movePanToMakePointerVisible();
+                }
             }
-            doubleTapActive = false;
         }
         return super.onDoubleTapEvent(e);
     }
