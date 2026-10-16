@@ -1398,13 +1398,9 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
 
     @Override
     public void onBackPressed() {
-        if (GeneralUtils.isTv(this)) {
-            disconnectAndFinishActivity();
-            super.onBackPressed();
-        }
-        if (inputListener != null) {
-            inputListener.onKey(canvas, KeyEvent.KEYCODE_BACK, new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK));
-        }
+        // FanRDP: the phone's back key disconnects the current remote session
+        // (equivalent to manually tapping "Disconnect"), instead of sending Back to the remote.
+        disconnectAndFinishActivity();
     }
 
     public RemoteConnection getRemoteConnection() {
