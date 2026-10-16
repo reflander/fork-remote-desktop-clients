@@ -268,6 +268,18 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         if (hasFocus) {
             controlImmersive();
         }
+        // FanRDP: track whether the app is in the background, and auto-reconnect the RDP
+        // session when returning to the foreground after it dropped while backgrounded.
+        if (remoteConnection != null) {
+            remoteConnection.isBackgrounded = !hasFocus;
+            if (hasFocus && remoteConnection.reconnectOnResume) {
+                remoteConnection.reconnectOnResume = false;
+                Log.d(TAG, "onWindowFocusChanged: RDP dropped in background, reconnecting...");
+                if (handler != null) {
+                    handler.sendEmptyMessage(RemoteClientLibConstants.REINIT_SESSION);
+                }
+            }
+        }
     }
 
     @SuppressLint("ObsoleteSdkInt")
@@ -840,35 +852,10 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected Dialog onCreateDialog(int id) {
         if (id == R.layout.entertext) {
             return new EnterTextDialog(this);
-        } else if (id == R.id.itemHelpInputMode) {
-            return createHelpDialog();
         }
 
         // Default to meta key dialog
         return new MetaKeyDialog(this);
-    }
-
-    /**
-     * Creates the help dialog for this activity.
-     */
-    private Dialog createHelpDialog() {
-        AlertDialog.Builder adb = new AlertDialog.Builder(this)
-                .setMessage(R.string.input_mode_help_text)
-                .setPositiveButton(R.string.close,
-                        (dialog, whichButton) -> {
-                            // We don't have to do anything.
-                        });
-        Dialog d = adb.setView(new ListView(this)).create();
-        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-        Window window = d.getWindow();
-        if (window != null) {
-            lp.copyFrom(window.getAttributes());
-            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-            d.show();
-            window.setAttributes(lp);
-        }
-        return d;
     }
 
     /*
@@ -1164,9 +1151,6 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
             }
             invalidateOptionsMenu();
             connection.save(this);
-            return true;
-        } else if (itemId == R.id.itemHelpInputMode) {
-            showDialog(R.id.itemHelpInputMode);
             return true;
         } else {
             boolean inputModeSet = setInputMode(item.getItemId());

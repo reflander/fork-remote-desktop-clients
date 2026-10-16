@@ -71,6 +71,12 @@ abstract public class RemoteConnection implements PointerInputHandler, KeyInputH
     public SSHConnection sshConnection = null;
     protected RfbConnectable rfbConn = null;
     public boolean maintainConnection = true;
+    // FanRDP: whether the app is currently in the background. When a connection drops while
+    // backgrounded, we defer the fatal error and auto-reconnect on return to the foreground.
+    public volatile boolean isBackgrounded = false;
+    // FanRDP: set when the connection drops while the app is backgrounded, so that the activity
+    // can silently reconnect (without showing the error dialog) when the app regains focus.
+    public volatile boolean reconnectOnResume = false;
     // Progress dialog shown at connection time.
     public ProgressDialog pd;
     public Runnable hideKeyboardAndExtraKeys;
@@ -227,9 +233,16 @@ abstract public class RemoteConnection implements PointerInputHandler, KeyInputH
 
     /**
      * Closes the connection and shows a fatal message which ends the activity.
+     * FanRDP: if the app is in the background when the connection drops, do not show the
+     * error and do not quit; mark it for automatic reconnection on return to the foreground.
      */
     public void showFatalMessageAndQuit(final String error) {
         closeConnection();
+        if (isBackgrounded) {
+            reconnectOnResume = true;
+            Log.i(TAG, "Connection dropped while app in background; will auto-reconnect on resume.");
+            return;
+        }
         handler.post(() -> Utils.showFatalErrorMessage(context, error));
     }
 

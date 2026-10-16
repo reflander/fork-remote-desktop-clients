@@ -21,6 +21,7 @@
 package com.iiordanov.bVNC.input;
 import com.undatech.opaque.Viewable;
 
+import android.os.SystemClock;
 import android.view.MotionEvent;
 
 import com.undatech.opaque.InputCarriable;
@@ -53,6 +54,51 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     @Override
     public String getId() {
         return ID;
+    }
+
+    /*
+     * FanRDP: touchpad double-tap = press-and-hold the left mouse button
+     * (lets the user drag with the left button held, like a desktop mouse).
+     */
+    @Override
+    public boolean onDoubleTap(MotionEvent e) {
+        GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTap (touchpad), e: " + e);
+
+        int metaState = e.getMetaState();
+
+        if (secondPointerWasDown || thirdPointerWasDown) {
+            GeneralUtils.debugLog(debugLogging, TAG,
+                    "onDoubleTap: multi-finger gesture in progress, not starting left drag");
+            return true;
+        }
+
+        // Enter left-drag mode: press and hold the left button.
+        dragMode = true;
+        remoteInput.getPointer().leftButtonDown(getX(e), getY(e), metaState);
+        viewable.movePanToMakePointerVisible();
+        return true;
+    }
+
+    /*
+     * FanRDP: touchpad long-press = right mouse button click.
+     */
+    @Override
+    public void onLongPress(MotionEvent e) {
+        GeneralUtils.debugLog(debugLogging, TAG, "onLongPress (touchpad), e: " + e);
+
+        int metaState = e.getMetaState();
+
+        if (secondPointerWasDown || thirdPointerWasDown) {
+            GeneralUtils.debugLog(debugLogging, TAG,
+                    "onLongPress: multi-finger gesture in progress, not sending right-click");
+            return;
+        }
+
+        touchInputDelegate.sendShortVibration();
+        remoteInput.getPointer().rightButtonDown(getX(e), getY(e), metaState);
+        SystemClock.sleep(50);
+        remoteInput.getPointer().releaseButton(getX(e), getY(e), metaState);
+        viewable.movePanToMakePointerVisible();
     }
 
     /*

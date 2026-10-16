@@ -135,9 +135,4 @@
         android:numericShortcut="9"
         android:title="@string/info"
         />
-    <item
-        android:id="@+id/itemHelpInputMode"
-        android:icon="@android:drawable/ic_menu_help"
-        android:title="@string/input_mode_help"
-        />
 </menu>
