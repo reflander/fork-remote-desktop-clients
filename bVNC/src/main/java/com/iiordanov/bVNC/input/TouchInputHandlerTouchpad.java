@@ -98,6 +98,17 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     private int currentDownX = 0;
     private int currentDownY = 0;
 
+    // FanRDP: manual take-over of the "double-tap then hold" gesture. We OWN the whole 2nd-tap
+    // stream (down/move/up) so the left-button drag can never be missed. The GestureDetector's
+    // onDoubleTap/onLongPress are too fragile here (a crisp double-tap is required), so once we
+    // detect a 2nd tap we swallow every following event of that interaction ourselves.
+    private static final float DRAG_START_SLOP = 20f; // moving the 2nd tap this far = a drag
+    private boolean doubleTapArmed = false;           // 2nd tap detected, button already pressed
+    private boolean doubleTapMoved = false;           // the 2nd tap has become a drag
+    private int doubleTapStartX = 0;                  // touch pos of the 2nd tap down
+    private int doubleTapStartY = 0;
+    private boolean suppressNextSingleTap = false;    // skip the 1st tap's delayed single-click
+
     @Override
     public boolean onDoubleTap(MotionEvent e) {
         GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTap (touchpad), e: " + e);
@@ -159,9 +170,11 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     }
 
     /*
-     * FanRDP: track quick taps and the current press ourselves. The GestureDetector's onDoubleTap
-     * only fires for a crisp double-tap; the manual record lets onLongPress recognize a
-     * "double-tap then hold" even when onDoubleTap did not fire, so the drag stays reliable.
+     * FanRDP: track quick taps and, when the user does a "double-tap then hold", TAKE OVER the
+     * whole second-tap gesture ourselves. We press the left button the instant the 2nd tap lands,
+     * switch to a left-button drag as soon as it moves, and swallow every event of that interaction
+     * so the fragile GestureDetector can't misread it as a right-click or a plain mouse move. This
+     * makes the double-tap drag reliable instead of "works only sometimes".
      */
     @Override
     public boolean onTouchEvent(MotionEvent e) {
@@ -172,19 +185,96 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
                 currentDownTime = now;
                 currentDownX = Math.round(e.getX());
                 currentDownY = Math.round(e.getY());
+                // Second tap of a double-tap (a quick tap just happened near here)?
+                if (lastTapUpTime != 0
+                        && now - lastTapUpTime <= DOUBLE_TAP_FALLBACK_MS
+                        && Math.abs(e.getX() - lastTapUpX) <= DOUBLE_TAP_FALLBACK_SLOP
+                        && Math.abs(e.getY() - lastTapUpY) <= DOUBLE_TAP_FALLBACK_SLOP) {
+                    GeneralUtils.debugLog(debugLogging, TAG,
+                            "onTouchEvent: 2nd tap of double-tap -> press left & take over");
+                    doubleTapArmed = true;
+                    doubleTapMoved = false;
+                    doubleTapDownTime = now;
+                    doubleTapStartX = Math.round(e.getX());
+                    doubleTapStartY = Math.round(e.getY());
+                    doubleTapX = remoteInput.getPointer().getX();
+                    doubleTapY = remoteInput.getPointer().getY();
+                    remoteInput.getPointer().leftButtonDown(doubleTapX, doubleTapY, e.getMetaState());
+                    viewable.movePanToMakePointerVisible();
+                    suppressNextSingleTap = true; // 1st tap's delayed single-click must be skipped
+                    lastTapUpTime = 0;            // consume, so it only counts once
+                    return true;                  // swallow this DOWN
+                }
+                doubleTapArmed = false;
+            } else if (action == MotionEvent.ACTION_MOVE) {
+                if (doubleTapArmed) {
+                    // Held 2nd tap starts moving -> left-button drag.
+                    if (!doubleTapMoved
+                            && (Math.abs(e.getX() - doubleTapStartX) > DRAG_START_SLOP
+                            || Math.abs(e.getY() - doubleTapStartY) > DRAG_START_SLOP)) {
+                        GeneralUtils.debugLog(debugLogging, TAG, "onTouchEvent: 2nd tap moved -> left drag");
+                        doubleTapMoved = true;
+                        dragMode = true;
+                        dragX = e.getX();
+                        dragY = e.getY();
+                        remoteInput.getPointer().moveMouseButtonDown(getX(e), getY(e), e.getMetaState());
+                        viewable.movePanToMakePointerVisible();
+                    } else if (doubleTapMoved) {
+                        // Continue the drag (button already down).
+                        viewable.movePanToMakePointerVisible();
+                        remoteInput.getPointer().moveMouseButtonDown(getX(e), getY(e), e.getMetaState());
+                    }
+                    return true; // swallow this MOVE (we own the drag)
+                }
             } else if (action == MotionEvent.ACTION_UP) {
-                // A quick press-lift with little movement is a "tap". Keep the last one so we can
-                // tell "double-tap then hold" apart from a plain long-press (right-click).
-                if (now - currentDownTime <= QUICK_TAP_MS
-                        && Math.abs(e.getX() - currentDownX) <= QUICK_TAP_MOVE_SLOP
-                        && Math.abs(e.getY() - currentDownY) <= QUICK_TAP_MOVE_SLOP) {
-                    lastTapUpTime = now;
-                    lastTapUpX = Math.round(e.getX());
-                    lastTapUpY = Math.round(e.getY());
+                if (doubleTapArmed) {
+                    if (!doubleTapMoved && now - doubleTapDownTime <= DOUBLE_CLICK_MAX_HOLD_MS) {
+                        // Quick 2nd tap, no movement -> double-click: finish 1st click, then 2nd click.
+                        GeneralUtils.debugLog(debugLogging, TAG, "onTouchEvent: quick 2nd tap -> double-click");
+                        remoteInput.getPointer().releaseButton(doubleTapX, doubleTapY, e.getMetaState());
+                        remoteInput.getPointer().leftButtonDown(doubleTapX, doubleTapY, e.getMetaState());
+                        SystemClock.sleep(50);
+                        remoteInput.getPointer().releaseButton(doubleTapX, doubleTapY, e.getMetaState());
+                        viewable.movePanToMakePointerVisible();
+                    } else {
+                        // Drag (or plain hold) ended -> release the left button.
+                        GeneralUtils.debugLog(debugLogging, TAG, "onTouchEvent: drag/hold ended -> release");
+                        dragMode = false;
+                        remoteInput.getPointer().releaseButton(getX(e), getY(e), e.getMetaState());
+                        viewable.movePanToMakePointerVisible();
+                    }
+                    doubleTapArmed = false;
+                    suppressNextSingleTap = false;
+                    return true; // swallow this UP
+                } else {
+                    // A quick press-lift with little movement is a "tap". Keep the last one so a
+                    // following press can be recognised as the 2nd tap of a double-tap.
+                    if (now - currentDownTime <= QUICK_TAP_MS
+                            && Math.abs(e.getX() - currentDownX) <= QUICK_TAP_MOVE_SLOP
+                            && Math.abs(e.getY() - currentDownY) <= QUICK_TAP_MOVE_SLOP) {
+                        lastTapUpTime = now;
+                        lastTapUpX = Math.round(e.getX());
+                        lastTapUpY = Math.round(e.getY());
+                    }
                 }
             }
         }
         return super.onTouchEvent(e);
+    }
+
+    /*
+     * FanRDP: a single tap whose second tap we already took over fires a delayed single-click
+     * (the GestureDetector's double-tap window expired without seeing the 2nd tap). Skip it so a
+     * double-tap-hold doesn't issue an unwanted click before the drag.
+     */
+    @Override
+    public boolean onSingleTapConfirmed(MotionEvent e) {
+        if (suppressNextSingleTap) {
+            suppressNextSingleTap = false;
+            GeneralUtils.debugLog(debugLogging, TAG, "onSingleTapConfirmed: suppressed (double-tap take-over)");
+            return true;
+        }
+        return super.onSingleTapConfirmed(e);
     }
 
     /*

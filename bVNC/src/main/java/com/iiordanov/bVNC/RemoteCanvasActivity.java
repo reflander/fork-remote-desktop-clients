@@ -42,6 +42,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.os.SystemClock;
@@ -153,6 +154,7 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     private FrameLayout canvasLayout;
     private RemoteCanvas canvas;
     private RemoteConnection remoteConnection;
+    private PowerManager.WakeLock mSessionWakeLock;
     private MenuItem[] inputModeMenuItems;
     private MenuItem[] scalingModeMenuItems;
     private TouchInputHandler[] inputModeHandlers;
@@ -362,11 +364,44 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
             Log.d(TAG, "OnCreate - initializing session with a REINIT_SESSION message");
             handler.sendEmptyMessage(RemoteClientLibConstants.REINIT_SESSION);
             continueConnecting();
+            // FanRDP: hold a partial wake lock for the whole session so the RDP connection keeps
+            // running (heartbeat/keepalive continue) when the app is sent to the background or the
+            // screen turns off. Without it the connection thread stalls and the server drops the
+            // idle session, which is why the connection used to die on backgrounding.
+            acquireSessionWakeLock();
         } else {
             showConnectionScreenOrExitIfNotReadyForConnecting(connection);
         }
 
         Log.d(TAG, "OnCreate complete");
+    }
+
+    /** FanRDP: keep the CPU awake for the session so the RDP connection survives backgrounding. */
+    private void acquireSessionWakeLock() {
+        try {
+            if (mSessionWakeLock == null) {
+                PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+                mSessionWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "FanRDP:session");
+                mSessionWakeLock.setReferenceCounted(false);
+            }
+            if (!mSessionWakeLock.isHeld()) {
+                mSessionWakeLock.acquire();
+                Log.d(TAG, "Session wake lock acquired.");
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "Could not acquire session wake lock", e);
+        }
+    }
+
+    private void releaseSessionWakeLock() {
+        try {
+            if (mSessionWakeLock != null && mSessionWakeLock.isHeld()) {
+                mSessionWakeLock.release();
+                Log.d(TAG, "Session wake lock released.");
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "Could not release session wake lock", e);
+        }
     }
 
     private void setApplicationSpecificSettings() {
@@ -1178,6 +1213,7 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         if (remoteConnection != null) {
             remoteConnection.closeConnection();
         }
+        releaseSessionWakeLock();
         Utils.justFinish(this);
     }
 
@@ -1230,6 +1266,7 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected void onDestroy() {
         super.onDestroy();
         Log.i(TAG, "onDestroy called.");
+        releaseSessionWakeLock();
         if (remoteConnection != null)
             remoteConnection.closeConnection();
         System.gc();
