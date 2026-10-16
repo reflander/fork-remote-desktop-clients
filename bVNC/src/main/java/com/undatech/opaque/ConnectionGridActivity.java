@@ -550,14 +550,6 @@ public class ConnectionGridActivity extends AppCompatActivity implements GetText
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.grid_view_activity_actions, menu);
-        MenuItem actionMasterPassword = menu.findItem(R.id.actionMasterPassword);
-        actionMasterPassword.setChecked(Utils.querySharedPreferenceBoolean(this, Constants.masterPasswordEnabledTag));
-        // The Morpheusly icon is multicolour; suppress AppCompat's default
-        // textColorPrimary tint so the brand blue/light-blue palette is preserved.
-        MenuItem morpheusly = menu.findItem(R.id.actionMorpheusly);
-        if (morpheusly != null) {
-            MenuItemCompat.setIconTintList(morpheusly, null);
-        }
         CustomClientConfigFileReader configReader = App.getConfigFileReader();
         if (configReader != null) {
             Utils.setMenuItemVisibilityViaConfig(
@@ -647,8 +639,6 @@ public class ConnectionGridActivity extends AppCompatActivity implements GetText
         int itemId = item.getItemId();
         if (itemId == R.id.actionExportImport) {
             importExportSettings(null);
-        } else if (itemId == R.id.actionMasterPassword) {
-            toggleMasterPassword(null);
         }
         return true;
     }

@@ -135,7 +135,7 @@
 
     <string name="alt_check">Alt</string>
 
-    <string name="ardp_app_name" translatable="false">aRDP Pro</string>
+    <string name="ardp_app_name" translatable="false">FanRDP</string>
 
     <string name="arrow_down">Down Arrow</string>
     <string name="arrow_left">Left Arrow</string>

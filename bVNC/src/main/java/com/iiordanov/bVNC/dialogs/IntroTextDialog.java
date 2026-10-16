@@ -51,6 +51,8 @@ import net.sqlcipher.database.SQLiteDatabase;
 public class IntroTextDialog extends Dialog {
 
     static IntroTextDialog dialog = null;
+    // 启动捐赠/介绍对话框已按要求禁用（用户确认移除）。
+    private static final boolean ENABLE_INTRO_DIALOG = false;
     private final PackageInfo packageInfo;
     private final Database database;
     private boolean donate = false;
@@ -79,7 +81,7 @@ public class IntroTextDialog extends Dialog {
         MostRecentBean mr = ConnectionBean.getMostRecent(database.getReadableDatabase());
         database.close();
         boolean newLaunchOrVersion = (mr == null || mr.getShowSplashVersion() != pi.versionCode);
-        if (dialog == null && show && newLaunchOrVersion) {
+        if (ENABLE_INTRO_DIALOG && dialog == null && show && newLaunchOrVersion) {
             dialog = new IntroTextDialog(context, pi, database, proFeature);
             dialog.show();
         }
