@@ -68,6 +68,7 @@ import android.widget.ListView;
 import androidx.viewpager.widget.ViewPager;
 
 import androidx.annotation.NonNull;
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -287,6 +288,17 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     public void onCreate(Bundle icicle) {
         Log.d(TAG, "OnCreate called");
         super.onCreate(icicle);
+
+        // FanRDP: the phone's back key disconnects the current remote session. We register an
+        // OnBackPressedCallback because with targetSdk 33+ / predictive back the system back is
+        // routed through OnBackPressedDispatcher, and the deprecated onBackPressed() alone is
+        // not reliably invoked.
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                disconnectAndFinishActivity();
+            }
+        });
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -1163,7 +1175,9 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     }
 
     private void disconnectAndFinishActivity() {
-        remoteConnection.closeConnection();
+        if (remoteConnection != null) {
+            remoteConnection.closeConnection();
+        }
         Utils.justFinish(this);
     }
 

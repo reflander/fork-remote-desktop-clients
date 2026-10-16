@@ -722,6 +722,13 @@ public class RemoteCanvas extends AppCompatImageView implements Viewable {
     public void invalidateMousePosition() {
         synchronized (this) {
             if (myDrawable != null) {
+                // FanRDP: make sure the real soft-cursor bitmap is loaded even while a touch gesture
+                // is in progress. softCursorMove() skips initializing the cursor while
+                // cursorBeingMoved is true (i.e. during a touchpad drag), which could leave a
+                // transparent 1x1 cursor and make the mouse "disappear" on the desktop.
+                if (isNotInitSoftCursor() && connection.getUseLocalCursor() != Constants.CURSOR_FORCE_DISABLE) {
+                    initializeSoftCursor();
+                }
                 moveSoftCursor(pointer.getX(), pointer.getY());
                 RectF r = getCursorRect();
                 reDraw(r.left, r.top, r.width(), r.height());

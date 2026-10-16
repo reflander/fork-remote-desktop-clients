@@ -244,8 +244,10 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
             int newX = Math.round(trueX);
             int newY = Math.round(trueY);
             remoteInput.getPointer().moveMouse(newX, newY, meta);
-            mouseResidualX = trueX - newX;
-            mouseResidualY = trueY - newY;
+            // Bound the residual so a pathological situation (e.g. pinned at the desktop edge)
+            // can never accumulate into an unbounded offset.
+            mouseResidualX = clamp(trueX - newX, -MAX_EVENT_DELTA, MAX_EVENT_DELTA);
+            mouseResidualY = clamp(trueY - newY, -MAX_EVENT_DELTA, MAX_EVENT_DELTA);
         }
         viewable.movePanToMakePointerVisible();
         return true;
