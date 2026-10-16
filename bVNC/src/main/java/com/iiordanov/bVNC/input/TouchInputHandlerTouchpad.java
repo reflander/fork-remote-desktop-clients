@@ -81,6 +81,22 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     // the screen.
     private static final float MAX_EVENT_DELTA = 60f;
 
+    // FanRDP manual double-tap-hold fallback.
+    // GestureDetector.onDoubleTap only fires when the two taps land within its double-tap timeout
+    // (300ms) and within its slop. When a user double-taps and then HOLDS to drag, the second tap
+    // often drifts or comes slightly late, so onDoubleTap never fires and the hold would be misread
+    // as a long-press right-click. We therefore track the last quick tap ourselves and, in
+    // onLongPress, if a quick tap just preceded the current press, treat it as a LEFT-button drag.
+    private static final long DOUBLE_TAP_FALLBACK_MS = 400;   // 1st tap-up -> 2nd tap-down window
+    private static final long QUICK_TAP_MS = 400;             // down-up duration that counts as a tap
+    private static final float QUICK_TAP_MOVE_SLOP = 60f;     // max movement while tapping
+    private long lastTapUpTime = 0;
+    private int lastTapUpX = 0;
+    private int lastTapUpY = 0;
+    private long currentDownTime = 0;
+    private int currentDownX = 0;
+    private int currentDownY = 0;
+
     @Override
     public boolean onDoubleTap(MotionEvent e) {
         GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTap (touchpad), e: " + e);
@@ -142,6 +158,35 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     }
 
     /*
+     * FanRDP: track quick taps and the current press ourselves. The GestureDetector's onDoubleTap
+     * only fires for a crisp double-tap; the manual record lets onLongPress recognize a
+     * "double-tap then hold" even when onDoubleTap did not fire, so the drag stays reliable.
+     */
+    @Override
+    public boolean onTouchEvent(MotionEvent e) {
+        int action = e.getActionMasked();
+        if (e.getPointerCount() == 1) {
+            long now = SystemClock.uptimeMillis();
+            if (action == MotionEvent.ACTION_DOWN) {
+                currentDownTime = now;
+                currentDownX = Math.round(e.getX());
+                currentDownY = Math.round(e.getY());
+            } else if (action == MotionEvent.ACTION_UP) {
+                // A quick press-lift with little movement is a "tap". Keep the last one so we can
+                // tell "double-tap then hold" apart from a plain long-press (right-click).
+                if (now - currentDownTime <= QUICK_TAP_MS
+                        && Math.abs(e.getX() - currentDownX) <= QUICK_TAP_MOVE_SLOP
+                        && Math.abs(e.getY() - currentDownY) <= QUICK_TAP_MOVE_SLOP) {
+                    lastTapUpTime = now;
+                    lastTapUpX = Math.round(e.getX());
+                    lastTapUpY = Math.round(e.getY());
+                }
+            }
+        }
+        return super.onTouchEvent(e);
+    }
+
+    /*
      * FanRDP: touchpad long-press (no prior double-tap) = right mouse button click.
      */
     @Override
@@ -155,6 +200,24 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
         if (secondPointerWasDown || thirdPointerWasDown || doubleTapActive) {
             GeneralUtils.debugLog(debugLogging, TAG,
                     "onLongPress: double-tap hold or multi-finger gesture in progress, not sending right-click");
+            return;
+        }
+
+        // FanRDP: a quick tap just before this press means the user is doing "double-tap then hold"
+        // but GestureDetector.onDoubleTap did not fire (taps not crisp enough). Turn it into a
+        // LEFT-button drag instead of a right-click — this makes the double-tap drag reliable.
+        boolean isDoubleTapHold = (lastTapUpTime != 0
+                && currentDownTime - lastTapUpTime <= DOUBLE_TAP_FALLBACK_MS
+                && Math.abs(currentDownX - lastTapUpX) <= 80
+                && Math.abs(currentDownY - lastTapUpY) <= 80);
+        if (isDoubleTapHold) {
+            GeneralUtils.debugLog(debugLogging, TAG, "onLongPress: double-tap-hold (fallback) -> left drag");
+            lastTapUpTime = 0; // consume the tap so it only counts once
+            dragMode = true;
+            dragX = e.getX();
+            dragY = e.getY();
+            remoteInput.getPointer().leftButtonDown(getX(e), getY(e), metaState);
+            viewable.movePanToMakePointerVisible();
             return;
         }
 
