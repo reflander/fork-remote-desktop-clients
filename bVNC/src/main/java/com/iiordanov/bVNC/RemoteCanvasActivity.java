@@ -1417,6 +1417,23 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         disconnectAndFinishActivity();
     }
 
+    /**
+     * FanRDP: catch the hardware/on-screen back key at the lowest level so it always
+     * disconnects, even if the OnBackPressedDispatcher path is bypassed (e.g. immersive
+     * fullscreen quirks on some devices). Note dialogs are separate windows and receive
+     * their own key events, so this does not affect back while a dialog is open.
+     */
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+            if (event.getAction() == KeyEvent.ACTION_UP) {
+                disconnectAndFinishActivity();
+            }
+            return true; // consume the back key
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
     public RemoteConnection getRemoteConnection() {
         return remoteConnection;
     }

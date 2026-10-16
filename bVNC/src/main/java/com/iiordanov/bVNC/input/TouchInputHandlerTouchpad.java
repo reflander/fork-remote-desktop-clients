@@ -80,9 +80,6 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     // can deliver when a finger lifts mid-gesture) is clamped so the cursor can't jump across
     // the screen.
     private static final float MAX_EVENT_DELTA = 60f;
-    // Fractional mouse-position remainder kept between events to avoid cumulative rounding drift.
-    private float mouseResidualX = 0f;
-    private float mouseResidualY = 0f;
 
     @Override
     public boolean onDoubleTap(MotionEvent e) {
@@ -204,8 +201,6 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
             // pointer jumps at the start of scrolling.
             if (!inScrolling) {
                 inScrolling = true;
-                mouseResidualX = 0f;
-                mouseResidualY = 0f;
                 distanceX = getSign(distanceX);
                 distanceY = getSign(distanceY);
                 distXQueue.clear();
@@ -235,19 +230,11 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
             distanceX = sensitivity * distanceX / displayDensity;
             distanceY = sensitivity * distanceY / displayDensity;
 
-            // Compute the new mouse position using a fractional accumulator so rounding errors
-            // don't accumulate into cursor drift over a long move.
-            float deltaX = getDelta(-distanceX);
-            float deltaY = getDelta(-distanceY);
-            float trueX = remoteInput.getPointer().getX() + mouseResidualX + deltaX;
-            float trueY = remoteInput.getPointer().getY() + mouseResidualY + deltaY;
-            int newX = Math.round(trueX);
-            int newY = Math.round(trueY);
+            // Compute the absolute new mouse position.
+            int newX = Math.round(remoteInput.getPointer().getX() + getDelta(-distanceX));
+            int newY = Math.round(remoteInput.getPointer().getY() + getDelta(-distanceY));
+
             remoteInput.getPointer().moveMouse(newX, newY, meta);
-            // Bound the residual so a pathological situation (e.g. pinned at the desktop edge)
-            // can never accumulate into an unbounded offset.
-            mouseResidualX = clamp(trueX - newX, -MAX_EVENT_DELTA, MAX_EVENT_DELTA);
-            mouseResidualY = clamp(trueY - newY, -MAX_EVENT_DELTA, MAX_EVENT_DELTA);
         }
         viewable.movePanToMakePointerVisible();
         return true;
