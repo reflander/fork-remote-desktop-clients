@@ -125,10 +125,14 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
                 doubleTapActive = false;
             } else if (action == MotionEvent.ACTION_MOVE) {
                 // If the second finger has been held long enough, this is now a left-button hold/drag:
-                // enter drag mode and start dragging from the current position.
+                // enter drag mode and start dragging from the current position. We reset the drag
+                // origin first so the first delta is zero — otherwise getX/getY would subtract the
+                // stale dragX from the FIRST tap and jump the cursor far away (it would disappear).
                 if (!dragMode && SystemClock.uptimeMillis() - doubleTapDownTime > DOUBLE_CLICK_MAX_HOLD_MS) {
                     GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTapEvent: held second tap -> left drag");
                     dragMode = true;
+                    dragX = e.getX();
+                    dragY = e.getY();
                     remoteInput.getPointer().moveMouseButtonDown(getX(e), getY(e), metaState);
                     viewable.movePanToMakePointerVisible();
                 }
@@ -304,17 +308,14 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
      * @return
      */
     private float computeAcceleration(float delta) {
+        // FanRDP: the touchpad cursor now follows the finger 1:1 (Microsoft RDP style). The
+        // original acceleration amplified fast moves up to 4.5x, which made the cursor outrun
+        // the finger, jump off the visible area and "disappear". We keep only a small dead-zone
+        // for micro-movements (to damp jitter); everything else moves exactly with the finger.
         float origSign = getSign(delta);
         delta = Math.abs(delta);
-        boolean accelerated = remoteInput.getPointer().isAccelerated();
-        if (delta <= 15) {
-            delta = delta * 0.75f;
-        } else if (accelerated && delta <= 70.0f) {
-            delta = delta * delta / 20.0f;
-        } else if (accelerated) {
-            // FanRDP: smooth, continuous extension beyond 70 instead of the original x4.5,
-            // which made the cursor "fly away" on fast moves.
-            delta = 70.0f * 70.0f / 20.0f + (delta - 70.0f) * 1.5f;
+        if (delta <= 8) {
+            delta = delta * 0.5f;
         }
         return origSign * delta;
     }
