@@ -34,13 +34,21 @@ public class SessionKeepAliveService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         // The notification is required for a foreground service. It is the only thing this
         // service does: hold the process in the foreground state.
-        Notification notification = new Notification.Builder(this, CHANNEL_ID)
-                .setContentTitle(getString(R.string.keep_alive_notification_title))
-                .setContentText(getString(R.string.keep_alive_notification_text))
-                .setSmallIcon(R.drawable.icon_ardp)
-                .setOngoing(true)
-                .build();
-        startForeground(NOTIFICATION_ID, notification);
+        try {
+            Notification notification = new Notification.Builder(this, CHANNEL_ID)
+                    .setContentTitle(getString(R.string.keep_alive_notification_title))
+                    .setContentText(getString(R.string.keep_alive_notification_text))
+                    .setSmallIcon(R.drawable.icon_ardp)
+                    .setOngoing(true)
+                    .build();
+            startForeground(NOTIFICATION_ID, notification);
+        } catch (Throwable t) {
+            // Never crash the app if the foreground service cannot start (e.g. notification
+            // permission denied). Stop silently; the wake lock still keeps the session alive.
+            android.util.Log.w("FanRDP", "Keep-alive service could not start foreground: " + t);
+            stopSelf();
+            return START_NOT_STICKY;
+        }
         return START_NOT_STICKY;
     }
 

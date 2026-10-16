@@ -29,6 +29,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import com.iiordanov.bVNC.Database;
 import com.iiordanov.bVNC.Utils;
 import com.undatech.opaque.RemoteClientLibConstants;
@@ -75,6 +79,9 @@ public class ImportExportDialog extends Dialog {
                 intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{
                         "*/*"
                 });
+                // FanRDP: default export file name fanrdp_日期_时间_导出
+                String stamp = new SimpleDateFormat("yyyy-MM-dd_HHmm", Locale.US).format(new Date());
+                intent.putExtra(Intent.EXTRA_TITLE, "fanrdp_" + stamp + "_导出");
                 activity.startActivityForResult(intent, RemoteClientLibConstants.EXPORT_SETTINGS_REQUEST_CODE);
                 dismiss();
             }

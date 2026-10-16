@@ -572,19 +572,8 @@ public class ConnectionGridActivity extends AppCompatActivity implements GetText
 
     public void editDefaultSettings() {
         Log.d(TAG, "editDefaultSettings selected.");
-        DefaultSettingsBottomSheet sheet = DefaultSettingsBottomSheet.newInstance(
-                new DefaultSettingsBottomSheet.Callback() {
-                    @Override
-                    public void onGlobalDefaultSettings() {
-                        openGlobalDefaultSettings();
-                    }
-
-                    @Override
-                    public void onDefaultConnectionSettings() {
-                        openDefaultConnectionSettings();
-                    }
-                });
-        sheet.show(getSupportFragmentManager(), "defaultSettings");
+        // FanRDP: go straight to the global default settings screen (skip the bottom sheet).
+        openGlobalDefaultSettings();
     }
 
     private void openGlobalDefaultSettings() {

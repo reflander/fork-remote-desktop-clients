@@ -155,6 +155,8 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     private RemoteCanvas canvas;
     private RemoteConnection remoteConnection;
     private PowerManager.WakeLock mSessionWakeLock;
+    private boolean keepAliveServiceRequested = false;
+    private boolean keepAliveServiceStarted = false;
     private MenuItem[] inputModeMenuItems;
     private MenuItem[] scalingModeMenuItems;
     private TouchInputHandler[] inputModeHandlers;
@@ -270,6 +272,12 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         canvas.setForegrounded(hasFocus);
         if (hasFocus) {
             controlImmersive();
+            // FanRDP: the foreground keep-alive service may only be started while the activity is
+            // actually in the foreground (Android 12+ restriction). Start it here, once, when a
+            // session is active and background keep-alive is requested.
+            if (keepAliveServiceRequested && !keepAliveServiceStarted) {
+                startKeepAliveService();
+            }
         }
         // FanRDP: when "Keep Background Connection" is on, track whether the app is in the
         // background and auto-reconnect the RDP session when returning to the foreground after it
@@ -390,10 +398,10 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
                 this, Constants.keepBackgroundConnectionTag, Constants.keepBackgroundConnectionDefault)) {
             return;
         }
-        // Keep the whole process in the foreground state so the OS does not suspend or kill it
-        // while the session runs in the background. Also request notification permission (API 33+)
-        // so the persistent keep-alive notification is visible.
-        startKeepAliveService();
+        // The foreground service must only be started once the activity is actually in the
+        // foreground (Android 12+ forbids starting one from onCreate). We mark it requested here
+        // and actually start it from onWindowFocusChanged. The wake lock itself is safe here.
+        keepAliveServiceRequested = true;
         try {
             if (mSessionWakeLock == null) {
                 PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -409,7 +417,9 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         }
     }
 
-    /** FanRDP: start the foreground keep-alive service (guarded so it never crashes the app). */
+    /** FanRDP: start the foreground keep-alive service once the activity is in the foreground.
+     *  Fully guarded so it can never crash the app (a failure just means no foreground service;
+     *  the wake lock above still keeps the session alive). */
     private void startKeepAliveService() {
         try {
             if (Build.VERSION.SDK_INT >= 33) {
@@ -421,17 +431,21 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
             } else {
                 startService(svc);
             }
+            keepAliveServiceStarted = true;
             Log.d(TAG, "Keep-alive service started.");
-        } catch (Exception e) {
-            Log.w(TAG, "Could not start keep-alive service", e);
+        } catch (Throwable t) {
+            Log.w(TAG, "Could not start keep-alive service", t);
         }
     }
 
     private void stopKeepAliveService() {
         try {
             stopService(new Intent(this, SessionKeepAliveService.class));
-        } catch (Exception e) {
-            Log.w(TAG, "Could not stop keep-alive service", e);
+        } catch (Throwable t) {
+            Log.w(TAG, "Could not stop keep-alive service", t);
+        } finally {
+            keepAliveServiceRequested = false;
+            keepAliveServiceStarted = false;
         }
     }
 
