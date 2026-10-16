@@ -57,9 +57,20 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     }
 
     /*
-     * FanRDP: touchpad double-tap = press-and-hold the left mouse button
-     * (lets the user drag with the left button held, like a desktop mouse).
+     * FanRDP touchpad gestures (matching the official Microsoft RDP client):
+     *  - Single tap (quickly lift)            = left click.
+     *  - Quick double-tap then lift           = double-click (e.g. to open a folder).
+     *  - Double-tap then hold (finger stays)  = left-button press and hold (drag).
+     *  - Long-press (no prior double-tap)     = right-click.
+     *  - Two-finger vertical swipe            = mouse wheel scroll (handled by the base class).
      */
+    // How long the second tap may be held before it is treated as a left-button hold
+    // instead of a quick double-tap.
+    private static final long DOUBLE_CLICK_MAX_HOLD_MS = 250;
+    // True while the second tap of a double-tap is on the screen.
+    private boolean doubleTapActive = false;
+    private long doubleTapDownTime = 0;
+
     @Override
     public boolean onDoubleTap(MotionEvent e) {
         GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTap (touchpad), e: " + e);
@@ -72,15 +83,37 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
             return true;
         }
 
-        // Enter left-drag mode: press and hold the left button.
+        // Second tap went down: press the left button. If the finger is lifted quickly this
+        // becomes a double-click; if it is held (or dragged), it becomes a left-button hold/drag.
+        doubleTapActive = true;
+        doubleTapDownTime = SystemClock.uptimeMillis();
         dragMode = true;
         remoteInput.getPointer().leftButtonDown(getX(e), getY(e), metaState);
         viewable.movePanToMakePointerVisible();
         return true;
     }
 
+    @Override
+    public boolean onDoubleTapEvent(MotionEvent e) {
+        if (e.getAction() == MotionEvent.ACTION_UP && doubleTapActive) {
+            // The second tap finished. If it was a quick tap (finger left the screen quickly),
+            // synthesize the missing click so the pair becomes a double-click. Otherwise it was a
+            // left-button hold/drag (the base handler already released the button).
+            if (SystemClock.uptimeMillis() - doubleTapDownTime <= DOUBLE_CLICK_MAX_HOLD_MS) {
+                GeneralUtils.debugLog(debugLogging, TAG, "onDoubleTapEvent: quick double-tap -> double-click");
+                int metaState = e.getMetaState();
+                remoteInput.getPointer().leftButtonDown(getX(e), getY(e), metaState);
+                SystemClock.sleep(50);
+                remoteInput.getPointer().releaseButton(getX(e), getY(e), metaState);
+                viewable.movePanToMakePointerVisible();
+            }
+            doubleTapActive = false;
+        }
+        return super.onDoubleTapEvent(e);
+    }
+
     /*
-     * FanRDP: touchpad long-press = right mouse button click.
+     * FanRDP: touchpad long-press (no prior double-tap) = right mouse button click.
      */
     @Override
     public void onLongPress(MotionEvent e) {
@@ -88,9 +121,11 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
 
         int metaState = e.getMetaState();
 
-        if (secondPointerWasDown || thirdPointerWasDown) {
+        // Do not send a right-click when the current touch is the held second tap of a
+        // double-tap (that is a left-button hold), or when a multi-finger gesture is in progress.
+        if (secondPointerWasDown || thirdPointerWasDown || doubleTapActive) {
             GeneralUtils.debugLog(debugLogging, TAG,
-                    "onLongPress: multi-finger gesture in progress, not sending right-click");
+                    "onLongPress: double-tap hold or multi-finger gesture in progress, not sending right-click");
             return;
         }
 

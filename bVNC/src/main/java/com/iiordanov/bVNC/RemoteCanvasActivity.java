@@ -1181,7 +1181,8 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
                 remoteConnection.getPointer().setRelativeEvents(false);
             }
 
-            showPanningState(true);
+            // FanRDP: removed the bottom "showPanningState" explanation that popped up
+            // when switching input modes.
             connection.save(this);
             return true;
         }
