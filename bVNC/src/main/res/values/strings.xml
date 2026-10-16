@@ -16,7 +16,7 @@
     <string name="no_connections_title">No connections yet</string>
     <string name="no_connections_hint">Tap the + button to add your first remote connection</string>
     <string name="no_connections_hint_tv">Press the + button above to add your first remote connection</string>
-    <string name="action_edit_default_settings">文本设置</string>
+    <string name="action_edit_default_settings">设置</string>
     <string name="global_default_settings">Global Default Settings</string>
     <string name="global_default_settings_description">App-wide preferences that affect every connection and the app itself, such as display, input, and behavior options.</string>
     <string name="default_connection_settings">Default Connection Settings</string>

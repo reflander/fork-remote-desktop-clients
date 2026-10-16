@@ -902,6 +902,12 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected void onPause() {
         super.onPause();
         Log.i(TAG, "onPause called.");
+        // FanRDP: mark the session as backgrounded the moment the app is pausing, so that if the
+        // RDP connection drops right at this point, the auto-reconnect-on-resume path is armed.
+        if (remoteConnection != null && Utils.querySharedPreferenceBoolean(
+                this, Constants.keepBackgroundConnectionTag, Constants.keepBackgroundConnectionDefault)) {
+            remoteConnection.isBackgrounded = true;
+        }
         try {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(canvas.getWindowToken(), 0);
@@ -914,6 +920,12 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume called.");
+        // FanRDP: backup trigger for the foreground keep-alive service (the primary trigger is
+        // onWindowFocusChanged). onResume means the activity is in the foreground, so starting a
+        // foreground service here is allowed even on Android 12+. The flags make it run only once.
+        if (keepAliveServiceRequested && !keepAliveServiceStarted) {
+            startKeepAliveService();
+        }
         try {
             canvas.postInvalidateDelayed(600);
         } catch (NullPointerException e) {

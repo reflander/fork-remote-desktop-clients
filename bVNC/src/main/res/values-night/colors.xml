@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- FanRDP: theme-aware icon color (night/dark theme: light gray, visible on dark background) -->
+    <color name="pref_icon_tint">#FF9AA0A6</color>
+</resources>

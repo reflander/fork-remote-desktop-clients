@@ -3,4 +3,6 @@
     <color name="black_overlay">#66000000</color>
     <color name="extra_keys_background">#AA000000</color>
     <color name="primaryTextColor">#AAAAAA</color>
+    <!-- FanRDP: theme-aware icon color (light theme: dark gray, visible on white background) -->
+    <color name="pref_icon_tint">#FF5F6368</color>
 </resources>
