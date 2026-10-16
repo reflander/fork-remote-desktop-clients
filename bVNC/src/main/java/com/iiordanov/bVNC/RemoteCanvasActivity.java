@@ -271,16 +271,23 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         if (hasFocus) {
             controlImmersive();
         }
-        // FanRDP: track whether the app is in the background, and auto-reconnect the RDP
-        // session when returning to the foreground after it dropped while backgrounded.
+        // FanRDP: when "Keep Background Connection" is on, track whether the app is in the
+        // background and auto-reconnect the RDP session when returning to the foreground after it
+        // dropped while backgrounded. When the setting is off, behave as a plain disconnect.
+        boolean keepBackground = Utils.querySharedPreferenceBoolean(
+                this, Constants.keepBackgroundConnectionTag, Constants.keepBackgroundConnectionDefault);
         if (remoteConnection != null) {
-            remoteConnection.isBackgrounded = !hasFocus;
-            if (hasFocus && remoteConnection.reconnectOnResume) {
-                remoteConnection.reconnectOnResume = false;
-                Log.d(TAG, "onWindowFocusChanged: RDP dropped in background, reconnecting...");
-                if (handler != null) {
-                    handler.sendEmptyMessage(RemoteClientLibConstants.REINIT_SESSION);
+            if (keepBackground) {
+                remoteConnection.isBackgrounded = !hasFocus;
+                if (hasFocus && remoteConnection.reconnectOnResume) {
+                    remoteConnection.reconnectOnResume = false;
+                    Log.d(TAG, "onWindowFocusChanged: RDP dropped in background, reconnecting...");
+                    if (handler != null) {
+                        handler.sendEmptyMessage(RemoteClientLibConstants.REINIT_SESSION);
+                    }
                 }
+            } else {
+                remoteConnection.isBackgrounded = false;
             }
         }
     }
@@ -378,6 +385,11 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
 
     /** FanRDP: keep the CPU awake for the session so the RDP connection survives backgrounding. */
     private void acquireSessionWakeLock() {
+        // FanRDP: only hold the wake lock when "Keep Background Connection" is enabled.
+        if (!Utils.querySharedPreferenceBoolean(
+                this, Constants.keepBackgroundConnectionTag, Constants.keepBackgroundConnectionDefault)) {
+            return;
+        }
         try {
             if (mSessionWakeLock == null) {
                 PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);

@@ -14,6 +14,11 @@
         android:key="keepScreenOn"
         android:title="@string/keep_screen_awake_enable" />
     <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:key="keepBackgroundConnection"
+        android:summary="@string/keep_background_connection_summary"
+        android:title="@string/keep_background_connection_enable" />
+    <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="forceLandscape"
         android:title="@string/landscape_force" />
