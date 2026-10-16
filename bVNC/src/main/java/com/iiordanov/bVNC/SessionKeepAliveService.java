@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
 
+import com.undatech.remoteClientUi.R;
+
 /**
  * FanRDP: keeps the app process in the foreground while a remote session is active, so the
  * OS does not suspend or kill it when the app is sent to the background or the screen turns off.
