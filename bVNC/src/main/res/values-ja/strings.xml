@@ -83,7 +83,7 @@
     <string name="ad_donate_text1">Proバージョン購入で少額の寄付に同意される方は、こちらをタップして下さい。</string>
     <string name="ad_donate_text2">Proバージョンご使用時、このダイアログは無効に設定可能です。また、追加機能へのアクセスが可能です。</string>
     <string name="ad_donate_text3">プロジェクトの詳細に関しては、下記クライアントアプリ用リンクをご参照ください：</string>
-    <string name="ad_donate_text_rdp">オープンソースプロジェクトにご支援をお願いします！サウンドリダイレクションに対応したaRDP Proをご購入ください。aRDP Proおよびその他のアプリへのリンクは以下をご覧ください。</string>
+    <string name="ad_donate_text_rdp">オープンソースプロジェクトにご支援をお願いします！サウンドリダイレクションに対応したFanRDPをご購入ください。FanRDPおよびその他のアプリへのリンクは以下をご覧ください。</string>
     <string name="ad_donate_text_spice">ProxmoxおよびoVirtへの接続には、OpaqueまたはaSPICE Proをご購入いただき、プロジェクトをご支援ください。aSPICE無料版はKVM仮想マシンへの直接接続のみ対応しています。OpaqueとaSPICE Pro、およびその他のアプリへのリンクは以下をご覧ください。</string>
     <string name="ad_donate_text_vnc">オープンソースプロジェクトにご支援をお願いします！bVNC Proをご購入ください。bVNC Proおよびその他のアプリへのリンクは以下をご覧ください。</string>
     <string name="ad_donate_spice_text1a">こちらをタップしてOpaqueを購入し、ProxmoxおよびoVirtへの直接接続を保存できます。.vvファイルにも対応しています。</string>
@@ -475,7 +475,7 @@ bVNCの対応機能は以下の通り：
     <string name="pro_feature_mfa">サーバーの多要素認証が有効になっています。多要素認証に対応している、Proバージョンをご購入ください。Proバージョンのリンクは、起動時に表示される画面上にあります。</string>
     <string name="pro_feature_intro">Pro版の機能をご利用のようです。この機能に対応したPro版をご購入いただき、プロジェクトをご支援ください。正しいアプリへのリンクは紹介ダイアログをご確認ください。</string>
     <string name="pro_feature_generic">Pro版の機能をご利用のようです。この機能に対応したPro版をご購入いただき、プロジェクトをご支援ください。Pro版へのリンクは起動時のダイアログにあります。</string>
-    <string name="pro_feature_rdp">.rdpファイルを開こうとされたようです。これはPro版の機能です。.rdpファイルに対応したaRDP Proをご購入いただき、プロジェクトをご支援ください。aRDP Proへのリンクは起動時のダイアログにあります。</string>
+    <string name="pro_feature_rdp">.rdpファイルを開こうとされたようです。これはPro版の機能です。.rdpファイルに対応したFanRDPをご購入いただき、プロジェクトをご支援ください。FanRDPへのリンクは起動時のダイアログにあります。</string>
     <string name="pro_feature_spice">.vvファイルを開こうとされたようです。ProxmoxやoVirtへの接続をアプリ内に保存し、.vvファイルも開きたい場合は、Opaqueの購入をご検討ください。.vvファイルのサポートのみ必要な場合は、aSPICE Proをご利用いただけます。両アプリへのリンクは起動時のダイアログにあります。</string>
     <string name="rdp_address_caption_hint">RDPサーバー</string>
     <string name="rdp_adv_console_mode">コンソールモード</string>
@@ -513,10 +513,10 @@ bVNCの対応機能は以下の通り：
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-aRDP及び汎用オープンソースソフトウェアへのご支援ありがとうございます！aRDPのご使用に関しては、メニューのヘルプアイテム、アプリ説明をご参照ください。
+FanRDP及び汎用オープンソースソフトウェアへのご支援ありがとうございます！FanRDPのご使用に関しては、メニューのヘルプアイテム、アプリ説明をご参照ください。
 &lt;br&gt;
 &lt;br&gt;
-aRDPの対応機能は以下の通り：
+FanRDPの対応機能は以下の通り：
 &lt;br&gt;
 ・プレーンRDP、SSHトンネル経由のRDP
 &lt;br&gt;
@@ -555,7 +555,7 @@ aRDPの対応機能は以下の通り：
 ・右/ミドルクリック、スクロールホイール含む、Android 4.0+端末機器のフルマウスサポート
 &lt;br&gt;
 &lt;br&gt;
-aRDP対応予定機能：
+FanRDP対応予定機能：
 &lt;br&gt;
 ・カラーモード選択
 &lt;br&gt;
@@ -567,7 +567,7 @@ aRDP対応予定機能：
 &lt;br&gt;
 &lt;br&gt;
 不具合：</string>
-    <string name="rdp_intro_title">aRDP: 直観的で安全なRDPクライアント</string>
+    <string name="rdp_intro_title">FanRDP: 直観的で安全なRDPクライアント</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 「接続を追加または編集すると、接続構成ページが表示されます。ここで、新しいRDP接続を設定するか、既存の接続を選択できます。上部には、接続を保存するためのボタンがあります。その下には、ここで接続を構成します。
 

@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">Die Pro-weergawe laat u toe om hierdie dialoog te deaktiveer en gee u toegang tot addisionele funksies.</string>
     <string name="ad_donate_text3">As u die projek verder wil ondersteun, volg die volgende skakels na kliëntprogramme vir: </string>
     <string name="ad_donate_text_vnc">Die oopbron-projek het u ondersteuning nodig! Skenk aan ons deur bVNC Pro te koop. Sien hieronder vir skakels na bVNC Pro en ons ander programme.</string>
-    <string name="ad_donate_text_rdp">Die oopbron-projek het u ondersteuning nodig! Skenk aan ons deur aRDP Pro te koop, wat klankomleiding ondersteun. Sien hieronder vir skakels na aRDP Pro en ons ander programme.</string>
+    <string name="ad_donate_text_rdp">Die oopbron-projek het u ondersteuning nodig! Skenk aan ons deur FanRDP te koop, wat klankomleiding ondersteun. Sien hieronder vir skakels na FanRDP en ons ander programme.</string>
     <string name="ad_donate_text_spice">Vir Proxmox- en oVirt-verbindings, skenk asseblief aan die projek deur Opaque of aSPICE Pro te koop. Die gratis weergawe van aSPICE ondersteun slegs direkte verbindings na KVM-virtuele masjiene. Sien hieronder vir skakels na Opaque en aSPICE Pro, asook ons ander programme.</string>
 
     <string name="address_caption">VNC-bediener</string>
@@ -491,7 +491,7 @@ As u na \'n vinnige prestasie-hupstoot soek, probeer om die Kleurmodus na \'n la
     <string name="pro_feature_mfa">Dit lyk asof u bediener multi-faktor-verifikasie geaktiveer het. Ondersteun asseblief die projek deur die Pro-weergawe te koop wat ondersteuning vir hierdie funksie het. \'n Skakel na die Pro-weergawe is beskikbaar in die aanvangsdialoog.</string>
     <string name="pro_feature_intro">Dit lyk asof u \'n Pro-funksie gebruik. Ondersteun asseblief die projek deur die Pro-weergawe te koop wat ondersteuning vir hierdie funksie het. Kontroleer die intro-dialoog vir skakels na die korrekte program.</string>
     <string name="pro_feature_generic">Dit lyk asof u \'n Pro-funksie gebruik. Ondersteun asseblief die projek deur die Pro-weergawe te koop wat ondersteuning vir hierdie funksie het. \'n Skakel na die Pro-weergawe is beskikbaar in die aanvangsdialoog.</string>
-    <string name="pro_feature_rdp">Dit lyk asof u probeer het om \'n .rdp-lêer oop te maak wat \'n Pro-funksie is. Ondersteun asseblief die projek deur aRDP Pro te koop, wat .rdp-lêers ondersteun. \'n Skakel na die aRDP Pro-weergawe is beskikbaar in die aanvangsdialoog.</string>
+    <string name="pro_feature_rdp">Dit lyk asof u probeer het om \'n .rdp-lêer oop te maak wat \'n Pro-funksie is. Ondersteun asseblief die projek deur FanRDP te koop, wat .rdp-lêers ondersteun. \'n Skakel na die FanRDP-weergawe is beskikbaar in die aanvangsdialoog.</string>
     <string name="pro_feature_spice">Dit lyk asof u probeer het om \'n .vv-lêer oop te maak. As u verbindings na Proxmox of oVirt direk in die program wil stoor en ook .vv-lêers wil oopmaak, oorweeg om Opaque te koop. As u slegs .vv-lêer-ondersteuning benodig, kan u aSPICE Pro kry. Vind skakels na beide programme in die aanvangsdialoog.</string>
 
     <string name="rdp_address_caption_hint">RDP-bediener</string>
@@ -554,10 +554,10 @@ As u na \'n vinnige prestasie-hupstoot soek, probeer om die Kleurmodus na \'n la
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Dankie dat u aRDP en oopbron-sagteware in die algemeen ondersteun! Vir hulp met die gebruik van aRDP, sien die Hulp-items in die Kieslys, en die beskrywing van die program in die mark.
+Dankie dat u FanRDP en oopbron-sagteware in die algemeen ondersteun! Vir hulp met die gebruik van FanRDP, sien die Hulp-items in die Kieslys, en die beskrywing van die program in die mark.
 &lt;br&gt;
 &lt;br&gt;
-Huidige lys van aRDP-funksies sluit in:
+Huidige lys van FanRDP-funksies sluit in:
 &lt;br&gt;
 - Gewone RDP, RDP getunnel oor SSH.
 &lt;br&gt;
@@ -605,7 +605,7 @@ Huidige lys van aRDP-funksies sluit in:
 &lt;br&gt;
 &lt;br&gt;
 Bekende probleme:</string>
-    <string name="rdp_intro_title">aRDP: Intuïtiewe, veilige RDP-kliënt</string>
+    <string name="rdp_intro_title">FanRDP: Intuïtiewe, veilige RDP-kliënt</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Wanneer u \'n verbinding byvoeg of wysig, sal u \'n verbindingskonfigurasie-bladsy sien. Hier kan u \'n nuwe RDP-verbinding opstel of \'n bestaande een kies. Bo-aan is \'n knoppie wat u toelaat om die verbinding te stoor. Daaronder is waar u u verbinding instel.
 

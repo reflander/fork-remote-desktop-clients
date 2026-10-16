@@ -63,7 +63,7 @@
     <string name="open_doc">Посібник/Wiki</string>
     <string name="remote_sound_disabled">Звук вимкнено</string>
     <string name="spice_ca_file_not_found">Файл не знайдено. Введіть дійсну назву файлу в текстове поле (наприклад, /sdcard/ca-cert.pem).</string>
-    <string name="rdp_intro_title">aRDP: інтуїтивно зрозумілий, безпечний клієнт RDP</string>
+    <string name="rdp_intro_title">FanRDP: інтуїтивно зрозумілий, безпечний клієнт RDP</string>
     <string name="error_pve_api_unexpected_code">Несподівана відповідь від Proxmox Virtual Environment:</string>
     <string name="error_out_of_memory">Не вдалося виділити достатньо пам’яті для малювання віддаленого екрана. Спробуйте перезапустити програму, а потім перезапустіть пристрій. Ви також можете спробувати зменшити розмір віддаленого робочого столу через налаштування програми.</string>
     <string name="enter_passphrase_title">Введіть ключову парольну фразу</string>
@@ -103,7 +103,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">Проект з відкритим кодом потребує вашої підтримки!Зробіть нам пожертву, купивши bVNC Pro. Нижче наведено посилання на bVNC Pro та інші наші програми.</string>
     <string name="input_method_mouse">Керування вказівником миші</string>
-    <string name="pro_feature_rdp">Схоже, ви намагалися відкрити файл .rdp, який є професійною функцією. Підтримайте проект, придбавши aRDP Pro, який підтримує файли .rdp. Посилання на версію aRDP Pro доступне в діалоговому вікні запуску.</string>
+    <string name="pro_feature_rdp">Схоже, ви намагалися відкрити файл .rdp, який є професійною функцією. Підтримайте проект, придбавши FanRDP, який підтримує файли .rdp. Посилання на версію FanRDP доступне в діалоговому вікні запуску.</string>
     <string name="opaque_connection_screen_help_text">Коли ви додаєте або редагуєте підключення, ви побачите сторінку конфігурації підключення.
 Тут ви можете налаштувати нове підключення Opaque або вибрати вже існуюче.
 У верхній частині розташована кнопка, яка дозволяє зберегти підключення.
@@ -348,7 +348,7 @@
     <string name="rdp_geom_custom">Custom</string>
     <string name="default_input_mode">Режим введення за замовчуванням</string>
     <string name="repeater_empty_text">Без ретранслятора</string>
-    <string name="ad_donate_text_rdp">Проект з відкритим кодом потребує вашої підтримки!Зробіть нам пожертву, купивши aRDP Pro, який підтримує переспрямування звуку. Нижче наведено посилання на aRDP Pro та інші наші програми.</string>
+    <string name="ad_donate_text_rdp">Проект з відкритим кодом потребує вашої підтримки!Зробіть нам пожертву, купивши FanRDP, який підтримує переспрямування звуку. Нижче наведено посилання на FanRDP та інші наші програми.</string>
     <string name="spice_tls_port_hint">Порт TLS</string>
     <string name="scaling">Масштабування</string>
     <string name="spice_connection_settings">Налаштування підключення SPICE</string>
@@ -361,10 +361,10 @@
     <string name="error_ssh_pubkey_auth_method_unavail">Сервер SSH не підтримує метод автентифікації \publickey\, і ми намагаємося використати пару ключів для автентифікації. Налаштуйте його, щоб дозволити автентифікацію за відкритим ключем, і повторіть спробу. Доступні методи авторизації:</string>
     <string name="username_caption">Користувач VNC</string>
     <string name="error_ssh_could_not_exec_command">Не вдалося виконати віддалену команду.</string>
-    <string name="rdp_intro_text">Дякуємо за підтримку aRDP і програмного забезпечення з відкритим кодом загалом!Щоб отримати довідку щодо використання aRDP, перегляньте пункти довідки в меню та опис програми на ринку.
+    <string name="rdp_intro_text">Дякуємо за підтримку FanRDP і програмного забезпечення з відкритим кодом загалом!Щоб отримати довідку щодо використання FanRDP, перегляньте пункти довідки в меню та опис програми на ринку.
 &lt;br&gt;
 &lt;br&gt;
-Поточний список функцій aRDP включає:
+Поточний список функцій FanRDP включає:
 &lt;br&gt;
 - Звичайний RDP, RDP, тунельований через SSH.
 &lt;br&gt;

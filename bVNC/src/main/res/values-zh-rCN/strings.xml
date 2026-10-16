@@ -82,7 +82,7 @@
     <string name="ad_donate_text1">如果您购买Pro版本并且同意捐赠我们的话，请点击这里。</string>
     <string name="ad_donate_text2">使用Pro版本时，可以将这个对话框设定为无效，也可以存取追加功能。</string>
     <string name="ad_donate_text3">项目的详细请参照以下客户端应用用链接：</string>
-    <string name="ad_donate_text_rdp">开源项目需要您的支持！请通过购买aRDP Pro进行捐赠，该版本支持声音重定向。请参阅下方的aRDP Pro及我们其他应用的链接。</string>
+    <string name="ad_donate_text_rdp">开源项目需要您的支持！请通过购买FanRDP进行捐赠，该版本支持声音重定向。请参阅下方的FanRDP及我们其他应用的链接。</string>
     <string name="ad_donate_text_spice">如需连接Proxmox和oVirt，请通过购买Opaque或aSPICE Pro来支持本项目。aSPICE免费版仅支持直接连接KVM虚拟机。请参阅下方Opaque和aSPICE Pro以及我们其他应用的链接。</string>
     <string name="ad_donate_text_vnc">开源项目需要您的支持！请通过购买bVNC Pro进行捐赠。请参阅下方的bVNC Pro及我们其他应用的链接。</string>
     <string name="ad_donate_spice_text1a">点击此处购买Opaque，保存与Proxmox和oVirt的直接连接。还支持.vv文件。</string>
@@ -173,6 +173,8 @@
     <string name="connection_edit_delete_prompt">你想编辑或删除连接吗？</string>
     <string name="connection_edit">编辑</string>
     <string name="connection_delete">删除</string>
+    <string name="connection_pin_top">置顶</string>
+    <string name="connection_unpin_top">取消置顶</string>
 
     <string name="control_check">Ctrl</string>
     <string name="copy_list_button">复制列表</string>
@@ -457,7 +459,7 @@ bVNC对应的功能如下：
     <string name="pro_feature_mfa">看来您的服务器已启用多因素身份验证。请购买支持此功能的Pro版本。在开始对话框中有Pro版本的链接。</string>
     <string name="pro_feature_intro">您似乎正在使用Pro版功能。请购买支持此功能的Pro版本来支持本项目。请查看介绍对话框中正确应用的链接。</string>
     <string name="pro_feature_generic">您似乎正在使用Pro版功能。请购买支持此功能的Pro版本来支持本项目。在开始对话框中有Pro版本的链接。</string>
-    <string name="pro_feature_rdp">您似乎尝试打开.rdp文件，这是Pro版功能。请购买支持.rdp文件的aRDP Pro来支持本项目。aRDP Pro的链接在开始对话框中。</string>
+    <string name="pro_feature_rdp">您似乎尝试打开.rdp文件，这是Pro版功能。请购买支持.rdp文件的FanRDP来支持本项目。FanRDP的链接在开始对话框中。</string>
     <string name="pro_feature_spice">您似乎尝试打开.vv文件。如果您想在应用中直接保存到Proxmox或oVirt的连接并打开.vv文件，请考虑购买Opaque。如果您只需要.vv文件支持，可以购买aSPICE Pro。两个应用的链接都在开始对话框中。</string>
     <string name="rdp_address_caption_hint">RDP服务器</string>
     <string name="rdp_adv_console_mode">控制台模式</string>
@@ -495,10 +497,10 @@ bVNC对应的功能如下：
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-感谢您支援aRDP以及开源软件！关于aRDP的用法，请参照菜单中的帮助项目以及应用的说明。
+感谢您支援FanRDP以及开源软件！关于FanRDP的用法，请参照菜单中的帮助项目以及应用的说明。
 &lt;br&gt;
 &lt;br&gt;
-aRDP对应的功能如下：
+FanRDP对应的功能如下：
 &lt;br&gt;
 - Plain RDP／经过SSH隧道的RDP
 &lt;br&gt;
@@ -535,7 +537,7 @@ aRDP对应的功能如下：
 - 在Android 4.0以上版本的设备支持完整鼠标，包括右键、中键以及滚轮。
 &lt;br&gt;
 &lt;br&gt;
-aRDP对应预定的功能：
+FanRDP对应预定的功能：
 &lt;br&gt;
 - 彩色模式选择
 &lt;br&gt;
@@ -548,7 +550,7 @@ aRDP对应预定的功能：
 &lt;br&gt;
 已知的问题：
 &lt;br&gt;</string>
-    <string name="rdp_intro_title">aRDP：又直观又安全的RDP客户端</string>
+    <string name="rdp_intro_title">FanRDP：又直观又安全的RDP客户端</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 新建或编辑连接时连接设定画面会显示出来。在此可以设置新的RDP连接设定或选择现有的连接。顶部有保存连接的按钮，下面可设定连接。
 
@@ -565,8 +567,8 @@ aRDP对应预定的功能：
 
 -RDP连接设置：
  （a）RDP服务器／端口：在此输入运行RDP服务器的计算机的主机名或IP地址与端口号。在通过SSH模式的RDP中，SSH服务器也可以看到此IP地址。如果SSH服务器与RDP服务器在同一台计算机上，就可以使用localhost。RDP服务器通常用端口3389侦听（第一个RDP屏幕，屏幕：0）。
-（b）RDP用户：在具有Windows登录模式的UltraRDP中可用，或通过VeNCrypt的安全RDP中可用。在此输入Windows / UNIX帐户用户名。
-（c）RDP密码：如果您的RDP服务器设置需要密码，在此输入该密码。具有Windows登录或VeNCrypt模式的UltraRDP的话，在此输入Windows / UNIX帐户密码。 密码不使用安全存储，只有选中“保持”选项，才会存储密码。未退出应用程序，密码就保留在画面上。
+（b）RDP用户：在具有Windows登录模式的UltrFanRDP中可用，或通过VeNCrypt的安全RDP中可用。在此输入Windows / UNIX帐户用户名。
+（c）RDP密码：如果您的RDP服务器设置需要密码，在此输入该密码。具有Windows登录或VeNCrypt模式的UltrFanRDP的话，在此输入Windows / UNIX帐户密码。 密码不使用安全存储，只有选中“保持”选项，才会存储密码。未退出应用程序，密码就保留在画面上。
 
 -详细设定：在此进行桌面分辨率的自定义设定或者RDP性能微调。
 

@@ -63,7 +63,7 @@
     <string name="open_doc">מדריך/ויקי</string>
     <string name="remote_sound_disabled">סאונד מושבת</string>
     <string name="spice_ca_file_not_found">הקובץ לא נמצא.אנא הזן שם קובץ חוקי בשדה הטקסט (למשל /sdcard/ca-cert.pem).</string>
-    <string name="rdp_intro_title">aRDP: לקוח RDP אינטואיטיבי ומאובטח</string>
+    <string name="rdp_intro_title">FanRDP: לקוח RDP אינטואיטיבי ומאובטח</string>
     <string name="error_pve_api_unexpected_code">תגובה לא צפויה מהסביבה הווירטואלית של Proxmox:</string>
     <string name="error_out_of_memory">לא ניתן להקצות מספיק זיכרון לציור מסך מרוחק.נסה להפעיל מחדש את האפליקציה ולאחר מכן הפעל מחדש את המכשיר.אתה יכול גם לנסות להקטין את גודל שולחן העבודה המרוחק דרך הגדרות האפליקציה.</string>
     <string name="enter_passphrase_title">הזן ביטוי סיסמה מפתח</string>
@@ -102,7 +102,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">פרויקט הקוד הפתוח זקוק לתמיכתך!תרמו לנו על ידי רכישת bVNC Pro.ראה למטה קישורים ל-bVNC Pro ולאפליקציות האחרות שלנו.</string>
     <string name="input_method_mouse">בקרת מצביע עכבר</string>
-    <string name="pro_feature_rdp">נראה שניסית לפתוח קובץ .rdp שהוא תכונת Pro.נא לתמוך בפרויקט על ידי רכישת aRDP Pro, התומך בקבצי .rdp.קישור לגרסת aRDP Pro זמין בתיבת הדו-שיח \'התחל\'.</string>
+    <string name="pro_feature_rdp">נראה שניסית לפתוח קובץ .rdp שהוא תכונת Pro.נא לתמוך בפרויקט על ידי רכישת FanRDP, התומך בקבצי .rdp.קישור לגרסת FanRDP זמין בתיבת הדו-שיח \'התחל\'.</string>
     <string name="opaque_connection_screen_help_text">כאשר תוסיף או תערוך חיבור, תראה דף תצורת חיבור.
 כאן אתה יכול להגדיר חיבור אטום חדש או לבחור חיבור קיים.
 בחלק העליון יש כפתור המאפשר לשמור את החיבור.
@@ -347,7 +347,7 @@
     <string name="rdp_geom_custom">מִנְהָג</string>
     <string name="default_input_mode">מצב קלט ברירת מחדל</string>
     <string name="repeater_empty_text">אין משחזר</string>
-    <string name="ad_donate_text_rdp">פרויקט הקוד הפתוח זקוק לתמיכתך!תרמו לנו על ידי רכישת aRDP Pro, התומך בהפניית קול.ראה למטה קישורים ל- aRDP Pro ולאפליקציות האחרות שלנו.</string>
+    <string name="ad_donate_text_rdp">פרויקט הקוד הפתוח זקוק לתמיכתך!תרמו לנו על ידי רכישת FanRDP, התומך בהפניית קול.ראה למטה קישורים ל- FanRDP ולאפליקציות האחרות שלנו.</string>
     <string name="spice_tls_port_hint">יציאת TLS</string>
     <string name="scaling">דֵרוּג</string>
     <string name="spice_connection_settings">הגדרות חיבור SPICE</string>
@@ -360,10 +360,10 @@
     <string name="error_ssh_pubkey_auth_method_unavail">שרת SSH אינו תומך בשיטת \publickey\ auth, ואנחנו מנסים להשתמש בזוג מפתחות לאימות.אנא הגדר אותו כך שיאפשר אימות מפתח ציבורי ונסה שוב.שיטות אימות זמינות:</string>
     <string name="username_caption">משתמש VNC</string>
     <string name="error_ssh_could_not_exec_command">לא ניתן לבצע פקודה מרחוק.</string>
-    <string name="rdp_intro_text">תודה על התמיכה ב-aRDP ובתוכנות קוד פתוח באופן כללי!לעזרה בשימוש ב- aRDP, עיין בפריטי העזרה בתפריט ובתיאור האפליקציה בשוק.
+    <string name="rdp_intro_text">תודה על התמיכה ב-FanRDP ובתוכנות קוד פתוח באופן כללי!לעזרה בשימוש ב- FanRDP, עיין בפריטי העזרה בתפריט ובתיאור האפליקציה בשוק.
 &lt;br&gt;
 &lt;br&gt;
-רשימה נוכחית של תכונות aRDP כוללת:
+רשימה נוכחית של תכונות FanRDP כוללת:
 &lt;br&gt;
 - RDP רגיל, RDP במנהרה מעל SSH.
 &lt;br&gt;

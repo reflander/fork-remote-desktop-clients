@@ -383,7 +383,7 @@ VNC сървър</string>
     <string name="master_password_enable">
 🔒 Активирайте главната парола</string>
     <string name="pro_feature_rdp">
-Изглежда, че сте се опитали да отворите .rdp файл, който е Pro функция. Моля, подкрепете проекта, като закупите aRDP Pro, който поддържа .rdp файлове. В диалоговия прозорец при стартиране на апликацията е налична връзка към версията на aRDP Pro.</string>
+Изглежда, че сте се опитали да отворите .rdp файл, който е Pro функция. Моля, подкрепете проекта, като закупите FanRDP, който поддържа .rdp файлове. В диалоговия прозорец при стартиране на апликацията е налична връзка към версията на FanRDP.</string>
     <string name="rdp_security_mode">
 Режим на защита</string>
     <string name="error_no_such_vm_found_for_user">
@@ -433,10 +433,10 @@ VNC Viewer стартира</string>
     <string name="keep_password_button">
 Запазете</string>
     <string name="rdp_intro_text">
-Благодарим ви, че поддържате aRDP и софтуера с отворен код като цяло! За помощ при използването на aRDP вижте елементите за помощ в менюто и описанието на приложението в пазара.
+Благодарим ви, че поддържате FanRDP и софтуера с отворен код като цяло! За помощ при използването на FanRDP вижте елементите за помощ в менюто и описанието на приложението в пазара.
 &lt;br&gt;
 &lt;br&gt;
-Текущият списък с функции на aRDP включва:
+Текущият списък с функции на FanRDP включва:
 &lt;br&gt;
 - Обикновен RDP, RDP тунелиран през SSH.
 &lt;br&gt;
@@ -491,7 +491,7 @@ VNC Viewer стартира</string>
     <string name="rdp_adv_desktop_composition">
 Активирайте композицията на работния плот</string>
     <string name="ad_donate_text_rdp">
-Проектът с отворен код се нуждае от вашата подкрепа! Дарете ни, като купите aRDP Pro, който поддържа пренасочване на звука. Вижте по-долу за връзки към aRDP Pro и другите ни приложения.</string>
+Проектът с отворен код се нуждае от вашата подкрепа! Дарете ни, като купите FanRDP, който поддържа пренасочване на звука. Вижте по-долу за връзки към FanRDP и другите ни приложения.</string>
     <string name="enter_passphrase">
 Моля, въведете ключова парола</string>
     <string name="enter_text">
@@ -647,7 +647,7 @@ UltraVNC ретранслатор</string>
     <string name="color_black_and_white">
 Черно и бяло (1 bpp)</string>
     <string name="rdp_intro_title">
-aRDP: Интуитивен, защитен RDP клиент</string>
+FanRDP: Интуитивен, защитен RDP клиент</string>
     <string name="rdp_adv_console_mode">
 Конзолен режим</string>
     <string name="scaling">

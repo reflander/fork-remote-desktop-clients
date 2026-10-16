@@ -103,7 +103,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">โครงการ Open Source ต้องการการสนับสนุนจากคุณ!บริจาคให้เราโดยซื้อ bVNC Proดูด้านล่างสำหรับลิงก์ไปยัง bVNC Pro และแอปอื่นๆ ของเรา</string>
     <string name="input_method_mouse">การควบคุมตัวชี้เมาส์</string>
-    <string name="pro_feature_rdp">ดูเหมือนว่าคุณพยายามเปิดไฟล์ .rdp ซึ่งเป็นฟีเจอร์ Proโปรดสนับสนุนโครงการโดยการซื้อ aRDP Pro ซึ่งรองรับไฟล์ .rdpลิงก์ไปยังเวอร์ชัน aRDP Pro มีอยู่ในกล่องโต้ตอบเริ่มต้น</string>
+    <string name="pro_feature_rdp">ดูเหมือนว่าคุณพยายามเปิดไฟล์ .rdp ซึ่งเป็นฟีเจอร์ Proโปรดสนับสนุนโครงการโดยการซื้อ FanRDP ซึ่งรองรับไฟล์ .rdpลิงก์ไปยังเวอร์ชัน FanRDP มีอยู่ในกล่องโต้ตอบเริ่มต้น</string>
     <string name="opaque_connection_screen_help_text">เมื่อคุณเพิ่มหรือแก้ไขการเชื่อมต่อ คุณจะเห็นหน้าการกำหนดค่าการเชื่อมต่อ
 ที่นี่คุณสามารถตั้งค่าการเชื่อมต่อแบบทึบใหม่หรือเลือกการเชื่อมต่อที่มีอยู่แล้วได้
 ที่ด้านบนมีปุ่มให้คุณบันทึกการเชื่อมต่อ
@@ -347,7 +347,7 @@
     <string name="rdp_geom_custom">กำหนดเอง</string>
     <string name="default_input_mode">โหมดอินพุตเริ่มต้น</string>
     <string name="repeater_empty_text">ไม่มีทวน</string>
-    <string name="ad_donate_text_rdp">โครงการ Open Source ต้องการการสนับสนุนจากคุณ!บริจาคให้เราโดยการซื้อ aRDP Pro ซึ่งรองรับการเปลี่ยนเส้นทางเสียงดูด้านล่างสำหรับลิงก์ไปยัง aRDP Pro และแอปอื่นๆ ของเรา</string>
+    <string name="ad_donate_text_rdp">โครงการ Open Source ต้องการการสนับสนุนจากคุณ!บริจาคให้เราโดยการซื้อ FanRDP ซึ่งรองรับการเปลี่ยนเส้นทางเสียงดูด้านล่างสำหรับลิงก์ไปยัง FanRDP และแอปอื่นๆ ของเรา</string>
     <string name="spice_tls_port_hint">พอร์ต ทีแอลเอส</string>
     <string name="scaling">การปรับขนาด</string>
     <string name="spice_connection_settings">การตั้งค่าการเชื่อมต่อ SPICE</string>
@@ -360,10 +360,10 @@
     <string name="error_ssh_pubkey_auth_method_unavail">เซิร์ฟเวอร์ SSH ไม่รองรับวิธี \publickey\ auth และเรากำลังพยายามใช้คู่คีย์ในการตรวจสอบสิทธิ์โปรดกำหนดค่าให้อนุญาตการตรวจสอบสิทธิ์กุญแจสาธารณะแล้วลองอีกครั้งวิธีการรับรองความถูกต้องที่ใช้ได้:</string>
     <string name="username_caption">ผู้ใช้ VNC</string>
     <string name="error_ssh_could_not_exec_command">ไม่สามารถดำเนินการคำสั่งระยะไกลได้</string>
-    <string name="rdp_intro_text">ขอขอบคุณที่สนับสนุน aRDP และซอฟต์แวร์โอเพ่นซอร์สโดยทั่วไป!หากต้องการความช่วยเหลือในการใช้ aRDP โปรดดูรายการความช่วยเหลือในเมนู และคำอธิบายของแอปในตลาด
+    <string name="rdp_intro_text">ขอขอบคุณที่สนับสนุน FanRDP และซอฟต์แวร์โอเพ่นซอร์สโดยทั่วไป!หากต้องการความช่วยเหลือในการใช้ FanRDP โปรดดูรายการความช่วยเหลือในเมนู และคำอธิบายของแอปในตลาด
 &lt;br&gt;
 &lt;br&gt;
-รายการคุณสมบัติ aRDP ปัจจุบันประกอบด้วย:
+รายการคุณสมบัติ FanRDP ปัจจุบันประกอบด้วย:
 &lt;br&gt;
 - RDP ธรรมดา, RDP อุโมงค์ผ่าน SSH
 &lt;br&gt;

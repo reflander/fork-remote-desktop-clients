@@ -124,7 +124,7 @@
     <string name="ad_donate_text2">The Pro version allows you to disable this dialog and gives you access to additional features.</string>
     <string name="ad_donate_text3">If you would like to support the project further, follow the following links for links to client apps for: </string>
     <string name="ad_donate_text_vnc">The Open Source project needs your support! Donate to us by buying bVNC Pro. See below for links to bVNC Pro and our other apps.</string>
-    <string name="ad_donate_text_rdp">The Open Source project needs your support! Donate to us by buying aRDP Pro, which supports sound redirection. See below for links to aRDP Pro and our other apps.</string>
+    <string name="ad_donate_text_rdp">The Open Source project needs your support! Donate to us by buying FanRDP, which supports sound redirection. See below for links to FanRDP and our other apps.</string>
     <string name="ad_donate_text_spice">For Proxmox and oVirt connections, please donate to the project by buying Opaque or aSPICE Pro. The Free version of aSPICE only supports direct connections to KVM virtual machines. See below for links to Opaque and aSPICE Pro, as well as our other apps.</string>
 
     <string name="address_caption">VNC Server</string>
@@ -270,6 +270,8 @@
     <string name="connection_edit_delete_prompt">Do you want to edit or delete the connection</string>
     <string name="connection_edit">Edit</string>
     <string name="connection_delete">Delete</string>
+    <string name="connection_pin_top">Pin to top</string>
+    <string name="connection_unpin_top">Unpin</string>
 
     <string name="control_check">Ctrl</string>
 
@@ -342,7 +344,7 @@
 
     <string name="force">Fullscreen Bitmap</string>
 
-    <string name="freeardp_app_name" translatable="false">aRDP Free</string>
+    <string name="freeardp_app_name" translatable="false">FanRDP Free</string>
 
     <string name="freeaspice_app_name" translatable="false">aSPICE Free</string>
 
@@ -587,7 +589,7 @@ If you are looking for a quick performance boost, try setting the Color mode to 
     <string name="pro_feature_mfa">It appears your server has multi-factor authentication enabled. Please support the project by purchasing the Pro version which has support for this feature. A link to the Pro version is available in the start dialog.</string>
     <string name="pro_feature_intro">It appears you are using a Pro feature. Please support the project by purchasing the Pro version which has support for this feature. Please check the intro dialog for links to the correct app.</string>
     <string name="pro_feature_generic">It appears you are using a Pro feature. Please support the project by purchasing the Pro version which has support for this feature. A link to the Pro version is available in the start dialog.</string>
-    <string name="pro_feature_rdp">It looks like you tried to open an .rdp file which is a Pro feature. Please support the project by purchasing aRDP Pro, which supports .rdp files. A link to aRDP Pro version is available in the start dialog.</string>
+    <string name="pro_feature_rdp">It looks like you tried to open an .rdp file which is a Pro feature. Please support the project by purchasing FanRDP, which supports .rdp files. A link to FanRDP version is available in the start dialog.</string>
     <string name="pro_feature_spice">It looks like you tried to open a .vv file. If you would like to save connections to Proxmox or oVirt right inside the app and also want to open .vv files, consider purchasing Opaque. If you only need .vv file support, you can get aSPICE Pro. Find links to both apps in the start dialog.</string>
 
     <string name="rdp_address_caption_hint">RDP Server</string>
@@ -650,10 +652,10 @@ If you are looking for a quick performance boost, try setting the Color mode to 
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Thank you for supporting aRDP and open-source software in general! For help with using aRDP, see the Help items in the Menu, and the description of the app in the market.
+Thank you for supporting FanRDP and open-source software in general! For help with using FanRDP, see the Help items in the Menu, and the description of the app in the market.
 &lt;br&gt;
 &lt;br&gt;
-Current list of aRDP features includes:
+Current list of FanRDP features includes:
 &lt;br&gt;
 - Plain RDP, RDP tunneled over SSH.
 &lt;br&gt;
@@ -701,7 +703,7 @@ Current list of aRDP features includes:
 &lt;br&gt;
 &lt;br&gt;
 Known issues:</string>
-    <string name="rdp_intro_title">aRDP: Intuitive, secure RDP client</string>
+    <string name="rdp_intro_title">FanRDP: Intuitive, secure RDP client</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 When you add or edit a connection, you will see a connection configuration page. Here you can set up a new RDP connection, or choose a preexisting one. At the top is a button that allows you to save the connection. Below that is where you configure your connection.
 

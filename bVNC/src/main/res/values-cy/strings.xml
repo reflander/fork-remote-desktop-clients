@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">Mae\'r fersiwn Pro yn caniatáu i chi analluogi\'r ddeialog hon ac yn rhoi mynediad i nodweddion ychwanegol.</string>
     <string name="ad_donate_text3">Os hoffech chi gefnogi\'r prosiect ymhellach, dilynwch y dolenni canlynol am ddolenni i apiau cleient ar gyfer: </string>
     <string name="ad_donate_text_vnc">Mae angen eich cefnogaeth ar y prosiect Ffynhonnell Agored! Rhoddwch i ni drwy brynu bVNC Pro. Gweler isod am ddolenni i bVNC Pro a\'n hapiau eraill.</string>
-    <string name="ad_donate_text_rdp">Mae angen eich cefnogaeth ar y prosiect Ffynhonnell Agored! Rhoddwch i ni drwy brynu aRDP Pro, sy\'n cefnogi ailgyfeirio sain. Gweler isod am ddolenni i aRDP Pro a\'n hapiau eraill.</string>
+    <string name="ad_donate_text_rdp">Mae angen eich cefnogaeth ar y prosiect Ffynhonnell Agored! Rhoddwch i ni drwy brynu FanRDP, sy\'n cefnogi ailgyfeirio sain. Gweler isod am ddolenni i FanRDP a\'n hapiau eraill.</string>
     <string name="ad_donate_text_spice">Ar gyfer cysylltiadau Proxmox ac oVirt, rhoddwch i\'r prosiect drwy brynu Opaque neu aSPICE Pro. Mae fersiwn Rhad ac Am Ddim aSPICE ond yn cefnogi cysylltiadau uniongyrchol â pheiriannau rhithwir KVM. Gweler isod am ddolenni i Opaque ac aSPICE Pro, yn ogystal â\'n hapiau eraill.</string>
 
     <string name="address_caption">Gweinydd VNC</string>
@@ -490,7 +490,7 @@ Os ydych chi\'n chwilio am hwb perfformiad cyflym, ceisiwch osod y modd Lliw i w
     <string name="pro_feature_mfa">Mae\'n ymddangos bod gan eich gweinydd ddilysu aml-ffactor wedi\'i alluogi. Cefnogwch y prosiect drwy brynu\'r fersiwn Pro sydd â chefnogaeth ar gyfer y nodwedd hon. Mae dolen i\'r fersiwn Pro ar gael yn y ddeialog gychwyn.</string>
     <string name="pro_feature_intro">Mae\'n ymddangos eich bod chi\'n defnyddio nodwedd Pro. Cefnogwch y prosiect drwy brynu\'r fersiwn Pro sydd â chefnogaeth ar gyfer y nodwedd hon. Gwiriwch y ddeialog cyflwyniad am ddolenni i\'r ap cywir.</string>
     <string name="pro_feature_generic">Mae\'n ymddangos eich bod chi\'n defnyddio nodwedd Pro. Cefnogwch y prosiect drwy brynu\'r fersiwn Pro sydd â chefnogaeth ar gyfer y nodwedd hon. Mae dolen i\'r fersiwn Pro ar gael yn y ddeialog gychwyn.</string>
-    <string name="pro_feature_rdp">Mae\'n edrych fel i chi geisio agor ffeil .rdp sy\'n nodwedd Pro. Cefnogwch y prosiect drwy brynu aRDP Pro, sy\'n cefnogi ffeiliau .rdp. Mae dolen i fersiwn aRDP Pro ar gael yn y ddeialog gychwyn.</string>
+    <string name="pro_feature_rdp">Mae\'n edrych fel i chi geisio agor ffeil .rdp sy\'n nodwedd Pro. Cefnogwch y prosiect drwy brynu FanRDP, sy\'n cefnogi ffeiliau .rdp. Mae dolen i fersiwn FanRDP ar gael yn y ddeialog gychwyn.</string>
     <string name="pro_feature_spice">Mae\'n edrych fel i chi geisio agor ffeil .vv. Os hoffech chi gadw cysylltiadau i Proxmox neu oVirt yn uniongyrchol yn yr ap a hefyd eisiau agor ffeiliau .vv, ystyriwch brynu Opaque. Os dim ond cefnogaeth ffeil .vv sydd ei angen arnoch, gallwch gael aSPICE Pro. Dewch o hyd i ddolenni i\'r ddau ap yn y ddeialog gychwyn.</string>
 
     <string name="rdp_address_caption_hint">Gweinydd RDP</string>
@@ -553,10 +553,10 @@ Os ydych chi\'n chwilio am hwb perfformiad cyflym, ceisiwch osod y modd Lliw i w
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Diolch am gefnogi aRDP a meddalwedd ffynhonnell agored yn gyffredinol! Am gymorth gyda defnyddio aRDP, gweler yr eitemau Cymorth yn y Dewislen, a disgrifiad yr ap yn y farchnad.
+Diolch am gefnogi FanRDP a meddalwedd ffynhonnell agored yn gyffredinol! Am gymorth gyda defnyddio FanRDP, gweler yr eitemau Cymorth yn y Dewislen, a disgrifiad yr ap yn y farchnad.
 &lt;br&gt;
 &lt;br&gt;
-Mae rhestr gyfredol o nodweddion aRDP yn cynnwys:
+Mae rhestr gyfredol o nodweddion FanRDP yn cynnwys:
 &lt;br&gt;
 - RDP Plaen, RDP wedi\'i dwnelu dros SSH.
 &lt;br&gt;
@@ -604,7 +604,7 @@ Mae rhestr gyfredol o nodweddion aRDP yn cynnwys:
 &lt;br&gt;
 &lt;br&gt;
 Materion hysbys:</string>
-    <string name="rdp_intro_title">aRDP: Cleient RDP greddfol, diogel</string>
+    <string name="rdp_intro_title">FanRDP: Cleient RDP greddfol, diogel</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Pan fyddwch chi\'n ychwanegu neu\'n golygu cysylltiad, byddwch chi\'n gweld tudalen ffurfweddu cysylltiad. Yma gallwch chi sefydlu cysylltiad RDP newydd, neu ddewis un presennol. Ar y brig mae botwm sy\'n caniatáu i chi gadw\'r cysylltiad. O dan hynny mae lle rydych chi\'n ffurfweddu eich cysylltiad.
 

@@ -85,7 +85,7 @@
     <string name="ad_donate_text2">Pro-versjonen lar deg deaktivere denne dialogen og gir deg tilgang til tilleggsfunksjoner.</string>
     <string name="ad_donate_text3">Hvis du onsker a stotte prosjektet ytterligere, folg lenkene nedenfor for klientapper for: </string>
     <string name="ad_donate_text_vnc">Apen kildekode-prosjektet trenger din stotte! Doner til oss ved a kjope bVNC Pro. Se nedenfor for lenker til bVNC Pro og vare andre apper.</string>
-    <string name="ad_donate_text_rdp">Apen kildekode-prosjektet trenger din stotte! Doner til oss ved a kjope aRDP Pro, som stotter lydoverforinger. Se nedenfor for lenker til aRDP Pro og vare andre apper.</string>
+    <string name="ad_donate_text_rdp">Apen kildekode-prosjektet trenger din stotte! Doner til oss ved a kjope FanRDP, som stotter lydoverforinger. Se nedenfor for lenker til FanRDP og vare andre apper.</string>
     <string name="ad_donate_text_spice">For Proxmox- og oVirt-tilkoblinger, vennligst doner til prosjektet ved a kjope Opaque eller aSPICE Pro. Gratisversjonen av aSPICE stotter bare direkte tilkoblinger til KVM virtuelle maskiner. Se nedenfor for lenker til Opaque og aSPICE Pro, samt vare andre apper.</string>
 
     <string name="address_caption">VNC-server</string>
@@ -452,7 +452,7 @@ Hvis du leter etter et raskt ytelsesskudd, prov a sette Fargemodus til en lavere
     <string name="pro_feature_mfa">Det ser ut til at serveren din har flerfaktor-autentisering aktivert. Vennligst stott prosjektet ved a kjope Pro-versjonen som har stotte for denne funksjonen. En lenke til Pro-versjonen er tilgjengelig i startdialogen.</string>
     <string name="pro_feature_intro">Det ser ut til at du bruker en Pro-funksjon. Vennligst stott prosjektet ved a kjope Pro-versjonen som har stotte for denne funksjonen. Vennligst sjekk introdialogen for lenker til riktig app.</string>
     <string name="pro_feature_generic">Det ser ut til at du bruker en Pro-funksjon. Vennligst stott prosjektet ved a kjope Pro-versjonen som har stotte for denne funksjonen. En lenke til Pro-versjonen er tilgjengelig i startdialogen.</string>
-    <string name="pro_feature_rdp">Det ser ut til at du provet a apne en .rdp-fil, som er en Pro-funksjon. Vennligst stott prosjektet ved a kjope aRDP Pro, som stotter .rdp-filer. En lenke til aRDP Pro-versjonen er tilgjengelig i startdialogen.</string>
+    <string name="pro_feature_rdp">Det ser ut til at du provet a apne en .rdp-fil, som er en Pro-funksjon. Vennligst stott prosjektet ved a kjope FanRDP, som stotter .rdp-filer. En lenke til FanRDP-versjonen er tilgjengelig i startdialogen.</string>
     <string name="pro_feature_spice">Det ser ut til at du provet a apne en .vv-fil. Hvis du onsker a lagre tilkoblinger til Proxmox eller oVirt direkte i appen og ogsa vil apne .vv-filer, vurder a kjope Opaque. Hvis du bare trenger .vv-filstotte, kan du fa aSPICE Pro. Finn lenker til begge appene i startdialogen.</string>
 
     <string name="rdp_address_caption_hint">RDP-server</string>
@@ -480,10 +480,10 @@ Hvis du leter etter et raskt ytelsesskudd, prov a sette Fargemodus til en lavere
     <string name="rdp_security_tls">TLS-sikkerhet</string>
     <string name="rdp_security_nla">Nettverksniva-autentisering</string>
     <string name="rdp_intro_text">
-Takk for at du stotter aRDP og apen kildekode-programvare generelt! For hjelp med a bruke aRDP, se Hjelp-elementene i menyen, og beskrivelsen av appen i markedet.
+Takk for at du stotter FanRDP og apen kildekode-programvare generelt! For hjelp med a bruke FanRDP, se Hjelp-elementene i menyen, og beskrivelsen av appen i markedet.
 &lt;br&gt;
 &lt;br&gt;
-Gjeldende liste over aRDP-funksjoner inkluderer:
+Gjeldende liste over FanRDP-funksjoner inkluderer:
 &lt;br&gt;
 - Vanlig RDP, RDP tunnelert over SSH.
 &lt;br&gt;
@@ -531,7 +531,7 @@ Gjeldende liste over aRDP-funksjoner inkluderer:
 &lt;br&gt;
 &lt;br&gt;
 Kjente problemer:</string>
-    <string name="rdp_intro_title">aRDP: Intuitiv, sikker RDP-klient</string>
+    <string name="rdp_intro_title">FanRDP: Intuitiv, sikker RDP-klient</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Nar du legger til eller redigerer en tilkobling, vil du se en tilkoblingskonfigurasjonsside. Her kan du sette opp en ny RDP-tilkobling, eller velge en eksisterende. Overst er en knapp som lar deg lagre tilkoblingen. Under det konfigurerer du tilkoblingen din.
 

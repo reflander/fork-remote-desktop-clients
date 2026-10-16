@@ -5,7 +5,7 @@
     <string name="ad_donate_text2">Wersja Pro pozwala na ukrycie tego okna i zawiera dodatkowe funkcje.</string>
     <string name="ad_donate_text3">Jeśli chciałbyś wesprzeć projekt, zajrzyj w następujące linki, aby zdobyć aplikacje dla:</string>
     <string name="ad_donate_text_vnc">Projekt open source potrzebuje Twojego wsparcia! Wesprzyj nas kupując bVNC Pro. Linki do bVNC Pro i naszych innych aplikacji znajdziesz poniżej.</string>
-    <string name="ad_donate_text_rdp">Projekt open source potrzebuje Twojego wsparcia! Wesprzyj nas kupując aRDP Pro, które obsługuje przekierowanie dźwięku. Linki do aRDP Pro i naszych innych aplikacji znajdziesz poniżej.</string>
+    <string name="ad_donate_text_rdp">Projekt open source potrzebuje Twojego wsparcia! Wesprzyj nas kupując FanRDP, które obsługuje przekierowanie dźwięku. Linki do FanRDP i naszych innych aplikacji znajdziesz poniżej.</string>
     <string name="ad_donate_text_spice">Do połączeń z Proxmox i oVirt prosimy o wsparcie projektu poprzez zakup Opaque lub aSPICE Pro. Darmowa wersja aSPICE obsługuje tylko bezpośrednie połączenia z maszynami wirtualnymi KVM. Linki do Opaque i aSPICE Pro oraz naszych innych aplikacji znajdziesz poniżej.</string>
     <string name="ad_donate_spice_text1a">Kliknij tutaj, aby kupić Opaque i zapisywać bezpośrednie połączenia z Proxmox i oVirt. Obsługuje również pliki .vv.</string>
     <string name="ad_donate_spice_text1b">Kliknij tutaj, aby kupić wersję Pro i otwierać pliki .vv.</string>
@@ -132,7 +132,7 @@
     <string name="extra_keys_enable">Włącz dodatkowe klawisze</string>
     <string name="fit_to_screen">Dopasuj do ekranu</string>
     <string name="force">Mapa bitowa pełnoekranowa</string>
-    <string name="freeardp_app_name">aRDP Free</string>
+    <string name="freeardp_app_name">FanRDP Free</string>
     <string name="freeaspice_app_name">aSPICE Free</string>
     <string name="freebvnc_app_name">bVNC Free</string>
     <string name="immersive_mode_disable">Wyłącz tryb pełnoekranowy</string>
@@ -221,7 +221,7 @@
         <item>\@string/rdp_geom_native_portrait</item>
         <item>\@string/rdp_geom_custom</item>
     </string-array>
-    <string name="rdp_intro_title">aRDP: Intuicyjny i bezpieczny klient RDP</string>
+    <string name="rdp_intro_title">FanRDP: Intuicyjny i bezpieczny klient RDP</string>
     <string name="rdp_password_hint">Hasło RDP</string>
     <string name="rdp_server_empty">Pole serwera lub portu RDP nie może być puste. Nie można połączyć.</string>
     <string name="rdp_username_hint">Nazwa użytkownika RDP</string>
@@ -292,7 +292,7 @@
     <string name="pro_feature_mfa">Wygląda na to, że Twój serwer ma włączone uwierzytelnianie wieloczynnikowe. Prosimy o wsparcie projektu poprzez zakup wersji Pro, która obsługuje tę funkcję. Link do wersji Pro jest dostępny w oknie startowym.</string>
     <string name="pro_feature_intro">Wygląda na to, że używasz funkcji Pro. Prosimy o wsparcie projektu poprzez zakup wersji Pro, która obsługuje tę funkcję. Sprawdź okno wprowadzające, aby znaleźć linki do odpowiedniej aplikacji.</string>
     <string name="pro_feature_generic">Wygląda na to, że używasz funkcji Pro. Prosimy o wsparcie projektu poprzez zakup wersji Pro, która obsługuje tę funkcję. Link do wersji Pro jest dostępny w oknie startowym.</string>
-    <string name="pro_feature_rdp">Wygląda na to, że próbujesz otworzyć plik .rdp, co jest funkcją Pro. Prosimy o wsparcie projektu poprzez zakup aRDP Pro, które obsługuje pliki .rdp. Link do aRDP Pro jest dostępny w oknie startowym.</string>
+    <string name="pro_feature_rdp">Wygląda na to, że próbujesz otworzyć plik .rdp, co jest funkcją Pro. Prosimy o wsparcie projektu poprzez zakup FanRDP, które obsługuje pliki .rdp. Link do FanRDP jest dostępny w oknie startowym.</string>
     <string name="pro_feature_spice">Wygląda na to, że próbujesz otworzyć plik .vv. Jeśli chcesz zapisywać połączenia z Proxmox lub oVirt bezpośrednio w aplikacji i otwierać pliki .vv, rozważ zakup Opaque. Jeśli potrzebujesz tylko obsługi plików .vv, możesz kupić aSPICE Pro. Linki do obu aplikacji znajdziesz w oknie startowym.</string>
     <string name="info_cert_signatures_identical">\n\nMożesz upewnić się, że informacje są zgodne z certyfikatem serwera, aby zapobiec atakowi typu man-in-the-middle.</string>
     <string name="info_vm_launched_on_stand_by">Znaleziono maszynę wirtualną wyłączoną i uruchomioną. Spróbuj ponownie za kilka minut. Jeśli spróbujesz zbyt wcześnie i wystąpi błąd połączenia, spróbuj ponownie później.</string>
@@ -589,10 +589,10 @@ Znane problemy:
     <string name="pref_keyboard_type_label_TYPE_NULL">Domyślny (TYPE_NULL)</string>
     <string name="error_uri_parse_error">Nie można przeanalizować identyfikatora URI zamiaru. Sprawdź format URI. Aby uzyskać więcej informacji, możesz także zobaczyć logcat urządzenia.</string>
     <string name="error">Błąd</string>
-    <string name="rdp_intro_text">Dziękujemy za wsparcie aRDP i ogólnie oprogramowania typu open source! Aby uzyskać pomoc dotyczącą korzystania z protokołu aRDP, zapoznaj się z elementami Pomocy w Menu oraz opisem aplikacji na rynku.
+    <string name="rdp_intro_text">Dziękujemy za wsparcie FanRDP i ogólnie oprogramowania typu open source! Aby uzyskać pomoc dotyczącą korzystania z protokołu FanRDP, zapoznaj się z elementami Pomocy w Menu oraz opisem aplikacji na rynku.
 &lt;br&gt;
 &lt;br&gt;
-Aktualna lista funkcji aRDP obejmuje:
+Aktualna lista funkcji FanRDP obejmuje:
 &lt;br&gt;
 - Zwykły RDP, RDP tunelowany przez SSH.
 &lt;br&gt;

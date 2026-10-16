@@ -79,7 +79,7 @@
     <string name="ad_donate_text1">Toque aqui para apoiar o projeto com uma pequena doação através da compra da versão Pro.</string>
     <string name="ad_donate_text2">A versão Pro permite desativar este diálogo e lhe dá acesso a funcionalidades adicionais.</string>
     <string name="ad_donate_text3">Se você gostaria de apoiar ainda mais o projeto, siga os links seguintes para obter outros links de aplicativos de clientes para: </string>
-    <string name="ad_donate_text_rdp">O projeto de código aberto precisa do seu apoio! Doe comprando o aRDP Pro, que suporta redirecionamento de som. Veja abaixo os links para o aRDP Pro e nossos outros aplicativos.</string>
+    <string name="ad_donate_text_rdp">O projeto de código aberto precisa do seu apoio! Doe comprando o FanRDP, que suporta redirecionamento de som. Veja abaixo os links para o FanRDP e nossos outros aplicativos.</string>
     <string name="ad_donate_text_spice">Para conexões Proxmox e oVirt, por favor doe ao projeto comprando Opaque ou aSPICE Pro. A versão gratuita do aSPICE suporta apenas conexões diretas a máquinas virtuais KVM. Veja abaixo os links para Opaque e aSPICE Pro, bem como nossos outros aplicativos.</string>
     <string name="ad_donate_text_vnc">O projeto de código aberto precisa do seu apoio! Doe comprando o bVNC Pro. Veja abaixo os links para o bVNC Pro e nossos outros aplicativos.</string>
     <string name="ad_donate_spice_text1a">Toque aqui para comprar o Opaque e salvar conexões diretas ao Proxmox e oVirt. Também suporta arquivos .vv.</string>
@@ -488,7 +488,7 @@ Se você estiver procurando um rápido aumento de desempenho, tente ajustar o Mo
     <string name="pro_feature_mfa">Parece que seu servidor tem a autenticação de vários fatores ativada. Por favor contribua ao projeto adquirindo a versão Pro que tem suporte para esta funcionalidade. Um link para a versão Pro está disponível no diálogo iniciar.</string>
     <string name="pro_feature_intro">Parece que você está usando um recurso Pro. Por favor apoie o projeto comprando a versão Pro que tem suporte para este recurso. Verifique o diálogo de introdução para links para o aplicativo correto.</string>
     <string name="pro_feature_generic">Parece que você está usando um recurso Pro. Por favor apoie o projeto comprando a versão Pro que tem suporte para este recurso. Um link para a versão Pro está disponível no diálogo de início.</string>
-    <string name="pro_feature_rdp">Parece que você tentou abrir um arquivo .rdp, que é um recurso Pro. Por favor apoie o projeto comprando o aRDP Pro, que suporta arquivos .rdp. Um link para a versão aRDP Pro está disponível no diálogo de início.</string>
+    <string name="pro_feature_rdp">Parece que você tentou abrir um arquivo .rdp, que é um recurso Pro. Por favor apoie o projeto comprando o FanRDP, que suporta arquivos .rdp. Um link para a versão FanRDP está disponível no diálogo de início.</string>
     <string name="pro_feature_spice">Parece que você tentou abrir um arquivo .vv. Se deseja salvar conexões ao Proxmox ou oVirt diretamente no aplicativo e também abrir arquivos .vv, considere comprar o Opaque. Se você só precisa de suporte a arquivos .vv, pode obter o aSPICE Pro. Encontre links para ambos os aplicativos no diálogo de início.</string>
 
     <string name="rdp_address_caption_hint">Servidor de RDP</string>
@@ -527,10 +527,10 @@ Se você estiver procurando um rápido aumento de desempenho, tente ajustar o Mo
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-"Obrigado por apoiar o aRDP, e o software de código livre em geral! Para obter ajuda no uso do aRDP, veja os itens de Ajuda no Menu, e a descrição do aplicativo nas lojas.
+"Obrigado por apoiar o FanRDP, e o software de código livre em geral! Para obter ajuda no uso do FanRDP, veja os itens de Ajuda no Menu, e a descrição do aplicativo nas lojas.
 &lt;br&gt;
 &lt;br&gt;
-A lista atual de funcionalidades de aRDP:
+A lista atual de funcionalidades de FanRDP:
 &lt;br&gt;
 - RDP simples, RDP sobre túnel de SSH.
 &lt;br&gt;
@@ -569,7 +569,7 @@ A lista atual de funcionalidades de aRDP:
 - Suporte completo de mouse nos dispositivos Android 4.0+, incluindo clique direito e do meio e rolagem do mouse.
 &lt;br&gt;
 &lt;br&gt;
-As funcionalidades planejadas de aRDP incluem:
+As funcionalidades planejadas de FanRDP incluem:
 &lt;br&gt;
 - Uma escolha de modos de cor
 &lt;br&gt;
@@ -581,7 +581,7 @@ As funcionalidades planejadas de aRDP incluem:
 &lt;br&gt;
 &lt;br&gt;
 Problemas conhecidos:</string>
-    <string name="rdp_intro_title">aRDP: Cliente de RDP Intuitivo e seguro</string>
+    <string name="rdp_intro_title">FanRDP: Cliente de RDP Intuitivo e seguro</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">
 "Ao adicionar ou editar uma conexão, você verá uma página de configuração de conexão. Aqui você pode configurar uma nova conexão de RDP, ou escolher uma preexistente. Na parte superior há um botão que lhe permite salvar a conexão. Abaixo disso é onde você configura sua conexão.
 

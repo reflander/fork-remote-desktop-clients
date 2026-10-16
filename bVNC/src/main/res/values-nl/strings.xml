@@ -85,7 +85,7 @@
     <string name="ad_donate_text2">Met de Pro-versie kunt u dit dialoogvenster uitschakelen en krijgt u toegang tot extra functies.</string>
     <string name="ad_donate_text3">Als u het project verder wilt ondersteunen, volg de volgende links voor links naar client-apps voor: </string>
     <string name="ad_donate_text_vnc">Het Open Source-project heeft uw steun nodig! Doneer aan ons door bVNC Pro te kopen. Zie hieronder voor links naar bVNC Pro en onze andere apps.</string>
-    <string name="ad_donate_text_rdp">Het Open Source-project heeft uw steun nodig! Doneer aan ons door aRDP Pro te kopen, dat geluidsomleiding ondersteunt. Zie hieronder voor links naar aRDP Pro en onze andere apps.</string>
+    <string name="ad_donate_text_rdp">Het Open Source-project heeft uw steun nodig! Doneer aan ons door FanRDP te kopen, dat geluidsomleiding ondersteunt. Zie hieronder voor links naar FanRDP en onze andere apps.</string>
     <string name="ad_donate_text_spice">Voor Proxmox- en oVirt-verbindingen kunt u het project steunen door Opaque of aSPICE Pro te kopen. De gratis versie van aSPICE ondersteunt alleen directe verbindingen met KVM virtuele machines. Zie hieronder voor links naar Opaque en aSPICE Pro, evenals onze andere apps.</string>
 
     <string name="address_caption">VNC-server</string>
@@ -454,7 +454,7 @@ Als u op zoek bent naar een snelle prestatieverbetering, probeer dan de Kleurmod
     <string name="pro_feature_mfa">Het lijkt erop dat uw server meervoudige authenticatie heeft ingeschakeld. Steun het project door de Pro-versie te kopen die ondersteuning heeft voor deze functie. Een link naar de Pro-versie is beschikbaar in het startdialoogvenster.</string>
     <string name="pro_feature_intro">Het lijkt erop dat u een Pro-functie gebruikt. Steun het project door de Pro-versie te kopen die ondersteuning heeft voor deze functie. Raadpleeg het introdialoogvenster voor links naar de juiste app.</string>
     <string name="pro_feature_generic">Het lijkt erop dat u een Pro-functie gebruikt. Steun het project door de Pro-versie te kopen die ondersteuning heeft voor deze functie. Een link naar de Pro-versie is beschikbaar in het startdialoogvenster.</string>
-    <string name="pro_feature_rdp">Het lijkt erop dat u een .rdp-bestand probeerde te openen, wat een Pro-functie is. Steun het project door aRDP Pro te kopen, dat .rdp-bestanden ondersteunt. Een link naar de aRDP Pro-versie is beschikbaar in het startdialoogvenster.</string>
+    <string name="pro_feature_rdp">Het lijkt erop dat u een .rdp-bestand probeerde te openen, wat een Pro-functie is. Steun het project door FanRDP te kopen, dat .rdp-bestanden ondersteunt. Een link naar de FanRDP-versie is beschikbaar in het startdialoogvenster.</string>
     <string name="pro_feature_spice">Het lijkt erop dat u een .vv-bestand probeerde te openen. Als u verbindingen met Proxmox of oVirt direct in de app wilt opslaan en ook .vv-bestanden wilt openen, overweeg dan Opaque te kopen. Als u alleen .vv-bestandsondersteuning nodig heeft, kunt u aSPICE Pro krijgen. Vind links naar beide apps in het startdialoogvenster.</string>
 
     <string name="rdp_address_caption_hint">RDP-server</string>
@@ -482,10 +482,10 @@ Als u op zoek bent naar een snelle prestatieverbetering, probeer dan de Kleurmod
     <string name="rdp_security_tls">TLS-beveiliging</string>
     <string name="rdp_security_nla">Netwerkniveau-authenticatie</string>
     <string name="rdp_intro_text">
-Bedankt voor het ondersteunen van aRDP en open-source software in het algemeen! Voor hulp bij het gebruik van aRDP, zie de Help-items in het menu en de beschrijving van de app in de markt.
+Bedankt voor het ondersteunen van FanRDP en open-source software in het algemeen! Voor hulp bij het gebruik van FanRDP, zie de Help-items in het menu en de beschrijving van de app in de markt.
 &lt;br&gt;
 &lt;br&gt;
-Huidige lijst van aRDP-functies:
+Huidige lijst van FanRDP-functies:
 &lt;br&gt;
 - Gewoon RDP, RDP getunneld via SSH.
 &lt;br&gt;
@@ -533,7 +533,7 @@ Huidige lijst van aRDP-functies:
 &lt;br&gt;
 &lt;br&gt;
 Bekende problemen:</string>
-    <string name="rdp_intro_title">aRDP: Intuitieve, beveiligde RDP-client</string>
+    <string name="rdp_intro_title">FanRDP: Intuitieve, beveiligde RDP-client</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Wanneer u een verbinding toevoegt of bewerkt, ziet u een verbindingsconfiguratiepagina. Hier kunt u een nieuwe RDP-verbinding instellen of een bestaande kiezen. Bovenaan staat een knop waarmee u de verbinding kunt opslaan. Daaronder configureert u uw verbinding.
 

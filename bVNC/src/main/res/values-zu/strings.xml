@@ -85,7 +85,7 @@
     <string name="ad_donate_text2">Inguqulo ye-Pro ikuvumela ukuthi ukhubaze le ngxoxo futhi ikunikeze ukufinyelela ezicini ezengeziwe.</string>
     <string name="ad_donate_text3">Uma ungathanda ukusekela iphrojekthi ngokuningi, landela izixhumanisi ezilandelayo zamaxhumaniso ezihlelo zokusebenza zamakhasimende zika-: </string>
     <string name="ad_donate_text_vnc">Iphrojekthi ye-Open Source idinga ukusekelwa kwakho! Nikela kithi ngokuthenga bVNC Pro. Bona ngezansi amaxhumaniso aya ku-bVNC Pro nezinye izinhlelo zokusebenza zethu.</string>
-    <string name="ad_donate_text_rdp">Iphrojekthi ye-Open Source idinga ukusekelwa kwakho! Nikela kithi ngokuthenga aRDP Pro, esekela ukuqondisa kabusha komsindo. Bona ngezansi amaxhumaniso aya ku-aRDP Pro nezinye izinhlelo zokusebenza zethu.</string>
+    <string name="ad_donate_text_rdp">Iphrojekthi ye-Open Source idinga ukusekelwa kwakho! Nikela kithi ngokuthenga FanRDP, esekela ukuqondisa kabusha komsindo. Bona ngezansi amaxhumaniso aya ku-FanRDP nezinye izinhlelo zokusebenza zethu.</string>
     <string name="ad_donate_text_spice">Ngoxhumano lwe-Proxmox ne-oVirt, sicela unikele kuphrojekthi ngokuthenga Opaque noma aSPICE Pro. Inguqulo yamahhala ye-aSPICE isekela kuphela uxhumano oluqondile kumaShini Ebonakalayo e-KVM. Bona ngezansi amaxhumaniso aya ku-Opaque ne-aSPICE Pro, kanye nezinye izinhlelo zokusebenza zethu.</string>
 
     <string name="address_caption">Iseva ye-VNC</string>
@@ -452,7 +452,7 @@ Uma ufuna ukukhuphulwa kwamandla okushesha, zama ukusetha Imodi Yombala kulingan
     <string name="pro_feature_mfa">Kubonakala sengathi iseva yakho inokuqinisekisa okuningi okuvuliwe. Sicela usekele iphrojekthi ngokuthenga inguqulo ye-Pro enesekelo lalesi sici. Ixhumaniso lokuya inguqulweni ye-Pro litholakala engxoxweni yokuqala.</string>
     <string name="pro_feature_intro">Kubonakala sengathi usebenzisa isici se-Pro. Sicela usekele iphrojekthi ngokuthenga inguqulo ye-Pro enesekelo lalesi sici. Sicela uhlole ingxoxo yesethulo ukuthola amaxhumaniso ohlelo zokusebenza olufanele.</string>
     <string name="pro_feature_generic">Kubonakala sengathi usebenzisa isici se-Pro. Sicela usekele iphrojekthi ngokuthenga inguqulo ye-Pro enesekelo lalesi sici. Ixhumaniso lokuya inguqulweni ye-Pro litholakala engxoxweni yokuqala.</string>
-    <string name="pro_feature_rdp">Kubonakala sengathi uzamile ukuvula ifayela le-.rdp okuyisici se-Pro. Sicela usekele iphrojekthi ngokuthenga aRDP Pro, esekela amafayela e-.rdp. Ixhumaniso lokuya inguqulweni ye-aRDP Pro litholakala engxoxweni yokuqala.</string>
+    <string name="pro_feature_rdp">Kubonakala sengathi uzamile ukuvula ifayela le-.rdp okuyisici se-Pro. Sicela usekele iphrojekthi ngokuthenga FanRDP, esekela amafayela e-.rdp. Ixhumaniso lokuya inguqulweni ye-FanRDP litholakala engxoxweni yokuqala.</string>
     <string name="pro_feature_spice">Kubonakala sengathi uzamile ukuvula ifayela le-.vv. Uma ungathanda ukulondoloza uxhumano ku-Proxmox noma ku-oVirt ngqo ngaphakathi kohlelo zokusebenza futhi ufune ukuvula amafayela e-.vv, cabanga ngokuthenga Opaque. Uma udinga ukusekelwa kwefayela le-.vv kuphela, ungathola aSPICE Pro. Thola amaxhumaniso azo zombili izinhlelo zokusebenza engxoxweni yokuqala.</string>
 
     <string name="rdp_address_caption_hint">Iseva ye-RDP</string>
@@ -480,10 +480,10 @@ Uma ufuna ukukhuphulwa kwamandla okushesha, zama ukusetha Imodi Yombala kulingan
     <string name="rdp_security_tls">Ukuphepha kwe-TLS</string>
     <string name="rdp_security_nla">Ukuqinisekisa Kwezinga Lenethiwekhi</string>
     <string name="rdp_intro_text">
-Siyabonga ngokusekelwa kwe-aRDP kanye nesofthiwe ye-open-source ngokujwayelekile! Ukuthola usizo ngokusebenzisa i-aRDP, bona izinto Zosizo kuMenyu, nencazelo yohlelo zokusebenza emakethe.
+Siyabonga ngokusekelwa kwe-FanRDP kanye nesofthiwe ye-open-source ngokujwayelekile! Ukuthola usizo ngokusebenzisa i-FanRDP, bona izinto Zosizo kuMenyu, nencazelo yohlelo zokusebenza emakethe.
 &lt;br&gt;
 &lt;br&gt;
-Uhlu lwamanje lwezici ze-aRDP lufaka:
+Uhlu lwamanje lwezici ze-FanRDP lufaka:
 &lt;br&gt;
 - RDP Evamile, RDP edluliswe ngethunneli ye-SSH.
 &lt;br&gt;
@@ -531,7 +531,7 @@ Uhlu lwamanje lwezici ze-aRDP lufaka:
 &lt;br&gt;
 &lt;br&gt;
 Izinkinga ezaziwayo:</string>
-    <string name="rdp_intro_title">aRDP: Iqalabulzo ye-RDP eqondile, ephephile</string>
+    <string name="rdp_intro_title">FanRDP: Iqalabulzo ye-RDP eqondile, ephephile</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Uma ungeza noma uhlela uxhumano, uzobona ikhasi lokulungiselelwa koxhumano. Lapha ungalungiselela uxhumano olusha lwe-RDP, noma ukhethe oluvele lukhona. Phezulu kukhona inkinobho ekuvumela ukuthi ulondoloze uxhumano. Ngezansi kungalapho ulungisa khona uxhumano lwakho.
 

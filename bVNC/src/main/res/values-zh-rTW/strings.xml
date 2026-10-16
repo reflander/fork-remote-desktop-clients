@@ -82,7 +82,7 @@
     <string name="ad_donate_text1">如果您購買Pro版本並且同意捐贈我們的話，請點選這裡。</string>
     <string name="ad_donate_text2">使用Pro版本時，可以將這個對話框設定為無效，也可以存取追加功能。</string>
     <string name="ad_donate_text3">項目的詳細請參照以下客戶端應用用鏈接：</string>
-    <string name="ad_donate_text_rdp">開源專案需要您的支持！請透過購買aRDP Pro進行捐贈，該版本支援聲音重新導向。請參閱下方的aRDP Pro及我們其他應用的連結。</string>
+    <string name="ad_donate_text_rdp">開源專案需要您的支持！請透過購買FanRDP進行捐贈，該版本支援聲音重新導向。請參閱下方的FanRDP及我們其他應用的連結。</string>
     <string name="ad_donate_text_spice">如需連線Proxmox和oVirt，請透過購買Opaque或aSPICE Pro來支持本專案。aSPICE免費版僅支援直接連線KVM虛擬機。請參閱下方Opaque和aSPICE Pro以及我們其他應用的連結。</string>
     <string name="ad_donate_text_vnc">開源專案需要您的支持！請透過購買bVNC Pro進行捐贈。請參閱下方的bVNC Pro及我們其他應用的連結。</string>
     <string name="ad_donate_spice_text1a">點選此處購買Opaque，儲存與Proxmox和oVirt的直接連線。還支援.vv檔案。</string>
@@ -173,6 +173,8 @@
     <string name="connection_edit_delete_prompt">你想編輯或刪除連接嗎？</string>
     <string name="connection_edit">編輯</string>
     <string name="connection_delete">刪除</string>
+    <string name="connection_pin_top">置頂</string>
+    <string name="connection_unpin_top">取消置頂</string>
 
 
     <string name="control_check">Ctrl</string>
@@ -458,7 +460,7 @@ bVNC對應的功能如下：
     <string name="pro_feature_mfa">看來您的伺服器已啟用多因素身份驗證。請購買支持此功能的Pro版本。在開始對話框中有Pro版本的鏈接。</string>
     <string name="pro_feature_intro">您似乎正在使用Pro版功能。請購買支援此功能的Pro版本來支持本專案。請查看介紹對話框中正確應用的連結。</string>
     <string name="pro_feature_generic">您似乎正在使用Pro版功能。請購買支援此功能的Pro版本來支持本專案。在開始對話框中有Pro版本的連結。</string>
-    <string name="pro_feature_rdp">您似乎嘗試開啟.rdp檔案，這是Pro版功能。請購買支援.rdp檔案的aRDP Pro來支持本專案。aRDP Pro的連結在開始對話框中。</string>
+    <string name="pro_feature_rdp">您似乎嘗試開啟.rdp檔案，這是Pro版功能。請購買支援.rdp檔案的FanRDP來支持本專案。FanRDP的連結在開始對話框中。</string>
     <string name="pro_feature_spice">您似乎嘗試開啟.vv檔案。如果您想在應用中直接儲存到Proxmox或oVirt的連線並開啟.vv檔案，請考慮購買Opaque。如果您只需要.vv檔案支援，可以購買aSPICE Pro。兩個應用的連結都在開始對話框中。</string>
     <string name="rdp_address_caption_hint">RDP伺服器</string>
     <string name="rdp_adv_console_mode">控制台模式</string>
@@ -496,10 +498,10 @@ bVNC對應的功能如下：
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-感謝您支援aRDP以及開源軟件！關於aRDP的用法，請參照功能表中的幫助項目以及應用的說明。
+感謝您支援FanRDP以及開源軟件！關於FanRDP的用法，請參照功能表中的幫助項目以及應用的說明。
 &lt;br&gt;
 &lt;br&gt;
-aRDP對應的功能如下：
+FanRDP對應的功能如下：
 &lt;br&gt;
 - Plain RDP／經過SSH隧道的RDP
 &lt;br&gt;
@@ -536,7 +538,7 @@ aRDP對應的功能如下：
 - 在Android 4.0以上版本的設備支持完整滑鼠，包括右鍵、中鍵以及滾輪。
 &lt;br&gt;
 &lt;br&gt;
-aRDP對應預定的功能：
+FanRDP對應預定的功能：
 &lt;br&gt;
 - 彩色模式選擇
 &lt;br&gt;
@@ -550,7 +552,7 @@ aRDP對應預定的功能：
 已知的問題：
 &lt;br&gt;
   </string>
-    <string name="rdp_intro_title">aRDP：又直觀又安全的RDP客戶端</string>
+    <string name="rdp_intro_title">FanRDP：又直觀又安全的RDP客戶端</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 新建或編輯連接時連接設定畫面會顯示出來。在此可以設置新的RDP連接設定或選擇現有的連接。頂部有儲存連接的按鈕，下面可設定連接。
 
@@ -567,8 +569,8 @@ aRDP對應預定的功能：
 
 -RDP連接設置：
  （a）RDP伺服器／端口：在此輸入運行RDP伺服器的計算機的主機名或IP地址與端口號。在透過SSH模式的RDP中，SSH伺服器也可以看到此IP地址。如果SSH伺服器與RDP伺服器在同一台計算機上，就可以使用localhost。RDP伺服器通常用端口3389偵聽（第一個RDP屏幕，屏幕：0）。
- （b）RDP用戶：在具有Windows登入模式的UltraRDP中可用，或透過VeNCrypt的安全RDP中可用。在此輸入Windows / UNIX帳戶用戶名。
- （c）RDP密碼：如果您的RDP伺服器設置需要密碼，在此輸入該密碼。具有Windows登入或VeNCrypt模式的UltraRDP的話，在此輸入Windows / UNIX帳戶密碼。 密碼不使用安全存儲，只有選中“保持”選項，才會存儲密碼。未退出應用程式，密碼就保留在畫面上。
+ （b）RDP用戶：在具有Windows登入模式的UltrFanRDP中可用，或透過VeNCrypt的安全RDP中可用。在此輸入Windows / UNIX帳戶用戶名。
+ （c）RDP密碼：如果您的RDP伺服器設置需要密碼，在此輸入該密碼。具有Windows登入或VeNCrypt模式的UltrFanRDP的話，在此輸入Windows / UNIX帳戶密碼。 密碼不使用安全存儲，只有選中“保持”選項，才會存儲密碼。未退出應用程式，密碼就保留在畫面上。
 
 -詳細設定：在此進行桌面分辨率的自定義設定或者RDP性能微調。
 

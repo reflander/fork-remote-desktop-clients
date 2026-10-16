@@ -85,7 +85,7 @@
     <string name="ad_donate_text2">Pro-versionen låter dig inaktivera denna dialog och ger dig tillgång till ytterligare funktioner.</string>
     <string name="ad_donate_text3">Om du vill stödja projektet ytterligare, följ följande länkar för klientappar för: </string>
     <string name="ad_donate_text_vnc">Öppen källkodsprojektet behöver ditt stöd! Donera till oss genom att köpa bVNC Pro. Se nedan för länkar till bVNC Pro och våra andra appar.</string>
-    <string name="ad_donate_text_rdp">Öppen källkodsprojektet behöver ditt stöd! Donera till oss genom att köpa aRDP Pro, som stöder ljudomdirigering. Se nedan för länkar till aRDP Pro och våra andra appar.</string>
+    <string name="ad_donate_text_rdp">Öppen källkodsprojektet behöver ditt stöd! Donera till oss genom att köpa FanRDP, som stöder ljudomdirigering. Se nedan för länkar till FanRDP och våra andra appar.</string>
     <string name="ad_donate_text_spice">För Proxmox- och oVirt-anslutningar, vänligen donera till projektet genom att köpa Opaque eller aSPICE Pro. Gratisversionen av aSPICE stöder bara direktanslutningar till KVM-virtuella maskiner. Se nedan för länkar till Opaque och aSPICE Pro, samt våra andra appar.</string>
 
     <string name="address_caption">VNC-server</string>
@@ -454,7 +454,7 @@ Om du letar efter en snabb prestandaförbättring, prova att ställa in färglä
     <string name="pro_feature_mfa">Det verkar som att din server har flerfaktorsautentisering aktiverad. Vänligen stöd projektet genom att köpa Pro-versionen som har stöd för denna funktion. En länk till Pro-versionen finns i startdialogen.</string>
     <string name="pro_feature_intro">Det verkar som att du använder en Pro-funktion. Vänligen stöd projektet genom att köpa Pro-versionen som har stöd för denna funktion. Vänligen kontrollera introduktionsdialogen för länkar till rätt app.</string>
     <string name="pro_feature_generic">Det verkar som att du använder en Pro-funktion. Vänligen stöd projektet genom att köpa Pro-versionen som har stöd för denna funktion. En länk till Pro-versionen finns i startdialogen.</string>
-    <string name="pro_feature_rdp">Det verkar som att du försökte öppna en .rdp-fil vilket är en Pro-funktion. Vänligen stöd projektet genom att köpa aRDP Pro, som stöder .rdp-filer. En länk till aRDP Pro finns i startdialogen.</string>
+    <string name="pro_feature_rdp">Det verkar som att du försökte öppna en .rdp-fil vilket är en Pro-funktion. Vänligen stöd projektet genom att köpa FanRDP, som stöder .rdp-filer. En länk till FanRDP finns i startdialogen.</string>
     <string name="pro_feature_spice">Det verkar som att du försökte öppna en .vv-fil. Om du vill spara anslutningar till Proxmox eller oVirt direkt i appen och även vill öppna .vv-filer, överväg att köpa Opaque. Om du bara behöver .vv-filstöd kan du skaffa aSPICE Pro. Hitta länkar till båda apparna i startdialogen.</string>
 
     <string name="rdp_address_caption_hint">RDP-server</string>
@@ -482,10 +482,10 @@ Om du letar efter en snabb prestandaförbättring, prova att ställa in färglä
     <string name="rdp_security_tls">TLS-säkerhet</string>
     <string name="rdp_security_nla">Nätverksnivåautentisering</string>
     <string name="rdp_intro_text">
-Tack för att du stöder aRDP och öppen källkod i allmänhet! För hjälp med att använda aRDP, se hjälpalternativen i menyn och beskrivningen av appen i butiken.
+Tack för att du stöder FanRDP och öppen källkod i allmänhet! För hjälp med att använda FanRDP, se hjälpalternativen i menyn och beskrivningen av appen i butiken.
 &lt;br&gt;
 &lt;br&gt;
-Aktuell lista över aRDP-funktioner inkluderar:
+Aktuell lista över FanRDP-funktioner inkluderar:
 &lt;br&gt;
 - Enkel RDP, RDP tunnlad över SSH.
 &lt;br&gt;
@@ -533,7 +533,7 @@ Aktuell lista över aRDP-funktioner inkluderar:
 &lt;br&gt;
 &lt;br&gt;
 Kända problem:</string>
-    <string name="rdp_intro_title">aRDP: Intuitiv, säker RDP-klient</string>
+    <string name="rdp_intro_title">FanRDP: Intuitiv, säker RDP-klient</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 När du lägger till eller redigerar en anslutning ser du en anslutningskonfigurationssida. Här kan du ställa in en ny RDP-anslutning eller välja en befintlig. Högst upp finns en knapp som låter dig spara anslutningen. Nedanför konfigurerar du din anslutning.
 

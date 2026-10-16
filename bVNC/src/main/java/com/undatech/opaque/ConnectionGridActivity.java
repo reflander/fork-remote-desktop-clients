@@ -141,6 +141,11 @@ public class ConnectionGridActivity extends AppCompatActivity implements GetText
             String gridItemText = ((TextView) v.findViewById(R.id.grid_item_text)).getText().toString();
             alertDialogBuilder.setTitle(getString(R.string.connection_edit_delete_prompt) + " " + gridItemText + " ?");
             List<CharSequence> options = new ArrayList<>();
+            // FanRDP: Pin/Unpin to top appears above Edit.
+            String runtimeId = ((TextView) v.findViewById(R.id.grid_item_id)).getText().toString();
+            Connection connection = getConnectionLoader(this).getConnectionsById().get(runtimeId);
+            boolean isPinned = connection != null && isConnectionPinned(connection.getId());
+            options.add(getString(isPinned ? R.string.connection_unpin_top : R.string.connection_pin_top));
             options.add(getString(R.string.connection_edit));
             options.add(getString(R.string.connection_delete));
             if (shortcutCreationSupported()) {
@@ -149,7 +154,9 @@ public class ConnectionGridActivity extends AppCompatActivity implements GetText
             CharSequence[] cs = options.toArray(new CharSequence[0]);
             alertDialogBuilder.setItems(cs, (dialog, item) -> {
                 String choice = cs[item].toString();
-                if (getString(R.string.connection_edit).equals(choice)) {
+                if (getString(R.string.connection_pin_top).equals(choice) || getString(R.string.connection_unpin_top).equals(choice)) {
+                    togglePinConnection(v);
+                } else if (getString(R.string.connection_edit).equals(choice)) {
                     editConnection(v);
                 } else if (getString(R.string.connection_delete).equals(choice)) {
                     deleteConnection(v);
@@ -222,18 +229,87 @@ public class ConnectionGridActivity extends AppCompatActivity implements GetText
     }
 
     private Map<String, Connection> sortConnections(Map<String, Connection> connections) {
-        if (sortOrder == SortOrder.NONE) return connections;
-        List<Connection> list = new ArrayList<>(connections.values());
-        Collections.sort(list, (a, b) -> {
-            String la = a.getLabel();
-            String lb = b.getLabel();
-            return sortOrder == SortOrder.ASC ? la.compareToIgnoreCase(lb) : lb.compareToIgnoreCase(la);
-        });
+        List<String> pinnedIds = loadPinnedConnections();
+        List<Connection> pinned = new ArrayList<>();
+        List<Connection> unpinned = new ArrayList<>();
+        for (Connection c : connections.values()) {
+            if (pinnedIds.contains(c.getId())) pinned.add(c);
+            else unpinned.add(c);
+        }
+        if (sortOrder == SortOrder.ASC || sortOrder == SortOrder.DESC) {
+            Collections.sort(unpinned, (a, b) -> {
+                String la = a.getLabel();
+                String lb = b.getLabel();
+                return sortOrder == SortOrder.ASC ? la.compareToIgnoreCase(lb) : lb.compareToIgnoreCase(la);
+            });
+        }
+        // FanRDP: pinned connections stay at the top in every sort order (pin order, newest first).
+        List<Connection> orderedPinned = new ArrayList<>();
+        for (String pid : pinnedIds) {
+            for (Connection c : pinned) {
+                if (c.getId().equals(pid)) {
+                    orderedPinned.add(c);
+                    break;
+                }
+            }
+        }
+        for (Connection c : pinned) {
+            if (!orderedPinned.contains(c)) orderedPinned.add(c);
+        }
+        List<Connection> all = new ArrayList<>(orderedPinned);
+        all.addAll(unpinned);
         Map<String, Connection> sorted = new LinkedHashMap<>();
-        for (int i = 0; i < list.size(); i++) {
-            sorted.put(String.valueOf(i), list.get(i));
+        for (int i = 0; i < all.size(); i++) {
+            sorted.put(String.valueOf(i), all.get(i));
         }
         return sorted;
+    }
+
+    private static final String PIN_PREFS_NAME = "FanRDPSettings";
+    private static final String PIN_PREFS_KEY = "pinnedConnections";
+
+    private List<String> loadPinnedConnections() {
+        SharedPreferences sp = appContext.getSharedPreferences(PIN_PREFS_NAME, Context.MODE_PRIVATE);
+        String s = sp.getString(PIN_PREFS_KEY, "");
+        List<String> list = new ArrayList<>();
+        if (s != null && !s.isEmpty()) {
+            for (String id : s.split(" ")) {
+                if (!id.isEmpty()) list.add(id);
+            }
+        }
+        return list;
+    }
+
+    private void savePinnedConnections(List<String> pinned) {
+        SharedPreferences sp = appContext.getSharedPreferences(PIN_PREFS_NAME, Context.MODE_PRIVATE);
+        sp.edit().putString(PIN_PREFS_KEY, String.join(" ", pinned)).apply();
+    }
+
+    private boolean isConnectionPinned(String connectionId) {
+        return loadPinnedConnections().contains(connectionId);
+    }
+
+    private void togglePinConnection(View v) {
+        String runtimeId = ((TextView) v.findViewById(R.id.grid_item_id)).getText().toString();
+        Connection connection = getConnectionLoader(this).getConnectionsById().get(runtimeId);
+        if (connection == null) {
+            Log.e(TAG, "togglePinConnection: connection not found for id " + runtimeId);
+            return;
+        }
+        String id = connection.getId();
+        List<String> pinned = loadPinnedConnections();
+        boolean nowPinned;
+        if (pinned.remove(id)) {
+            nowPinned = false;
+        } else {
+            pinned.add(0, id);
+            nowPinned = true;
+        }
+        savePinnedConnections(pinned);
+        Snackbar.make(gridView,
+                getString(nowPinned ? R.string.connection_pin_top : R.string.connection_unpin_top) + ": " + connection.getLabel(),
+                Snackbar.LENGTH_SHORT).show();
+        createAndSetLabeledImageAdapterAndNumberOfColumns();
     }
 
     private void cycleSortState() {

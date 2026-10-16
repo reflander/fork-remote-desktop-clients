@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">Pro-versioon võimaldab selle dialoogi keelata ja annab juurdepääsu lisafunktsioonidele.</string>
     <string name="ad_donate_text3">Kui soovite projekti veelgi toetada, järgige järgmisi linke klientrakendustele: </string>
     <string name="ad_donate_text_vnc">Avatud lähtekoodiga projekt vajab teie tuge! Annetage meile bVNC Pro ostmisega. Allpool on lingid bVNC Pro-le ja meie teistele rakendustele.</string>
-    <string name="ad_donate_text_rdp">Avatud lähtekoodiga projekt vajab teie tuge! Annetage meile aRDP Pro ostmisega, mis toetab heliedastust. Allpool on lingid aRDP Pro-le ja meie teistele rakendustele.</string>
+    <string name="ad_donate_text_rdp">Avatud lähtekoodiga projekt vajab teie tuge! Annetage meile FanRDP ostmisega, mis toetab heliedastust. Allpool on lingid FanRDP-le ja meie teistele rakendustele.</string>
     <string name="ad_donate_text_spice">Proxmox\'i ja oVirt\'i ühenduste jaoks annetage projekti toetuseks Opaque\'i või aSPICE Pro ostmisega. aSPICE tasuta versioon toetab ainult otseühendusi KVM virtuaalmasinatega. Allpool on lingid Opaque\'ile ja aSPICE Pro-le, samuti meie teistele rakendustele.</string>
 
     <string name="address_caption">VNC-server</string>
@@ -490,7 +490,7 @@ Kui soovite kiiret jõudluse parandust, proovige seada värvirežiim madalamale 
     <string name="pro_feature_mfa">Näib, et teie serveril on mitmefaktoriline autentimine lubatud. Toetage projekti Pro-versiooni ostmisega, mis toetab seda funktsiooni. Link Pro-versioonile on saadaval avadialoogis.</string>
     <string name="pro_feature_intro">Näib, et kasutate Pro-funktsiooni. Toetage projekti Pro-versiooni ostmisega, mis toetab seda funktsiooni. Vaadake avadialoogist linke õige rakenduse jaoks.</string>
     <string name="pro_feature_generic">Näib, et kasutate Pro-funktsiooni. Toetage projekti Pro-versiooni ostmisega, mis toetab seda funktsiooni. Link Pro-versioonile on saadaval avadialoogis.</string>
-    <string name="pro_feature_rdp">Näib, et proovisite avada .rdp-faili, mis on Pro-funktsioon. Toetage projekti aRDP Pro ostmisega, mis toetab .rdp-faile. Link aRDP Pro versioonile on saadaval avadialoogis.</string>
+    <string name="pro_feature_rdp">Näib, et proovisite avada .rdp-faili, mis on Pro-funktsioon. Toetage projekti FanRDP ostmisega, mis toetab .rdp-faile. Link FanRDP versioonile on saadaval avadialoogis.</string>
     <string name="pro_feature_spice">Näib, et proovisite avada .vv-faili. Kui soovite salvestada ühendusi Proxmox\'ile või oVirt\'ile otse rakenduses ja avada ka .vv-faile, kaaluge Opaque ostmist. Kui vajate ainult .vv-faili tuge, saate aSPICE Pro. Mõlema rakenduse lingid leiate avadialoogist.</string>
 
     <string name="rdp_address_caption_hint">RDP-server</string>
@@ -553,10 +553,10 @@ Kui soovite kiiret jõudluse parandust, proovige seada värvirežiim madalamale 
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Täname aRDP ja avatud lähtekoodiga tarkvara toetamise eest! aRDP kasutamise abi saamiseks vaadake menüü abüksuseid ja rakenduse kirjeldust turul.
+Täname FanRDP ja avatud lähtekoodiga tarkvara toetamise eest! FanRDP kasutamise abi saamiseks vaadake menüü abüksuseid ja rakenduse kirjeldust turul.
 &lt;br&gt;
 &lt;br&gt;
-aRDP funktsioonide praegune loend sisaldab:
+FanRDP funktsioonide praegune loend sisaldab:
 &lt;br&gt;
 - Tavaline RDP, SSH kaudu tunneldatud RDP.
 &lt;br&gt;
@@ -604,7 +604,7 @@ aRDP funktsioonide praegune loend sisaldab:
 &lt;br&gt;
 &lt;br&gt;
 Teadaolevad probleemid:</string>
-    <string name="rdp_intro_title">aRDP: Intuitiivne, turvaline RDP-klient</string>
+    <string name="rdp_intro_title">FanRDP: Intuitiivne, turvaline RDP-klient</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Kui lisate või redigeerite ühendust, kuvatakse ühenduse konfiguratsiooni leht. Siin saate seadistada uue RDP-ühenduse või valida olemasoleva. Ülaosas on nupp ühenduse salvestamiseks. Allpool konfigureerite ühendust.
 

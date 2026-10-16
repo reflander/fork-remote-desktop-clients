@@ -85,7 +85,7 @@
     <string name="ad_donate_text2">Verze Pro v\u00e1m umo\u017en\u00ed vypnout tento dialog a d\u00e1 v\u00e1m p\u0159\u00edstup k dal\u0161\u00edm funkc\u00edm.</string>
     <string name="ad_donate_text3">Pokud chcete projekt d\u00e1le podpo\u0159it, n\u00e1sledujte n\u00ed\u017ee uveden\u00e9 odkazy na klientsk\u00e9 aplikace pro: </string>
     <string name="ad_donate_text_vnc">Open Source projekt pot\u0159ebuje va\u0161i podporu! P\u0159isp\u011bjte n\u00e1m zakoupen\u00edm bVNC Pro. N\u00ed\u017ee naleznete odkazy na bVNC Pro a na\u0161e dal\u0161\u00ed aplikace.</string>
-    <string name="ad_donate_text_rdp">Open Source projekt pot\u0159ebuje va\u0161i podporu! P\u0159isp\u011bjte n\u00e1m zakoupen\u00edm aRDP Pro, kter\u00fd podporuje p\u0159esm\u011brov\u00e1n\u00ed zvuku. N\u00ed\u017ee naleznete odkazy na aRDP Pro a na\u0161e dal\u0161\u00ed aplikace.</string>
+    <string name="ad_donate_text_rdp">Open Source projekt pot\u0159ebuje va\u0161i podporu! P\u0159isp\u011bjte n\u00e1m zakoupen\u00edm FanRDP, kter\u00fd podporuje p\u0159esm\u011brov\u00e1n\u00ed zvuku. N\u00ed\u017ee naleznete odkazy na FanRDP a na\u0161e dal\u0161\u00ed aplikace.</string>
     <string name="ad_donate_text_spice">Pro p\u0159ipojen\u00ed k Proxmox a oVirt pros\u00edm p\u0159isp\u011bjte projektu zakoupen\u00edm Opaque nebo aSPICE Pro. Bezplatn\u00e1 verze aSPICE podporuje pouze p\u0159\u00edm\u00e1 p\u0159ipojen\u00ed k virtu\u00e1ln\u00edm stroj\u016fm KVM. N\u00ed\u017ee naleznete odkazy na Opaque a aSPICE Pro, stejn\u011b jako na na\u0161e dal\u0161\u00ed aplikace.</string>
 
     <string name="address_caption">VNC Server</string>
@@ -454,7 +454,7 @@ Pokud hled\u00e1te rychl\u00e9 zv\u00fd\u0161en\u00ed v\u00fdkonu, zkuste nastav
     <string name="pro_feature_mfa">Zd\u00e1 se, \u017ee v\u00e1\u0161 server m\u00e1 povoleno v\u00edcefaktorov\u00e9 ov\u011b\u0159ov\u00e1n\u00ed. Podpo\u0159te pros\u00edm projekt zakoupen\u00edm verze Pro, kter\u00e1 tuto funkci podporuje. Odkaz na verzi Pro je dostupn\u00fd v \u00favodn\u00edm dialogu.</string>
     <string name="pro_feature_intro">Zd\u00e1 se, \u017ee pou\u017e\u00edv\u00e1te funkci Pro. Podpo\u0159te pros\u00edm projekt zakoupen\u00edm verze Pro, kter\u00e1 tuto funkci podporuje. Zkontrolujte pros\u00edm \u00favodn\u00ed dialog pro odkazy na spr\u00e1vnou aplikaci.</string>
     <string name="pro_feature_generic">Zd\u00e1 se, \u017ee pou\u017e\u00edv\u00e1te funkci Pro. Podpo\u0159te pros\u00edm projekt zakoupen\u00edm verze Pro, kter\u00e1 tuto funkci podporuje. Odkaz na verzi Pro je dostupn\u00fd v \u00favodn\u00edm dialogu.</string>
-    <string name="pro_feature_rdp">Vypad\u00e1 to, \u017ee jste se pokusili otev\u0159\u00edt soubor .rdp, co\u017e je funkce Pro. Podpo\u0159te pros\u00edm projekt zakoupen\u00edm aRDP Pro, kter\u00fd podporuje soubory .rdp. Odkaz na verzi aRDP Pro je dostupn\u00fd v \u00favodn\u00edm dialogu.</string>
+    <string name="pro_feature_rdp">Vypad\u00e1 to, \u017ee jste se pokusili otev\u0159\u00edt soubor .rdp, co\u017e je funkce Pro. Podpo\u0159te pros\u00edm projekt zakoupen\u00edm FanRDP, kter\u00fd podporuje soubory .rdp. Odkaz na verzi FanRDP je dostupn\u00fd v \u00favodn\u00edm dialogu.</string>
     <string name="pro_feature_spice">Vypad\u00e1 to, \u017ee jste se pokusili otev\u0159\u00edt soubor .vv. Pokud chcete ukl\u00e1dat p\u0159ipojen\u00ed k Proxmox nebo oVirt p\u0159\u00edmo v aplikaci a tak\u00e9 otev\u00edrat soubory .vv, zva\u017ete koupi Opaque. Pokud pot\u0159ebujete pouze podporu soubor\u016f .vv, m\u016f\u017eete z\u00edskat aSPICE Pro. Odkazy na ob\u011b aplikace naleznete v \u00favodn\u00edm dialogu.</string>
 
     <string name="rdp_address_caption_hint">RDP Server</string>
@@ -482,10 +482,10 @@ Pokud hled\u00e1te rychl\u00e9 zv\u00fd\u0161en\u00ed v\u00fdkonu, zkuste nastav
     <string name="rdp_security_tls">TLS zabezpe\u010den\u00ed</string>
     <string name="rdp_security_nla">Ov\u011b\u0159ov\u00e1n\u00ed na \u00farovni s\u00edt\u011b</string>
     <string name="rdp_intro_text">
-D\u011bkujeme za podporu aRDP a open-source softwaru obecn\u011b! Pro n\u00e1pov\u011bdu k pou\u017e\u00edv\u00e1n\u00ed aRDP se pod\u00edvejte na polo\u017eky N\u00e1pov\u011bda v nab\u00eddce a na popis aplikace na trhu.
+D\u011bkujeme za podporu FanRDP a open-source softwaru obecn\u011b! Pro n\u00e1pov\u011bdu k pou\u017e\u00edv\u00e1n\u00ed FanRDP se pod\u00edvejte na polo\u017eky N\u00e1pov\u011bda v nab\u00eddce a na popis aplikace na trhu.
 &lt;br&gt;
 &lt;br&gt;
-Aktu\u00e1ln\u00ed seznam funkc\u00ed aRDP zahrnuje:
+Aktu\u00e1ln\u00ed seznam funkc\u00ed FanRDP zahrnuje:
 &lt;br&gt;
 - Prost\u00e9 RDP, RDP tunelovan\u00e9 p\u0159es SSH.
 &lt;br&gt;
@@ -533,7 +533,7 @@ Aktu\u00e1ln\u00ed seznam funkc\u00ed aRDP zahrnuje:
 &lt;br&gt;
 &lt;br&gt;
 Zn\u00e1m\u00e9 probl\u00e9my:</string>
-    <string name="rdp_intro_title">aRDP: Intuitivn\u00ed, bezpe\u010dn\u00fd RDP klient</string>
+    <string name="rdp_intro_title">FanRDP: Intuitivn\u00ed, bezpe\u010dn\u00fd RDP klient</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Kdy\u017e p\u0159id\u00e1te nebo uprav\u00edte p\u0159ipojen\u00ed, uvid\u00edte str\u00e1nku konfigurace p\u0159ipojen\u00ed. Zde m\u016f\u017eete nastavit nov\u00e9 RDP p\u0159ipojen\u00ed nebo zvolit ji\u017e existuj\u00edc\u00ed. Naho\u0159e je tla\u010d\u00edtko pro ulo\u017een\u00ed p\u0159ipojen\u00ed. Pod n\u00edm je konfigurace va\u0161eho p\u0159ipojen\u00ed.
 

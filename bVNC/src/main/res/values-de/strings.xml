@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">Die Pro-Version ermöglicht es Ihnen, diesen Dialog zu deaktivieren und gibt Ihnen Zugang zu zusätzlichen Funktionen.</string>
     <string name="ad_donate_text3">Wenn Sie das Projekt weiter unterstützen möchten, folgen Sie diesen Links zu Client-Apps für: </string>
     <string name="ad_donate_text_vnc">Das Open-Source-Projekt braucht Ihre Unterstützung! Spenden Sie, indem Sie bVNC Pro kaufen. Unten finden Sie Links zu bVNC Pro und unseren anderen Apps.</string>
-    <string name="ad_donate_text_rdp">Das Open-Source-Projekt braucht Ihre Unterstützung! Spenden Sie, indem Sie aRDP Pro kaufen, das Soundumleitung unterstützt. Unten finden Sie Links zu aRDP Pro und unseren anderen Apps.</string>
+    <string name="ad_donate_text_rdp">Das Open-Source-Projekt braucht Ihre Unterstützung! Spenden Sie, indem Sie FanRDP kaufen, das Soundumleitung unterstützt. Unten finden Sie Links zu FanRDP und unseren anderen Apps.</string>
     <string name="ad_donate_text_spice">Für Proxmox- und oVirt-Verbindungen spenden Sie bitte an das Projekt, indem Sie Opaque oder aSPICE Pro kaufen. Die freie Version von aSPICE unterstützt nur direkte Verbindungen zu KVM-virtuellen Maschinen. Unten finden Sie Links zu Opaque und aSPICE Pro sowie zu unseren anderen Apps.</string>
 
     <string name="address_caption">VNC Server</string>
@@ -488,7 +488,7 @@ Wenn Sie eine schnelle Leistungsverbesserung suchen, versuchen Sie den Farbmodus
     <string name="pro_feature_mfa">Es scheint, dass Ihr Server Multi-Faktor-Authentifizierung aktiviert hat. Bitte unterstützen Sie das Projekt durch den Kauf der Pro-Version, die diese Funktion unterstützt. Ein Link zur Pro-Version ist im Startdialog verfügbar.</string>
     <string name="pro_feature_intro">Es scheint, dass Sie eine Pro-Funktion verwenden. Bitte unterstützen Sie das Projekt durch den Kauf der Pro-Version, die diese Funktion unterstützt. Bitte prüfen Sie den Intro-Dialog für Links zur richtigen App.</string>
     <string name="pro_feature_generic">Es scheint, dass Sie eine Pro-Funktion verwenden. Bitte unterstützen Sie das Projekt durch den Kauf der Pro-Version, die diese Funktion unterstützt. Ein Link zur Pro-Version ist im Startdialog verfügbar.</string>
-    <string name="pro_feature_rdp">Es scheint, dass Sie versucht haben, eine .rdp-Datei zu öffnen, was eine Pro-Funktion ist. Bitte unterstützen Sie das Projekt durch den Kauf von aRDP Pro, das .rdp-Dateien unterstützt. Ein Link zur aRDP Pro-Version ist im Startdialog verfügbar.</string>
+    <string name="pro_feature_rdp">Es scheint, dass Sie versucht haben, eine .rdp-Datei zu öffnen, was eine Pro-Funktion ist. Bitte unterstützen Sie das Projekt durch den Kauf von FanRDP, das .rdp-Dateien unterstützt. Ein Link zur FanRDP-Version ist im Startdialog verfügbar.</string>
     <string name="pro_feature_spice">Es scheint, dass Sie versucht haben, eine .vv-Datei zu öffnen. Wenn Sie Verbindungen zu Proxmox oder oVirt direkt in der App speichern und auch .vv-Dateien öffnen möchten, erwägen Sie den Kauf von Opaque. Wenn Sie nur .vv-Datei-Unterstützung benötigen, können Sie aSPICE Pro erwerben. Links zu beiden Apps finden Sie im Startdialog.</string>
 
     <string name="rdp_address_caption_hint">RDP Server</string>
@@ -551,10 +551,10 @@ Wenn Sie eine schnelle Leistungsverbesserung suchen, versuchen Sie den Farbmodus
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Danke für Ihre Unterstützung von aRDP und Open-Source-Software im Allgemeinen! Hilfe zur Verwendung von aRDP finden Sie in den Hilfepunkten im Menü und in der App-Beschreibung im Marktplatz.
+Danke für Ihre Unterstützung von FanRDP und Open-Source-Software im Allgemeinen! Hilfe zur Verwendung von FanRDP finden Sie in den Hilfepunkten im Menü und in der App-Beschreibung im Marktplatz.
 &lt;br&gt;
 &lt;br&gt;
-Aktuelle Liste der aRDP-Funktionen umfasst:
+Aktuelle Liste der FanRDP-Funktionen umfasst:
 &lt;br&gt;
 - Einfaches RDP, RDP über SSH getunnelt.
 &lt;br&gt;
@@ -602,7 +602,7 @@ Aktuelle Liste der aRDP-Funktionen umfasst:
 &lt;br&gt;
 &lt;br&gt;
 Bekannte Probleme:</string>
-    <string name="rdp_intro_title">aRDP: Intuitiver, sicherer RDP-Client</string>
+    <string name="rdp_intro_title">FanRDP: Intuitiver, sicherer RDP-Client</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Wenn Sie eine Verbindung hinzufügen oder bearbeiten, sehen Sie eine Verbindungskonfigurationsseite. Hier können Sie eine neue RDP-Verbindung einrichten oder eine vorhandene auswählen. Oben befindet sich eine Schaltfläche zum Speichern der Verbindung. Darunter konfigurieren Sie Ihre Verbindung.
 

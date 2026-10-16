@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">Ang Pro na bersyon ay nagbibigay-daan sa inyong hindi paganahin ang dialog na ito at nagbibigay sa inyo ng access sa mga karagdagang feature.</string>
     <string name="ad_donate_text3">Kung nais ninyong suportahan ang proyekto nang higit pa, sundan ang mga sumusunod na link para sa mga link sa mga client app para sa: </string>
     <string name="ad_donate_text_vnc">Kailangan ng suporta ng Open Source na proyekto! Mag-donate sa amin sa pamamagitan ng pagbili ng bVNC Pro. Tingnan sa ibaba ang mga link sa bVNC Pro at sa aming iba pang mga app.</string>
-    <string name="ad_donate_text_rdp">Kailangan ng suporta ng Open Source na proyekto! Mag-donate sa amin sa pamamagitan ng pagbili ng aRDP Pro, na sumusuporta sa pag-redirect ng sound. Tingnan sa ibaba ang mga link sa aRDP Pro at sa aming iba pang mga app.</string>
+    <string name="ad_donate_text_rdp">Kailangan ng suporta ng Open Source na proyekto! Mag-donate sa amin sa pamamagitan ng pagbili ng FanRDP, na sumusuporta sa pag-redirect ng sound. Tingnan sa ibaba ang mga link sa FanRDP at sa aming iba pang mga app.</string>
     <string name="ad_donate_text_spice">Para sa mga koneksyon sa Proxmox at oVirt, mangyaring mag-donate sa proyekto sa pamamagitan ng pagbili ng Opaque o aSPICE Pro. Ang Libreng bersyon ng aSPICE ay sumusuporta lamang sa mga direktang koneksyon sa mga KVM virtual machine. Tingnan sa ibaba ang mga link sa Opaque at aSPICE Pro, pati na rin ang aming iba pang mga app.</string>
 
     <string name="address_caption">VNC Server</string>
@@ -490,7 +490,7 @@ Kung naghahanap kayo ng mabilis na performance boost, subukang itakda ang Color 
     <string name="pro_feature_mfa">Mukhang ang inyong server ay may multi-factor authentication na naka-enable. Mangyaring suportahan ang proyekto sa pamamagitan ng pagbili ng Pro na bersyon na may suporta para sa feature na ito. Ang isang link sa Pro na bersyon ay available sa start dialog.</string>
     <string name="pro_feature_intro">Mukhang gumagamit kayo ng Pro feature. Mangyaring suportahan ang proyekto sa pamamagitan ng pagbili ng Pro na bersyon na may suporta para sa feature na ito. Mangyaring suriin ang intro dialog para sa mga link sa tamang app.</string>
     <string name="pro_feature_generic">Mukhang gumagamit kayo ng Pro feature. Mangyaring suportahan ang proyekto sa pamamagitan ng pagbili ng Pro na bersyon na may suporta para sa feature na ito. Ang isang link sa Pro na bersyon ay available sa start dialog.</string>
-    <string name="pro_feature_rdp">Mukhang sinubukan ninyong buksan ang isang .rdp file na isang Pro feature. Mangyaring suportahan ang proyekto sa pamamagitan ng pagbili ng aRDP Pro, na sumusuporta sa mga .rdp file. Ang isang link sa bersyon ng aRDP Pro ay available sa start dialog.</string>
+    <string name="pro_feature_rdp">Mukhang sinubukan ninyong buksan ang isang .rdp file na isang Pro feature. Mangyaring suportahan ang proyekto sa pamamagitan ng pagbili ng FanRDP, na sumusuporta sa mga .rdp file. Ang isang link sa bersyon ng FanRDP ay available sa start dialog.</string>
     <string name="pro_feature_spice">Mukhang sinubukan ninyong buksan ang isang .vv file. Kung nais ninyong i-save ang mga koneksyon sa Proxmox o oVirt nang direkta sa loob ng app at gusto ring buksan ang mga .vv file, isaalang-alang ang pagbili ng Opaque. Kung kailangan lamang ninyo ng suporta sa .vv file, maaari kayong kumuha ng aSPICE Pro. Hanapin ang mga link sa parehong app sa start dialog.</string>
 
     <string name="rdp_address_caption_hint">RDP Server</string>
@@ -553,10 +553,10 @@ Kung naghahanap kayo ng mabilis na performance boost, subukang itakda ang Color 
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Salamat sa inyong suporta sa aRDP at sa open-source software sa pangkalahatan! Para sa tulong sa paggamit ng aRDP, tingnan ang mga item na Tulong sa Menu, at ang paglalarawan ng app sa market.
+Salamat sa inyong suporta sa FanRDP at sa open-source software sa pangkalahatan! Para sa tulong sa paggamit ng FanRDP, tingnan ang mga item na Tulong sa Menu, at ang paglalarawan ng app sa market.
 &lt;br&gt;
 &lt;br&gt;
-Ang kasalukuyang listahan ng mga feature ng aRDP ay kinabibilangan ng:
+Ang kasalukuyang listahan ng mga feature ng FanRDP ay kinabibilangan ng:
 &lt;br&gt;
 - Plain RDP, RDP na naka-tunnel sa pamamagitan ng SSH.
 &lt;br&gt;
@@ -604,7 +604,7 @@ Ang kasalukuyang listahan ng mga feature ng aRDP ay kinabibilangan ng:
 &lt;br&gt;
 &lt;br&gt;
 Mga kilalang isyu:</string>
-    <string name="rdp_intro_title">aRDP: Intuitive, secure RDP client</string>
+    <string name="rdp_intro_title">FanRDP: Intuitive, secure RDP client</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Kapag nagdagdag o nag-edit kayo ng koneksyon, makikita ninyo ang pahina ng configuration ng koneksyon. Dito maaari kayong mag-set up ng bagong RDP koneksyon, o pumili ng mayroon nang isa. Sa itaas ay isang button na nagbibigay-daan sa inyong i-save ang koneksyon. Sa ibaba nito ay kung saan ninyo iko-configure ang inyong koneksyon.
 

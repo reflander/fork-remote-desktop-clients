@@ -63,7 +63,7 @@
     <string name="open_doc">Hướng dẫn sử dụng/Wiki</string>
     <string name="remote_sound_disabled">Âm thanh bị tắt</string>
     <string name="spice_ca_file_not_found">Không tìm thấy tập tin. Vui lòng nhập tên tệp hợp lệ vào trường văn bản (ví dụ: /sdcard/ca-cert.pem).</string>
-    <string name="rdp_intro_title">aRDP: Máy khách RDP trực quan, an toàn</string>
+    <string name="rdp_intro_title">FanRDP: Máy khách RDP trực quan, an toàn</string>
     <string name="error_pve_api_unexpected_code">Phản hồi không mong đợi từ Môi trường ảo Proxmox:</string>
     <string name="error_out_of_memory">Không thể phân bổ đủ bộ nhớ để vẽ màn hình từ xa. Hãy thử khởi động lại ứng dụng, sau đó khởi động lại thiết bị của bạn. Bạn cũng có thể thử giảm kích thước của máy tính từ xa thông qua cài đặt ứng dụng.</string>
     <string name="enter_passphrase_title">Nhập cụm mật khẩu chính</string>
@@ -103,7 +103,7 @@
     <string name="control_check">Điều khiển</string>
     <string name="ad_donate_text_vnc">Dự án Nguồn Mở cần sự hỗ trợ của bạn! Hãy đóng góp cho chúng tôi bằng cách mua bVNC Pro. Xem bên dưới để biết các liên kết đến bVNC Pro và các ứng dụng khác của chúng tôi.</string>
     <string name="input_method_mouse">Điều khiển con trỏ chuột</string>
-    <string name="pro_feature_rdp">Có vẻ như bạn đã cố mở tệp .rdp, một tính năng của Pro. Vui lòng hỗ trợ dự án bằng cách mua aRDP Pro, hỗ trợ các tệp .rdp. Liên kết đến phiên bản aRDP Pro có sẵn trong hộp thoại bắt đầu.</string>
+    <string name="pro_feature_rdp">Có vẻ như bạn đã cố mở tệp .rdp, một tính năng của Pro. Vui lòng hỗ trợ dự án bằng cách mua FanRDP, hỗ trợ các tệp .rdp. Liên kết đến phiên bản FanRDP có sẵn trong hộp thoại bắt đầu.</string>
     <string name="opaque_connection_screen_help_text">Khi bạn thêm hoặc chỉnh sửa kết nối, bạn sẽ thấy trang cấu hình kết nối.
 Tại đây bạn có thể thiết lập kết nối Opaque mới hoặc chọn kết nối có sẵn.
 Ở trên cùng là nút cho phép bạn lưu kết nối.
@@ -347,7 +347,7 @@ Các vấn đề đã biết:
     <string name="rdp_geom_custom">Phong tục</string>
     <string name="default_input_mode">Chế độ nhập mặc định</string>
     <string name="repeater_empty_text">Không có bộ lặp</string>
-    <string name="ad_donate_text_rdp">Dự án Nguồn Mở cần sự hỗ trợ của bạn! Hãy đóng góp cho chúng tôi bằng cách mua aRDP Pro, hỗ trợ chuyển hướng âm thanh. Xem bên dưới để biết các liên kết đến aRDP Pro và các ứng dụng khác của chúng tôi.</string>
+    <string name="ad_donate_text_rdp">Dự án Nguồn Mở cần sự hỗ trợ của bạn! Hãy đóng góp cho chúng tôi bằng cách mua FanRDP, hỗ trợ chuyển hướng âm thanh. Xem bên dưới để biết các liên kết đến FanRDP và các ứng dụng khác của chúng tôi.</string>
     <string name="spice_tls_port_hint">Cổng TLS</string>
     <string name="scaling">Chia tỷ lệ</string>
     <string name="spice_connection_settings">Cài đặt kết nối SPICE</string>
@@ -360,10 +360,10 @@ Các vấn đề đã biết:
     <string name="error_ssh_pubkey_auth_method_unavail">Máy chủ SSH không hỗ trợ phương thức \publickey\ auth và chúng tôi đang cố gắng sử dụng cặp khóa để xác thực. Vui lòng định cấu hình nó để cho phép xác thực khóa công khai và thử lại. Các phương thức xác thực có sẵn:</string>
     <string name="username_caption">Người dùng VNC</string>
     <string name="error_ssh_could_not_exec_command">Không thể thực thi lệnh từ xa.</string>
-    <string name="rdp_intro_text">Cảm ơn bạn đã hỗ trợ aRDP và phần mềm nguồn mở nói chung!Để được trợ giúp về cách sử dụng aRDP, hãy xem các mục Trợ giúp trong Menu và mô tả về ứng dụng trên thị trường.
+    <string name="rdp_intro_text">Cảm ơn bạn đã hỗ trợ FanRDP và phần mềm nguồn mở nói chung!Để được trợ giúp về cách sử dụng FanRDP, hãy xem các mục Trợ giúp trong Menu và mô tả về ứng dụng trên thị trường.
 &lt;br&gt;
 &lt;br&gt;
-Danh sách các tính năng aRDP hiện tại bao gồm:
+Danh sách các tính năng FanRDP hiện tại bao gồm:
 &lt;br&gt;
 - RDP đơn giản, RDP được tạo đường hầm qua SSH.
 &lt;br&gt;

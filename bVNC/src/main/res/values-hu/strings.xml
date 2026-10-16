@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">A Pro verzióval letilthatja ezt a párbeszédpanelt, és hozzáférhet további funkciókhoz.</string>
     <string name="ad_donate_text3">Ha szeretné tovább támogatni a projektet, kövesse az alábbi hivatkozásokat a kliens alkalmazásokhoz: </string>
     <string name="ad_donate_text_vnc">A nyílt forráskódú projektnek szüksége van a támogatására! Adományozzon nekünk a bVNC Pro megvásárlásával. Az alábbiakban találja a bVNC Pro és más alkalmazásaink hivatkozásait.</string>
-    <string name="ad_donate_text_rdp">A nyílt forráskódú projektnek szüksége van a támogatására! Adományozzon nekünk az aRDP Pro megvásárlásával, amely hangátirányítást is támogat. Az alábbiakban találja az aRDP Pro és más alkalmazásaink hivatkozásait.</string>
+    <string name="ad_donate_text_rdp">A nyílt forráskódú projektnek szüksége van a támogatására! Adományozzon nekünk az FanRDP megvásárlásával, amely hangátirányítást is támogat. Az alábbiakban találja az FanRDP és más alkalmazásaink hivatkozásait.</string>
     <string name="ad_donate_text_spice">Proxmox és oVirt kapcsolatokhoz kérjük, adományozzon a projektnek az Opaque vagy az aSPICE Pro megvásárlásával. Az aSPICE ingyenes verziója csak KVM virtuális gépekhez való közvetlen kapcsolatokat támogat. Az alábbiakban találja az Opaque és az aSPICE Pro, valamint más alkalmazásaink hivatkozásait.</string>
 
     <string name="address_caption">VNC kiszolgáló</string>
@@ -488,7 +488,7 @@ Ha gyors teljesítménynövelést keres, próbálja beállítani a Szín módot 
     <string name="pro_feature_mfa">Úgy tűnik, a kiszolgálója többfaktoros hitelesítéssel rendelkezik. Kérjük, támogassa a projektet a Pro verzió megvásárlásával, amely támogatja ezt a funkciót. A Pro verzió hivatkozása megtalálható az induló párbeszédpanelen.</string>
     <string name="pro_feature_intro">Úgy tűnik, Pro funkciót használ. Kérjük, támogassa a projektet a Pro verzió megvásárlásával, amely támogatja ezt a funkciót. Kérjük, ellenőrizze az induló párbeszédpanelt a megfelelő alkalmazás hivatkozásáért.</string>
     <string name="pro_feature_generic">Úgy tűnik, Pro funkciót használ. Kérjük, támogassa a projektet a Pro verzió megvásárlásával, amely támogatja ezt a funkciót. A Pro verzió hivatkozása megtalálható az induló párbeszédpanelen.</string>
-    <string name="pro_feature_rdp">Úgy tűnik, .rdp fájlt próbált megnyitni, ami Pro funkció. Kérjük, támogassa a projektet az aRDP Pro megvásárlásával, amely támogatja a .rdp fájlokat. Az aRDP Pro hivatkozása megtalálható az induló párbeszédpanelen.</string>
+    <string name="pro_feature_rdp">Úgy tűnik, .rdp fájlt próbált megnyitni, ami Pro funkció. Kérjük, támogassa a projektet az FanRDP megvásárlásával, amely támogatja a .rdp fájlokat. Az FanRDP hivatkozása megtalálható az induló párbeszédpanelen.</string>
     <string name="pro_feature_spice">Úgy tűnik, .vv fájlt próbált megnyitni. Ha szeretne Proxmox vagy oVirt kapcsolatokat menteni közvetlenül az alkalmazásban, és .vv fájlokat is megnyitni, fontolja meg az Opaque megvásárlását. Ha csak .vv fájl támogatásra van szüksége, megveheti az aSPICE Pro-t. Mindkét alkalmazás hivatkozása megtalálható az induló párbeszédpanelen.</string>
 
     <string name="rdp_address_caption_hint">RDP kiszolgáló</string>
@@ -551,10 +551,10 @@ Ha gyors teljesítménynövelést keres, próbálja beállítani a Szín módot 
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Köszönjük, hogy támogatja az aRDP-t és az általános nyílt forráskódú szoftvereket! Az aRDP használatával kapcsolatos segítségért tekintse meg a Menü Súgó elemeit, valamint az alkalmazás piaci leírását.
+Köszönjük, hogy támogatja az FanRDP-t és az általános nyílt forráskódú szoftvereket! Az FanRDP használatával kapcsolatos segítségért tekintse meg a Menü Súgó elemeit, valamint az alkalmazás piaci leírását.
 &lt;br&gt;
 &lt;br&gt;
-Az aRDP jelenlegi funkciói:
+Az FanRDP jelenlegi funkciói:
 &lt;br&gt;
 - Alap RDP, RDP SSH-n keresztül alagútban.
 &lt;br&gt;
@@ -602,7 +602,7 @@ Az aRDP jelenlegi funkciói:
 &lt;br&gt;
 &lt;br&gt;
 Ismert problémák:</string>
-    <string name="rdp_intro_title">aRDP: Intuitív, biztonságos RDP kliens</string>
+    <string name="rdp_intro_title">FanRDP: Intuitív, biztonságos RDP kliens</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Amikor kapcsolatot ad hozzá vagy szerkeszt, megjelenik a kapcsolat konfigurációs oldala. Itt beállíthat egy új RDP kapcsolatot, vagy kiválaszthat egy meglévőt. Az oldal tetején egy gomb van, amely lehetővé teszi a kapcsolat mentését. Alatta konfigurálhatja a kapcsolatát.
 

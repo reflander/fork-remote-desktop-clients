@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">A versão Pro permite-lhe desativar este diálogo e dá-lhe acesso a funcionalidades adicionais.</string>
     <string name="ad_donate_text3">Se quiser apoiar ainda mais o projeto, siga os seguintes links para aplicações cliente para: </string>
     <string name="ad_donate_text_vnc">O projeto Open Source precisa do seu apoio! Doe-nos comprando o bVNC Pro. Veja abaixo os links para o bVNC Pro e as nossas outras aplicações.</string>
-    <string name="ad_donate_text_rdp">O projeto Open Source precisa do seu apoio! Doe-nos comprando o aRDP Pro, que suporta redirecionamento de som. Veja abaixo os links para o aRDP Pro e as nossas outras aplicações.</string>
+    <string name="ad_donate_text_rdp">O projeto Open Source precisa do seu apoio! Doe-nos comprando o FanRDP, que suporta redirecionamento de som. Veja abaixo os links para o FanRDP e as nossas outras aplicações.</string>
     <string name="ad_donate_text_spice">Para ligações ao Proxmox e oVirt, por favor doe ao projeto comprando o Opaque ou o aSPICE Pro. A versão gratuita do aSPICE apenas suporta ligações diretas a máquinas virtuais KVM. Veja abaixo os links para o Opaque e o aSPICE Pro, bem como as nossas outras aplicações.</string>
 
     <string name="address_caption">Servidor VNC</string>
@@ -490,7 +490,7 @@ Se procura uma melhoria rápida de desempenho, tente definir o modo de Cor para 
     <string name="pro_feature_mfa">Parece que o seu servidor tem autenticação multifator ativada. Por favor, apoie o projeto adquirindo a versão Pro que tem suporte para esta funcionalidade. Um link para a versão Pro está disponível no diálogo inicial.</string>
     <string name="pro_feature_intro">Parece que está a utilizar uma funcionalidade Pro. Por favor, apoie o projeto adquirindo a versão Pro que tem suporte para esta funcionalidade. Por favor, verifique o diálogo de introdução para links para a aplicação correta.</string>
     <string name="pro_feature_generic">Parece que está a utilizar uma funcionalidade Pro. Por favor, apoie o projeto adquirindo a versão Pro que tem suporte para esta funcionalidade. Um link para a versão Pro está disponível no diálogo inicial.</string>
-    <string name="pro_feature_rdp">Parece que tentou abrir um ficheiro .rdp que é uma funcionalidade Pro. Por favor, apoie o projeto adquirindo o aRDP Pro, que suporta ficheiros .rdp. Um link para a versão aRDP Pro está disponível no diálogo inicial.</string>
+    <string name="pro_feature_rdp">Parece que tentou abrir um ficheiro .rdp que é uma funcionalidade Pro. Por favor, apoie o projeto adquirindo o FanRDP, que suporta ficheiros .rdp. Um link para a versão FanRDP está disponível no diálogo inicial.</string>
     <string name="pro_feature_spice">Parece que tentou abrir um ficheiro .vv. Se quiser guardar ligações ao Proxmox ou oVirt diretamente na aplicação e também abrir ficheiros .vv, considere adquirir o Opaque. Se só precisar de suporte para ficheiros .vv, pode obter o aSPICE Pro. Encontre links para ambas as aplicações no diálogo inicial.</string>
 
     <string name="rdp_address_caption_hint">Servidor RDP</string>
@@ -553,10 +553,10 @@ Se procura uma melhoria rápida de desempenho, tente definir o modo de Cor para 
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Obrigado por apoiar o aRDP e o software de código aberto em geral! Para obter ajuda com o uso do aRDP, consulte os itens de Ajuda no Menu e a descrição da aplicação na loja.
+Obrigado por apoiar o FanRDP e o software de código aberto em geral! Para obter ajuda com o uso do FanRDP, consulte os itens de Ajuda no Menu e a descrição da aplicação na loja.
 &lt;br&gt;
 &lt;br&gt;
-A lista atual de funcionalidades do aRDP inclui:
+A lista atual de funcionalidades do FanRDP inclui:
 &lt;br&gt;
 - RDP simples, RDP tunelizado sobre SSH.
 &lt;br&gt;
@@ -604,7 +604,7 @@ A lista atual de funcionalidades do aRDP inclui:
 &lt;br&gt;
 &lt;br&gt;
 Problemas conhecidos:</string>
-    <string name="rdp_intro_title">aRDP: Cliente RDP intuitivo e seguro</string>
+    <string name="rdp_intro_title">FanRDP: Cliente RDP intuitivo e seguro</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Quando adiciona ou edita uma ligação, verá uma página de configuração de ligação. Aqui pode configurar uma nova ligação RDP ou escolher uma existente. No topo existe um botão que lhe permite guardar a ligação. Abaixo está onde configura a sua ligação.
 

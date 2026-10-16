@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">Pro-versio mahdollistaa tämän valintaikkunan poistamisen käytöstä ja antaa sinulle pääsyn lisäominaisuuksiin.</string>
     <string name="ad_donate_text3">Jos haluat tukea projektia edelleen, seuraa seuraavia linkkejä asiakasohjelmiin: </string>
     <string name="ad_donate_text_vnc">Avoimen lähdekoodin projekti tarvitsee tukeasi! Lahjoita meille ostamalla bVNC Pro. Katso alla linkit bVNC Prohon ja muihin sovelluksiimme.</string>
-    <string name="ad_donate_text_rdp">Avoimen lähdekoodin projekti tarvitsee tukeasi! Lahjoita meille ostamalla aRDP Pro, joka tukee äänenohjausta. Katso alla linkit aRDP Prohon ja muihin sovelluksiimme.</string>
+    <string name="ad_donate_text_rdp">Avoimen lähdekoodin projekti tarvitsee tukeasi! Lahjoita meille ostamalla FanRDP, joka tukee äänenohjausta. Katso alla linkit FanRDPhon ja muihin sovelluksiimme.</string>
     <string name="ad_donate_text_spice">Proxmox- ja oVirt-yhteyksiä varten lahjoita projektille ostamalla Opaque tai aSPICE Pro. aSPICE:n ilmaisversio tukee vain suoria yhteyksiä KVM-virtuaalikoneisiin. Katso alla linkit Opaqueen ja aSPICE Prohon sekä muihin sovelluksiimme.</string>
 
     <string name="address_caption">VNC Server</string>
@@ -490,7 +490,7 @@ Jos etsit nopeaa suorituskyvyn parannusta, yritä asettaa Väritila pienempään
     <string name="pro_feature_mfa">Palvelimellasi näyttää olevan monivaiheinen todennus käytössä. Tue projektia ostamalla Pro-versio, jossa on tuki tähän ominaisuuteen. Linkki Pro-versioon löytyy aloitusvalintaikkunasta.</string>
     <string name="pro_feature_intro">Näyttää siltä, että käytät Pro-ominaisuutta. Tue projektia ostamalla Pro-versio, jossa on tuki tähän ominaisuuteen. Tarkista aloitusvalintaikkuna linkkejä varten oikeaan sovellukseen.</string>
     <string name="pro_feature_generic">Näyttää siltä, että käytät Pro-ominaisuutta. Tue projektia ostamalla Pro-versio, jossa on tuki tähän ominaisuuteen. Linkki Pro-versioon löytyy aloitusvalintaikkunasta.</string>
-    <string name="pro_feature_rdp">Näyttää siltä, että yritit avata .rdp-tiedoston, joka on Pro-ominaisuus. Tue projektia ostamalla aRDP Pro, joka tukee .rdp-tiedostoja. Linkki aRDP Pro -versioon löytyy aloitusvalintaikkunasta.</string>
+    <string name="pro_feature_rdp">Näyttää siltä, että yritit avata .rdp-tiedoston, joka on Pro-ominaisuus. Tue projektia ostamalla FanRDP, joka tukee .rdp-tiedostoja. Linkki FanRDP -versioon löytyy aloitusvalintaikkunasta.</string>
     <string name="pro_feature_spice">Näyttää siltä, että yritit avata .vv-tiedoston. Jos haluat tallentaa yhteyksiä Proxmoxiin tai oVirtiin suoraan sovellukseen ja avata myös .vv-tiedostoja, harkitse Opaquen ostamista. Jos tarvitset vain .vv-tiedostotukea, voit hankkia aSPICE Pron. Löydät linkit molempiin sovelluksiin aloitusvalintaikkunasta.</string>
 
     <string name="rdp_address_caption_hint">RDP Server</string>
@@ -553,10 +553,10 @@ Jos etsit nopeaa suorituskyvyn parannusta, yritä asettaa Väritila pienempään
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Kiitos aRDP:n ja avoimen lähdekoodin ohjelmistojen tukemisesta yleensä! Apua aRDP:n käyttöön löytyy valikon Ohje-kohdista ja sovelluksen kuvauksesta kaupassa.
+Kiitos FanRDP:n ja avoimen lähdekoodin ohjelmistojen tukemisesta yleensä! Apua FanRDP:n käyttöön löytyy valikon Ohje-kohdista ja sovelluksen kuvauksesta kaupassa.
 &lt;br&gt;
 &lt;br&gt;
-Nykyinen luettelo aRDP:n ominaisuuksista sisältää:
+Nykyinen luettelo FanRDP:n ominaisuuksista sisältää:
 &lt;br&gt;
 - Tavallinen RDP, RDP tunneloitu SSH:n kautta.
 &lt;br&gt;
@@ -604,7 +604,7 @@ Nykyinen luettelo aRDP:n ominaisuuksista sisältää:
 &lt;br&gt;
 &lt;br&gt;
 Tunnetut ongelmat:</string>
-    <string name="rdp_intro_title">aRDP: Intuitiivinen, turvallinen RDP-asiakas</string>
+    <string name="rdp_intro_title">FanRDP: Intuitiivinen, turvallinen RDP-asiakas</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Kun lisäät tai muokkaat yhteyttä, näet yhteyden määrityssivun. Täällä voit asettaa uuden RDP-yhteyden tai valita olemassa olevan. Yläosassa on painike, jonka avulla voit tallentaa yhteyden. Sen alla konfiguroit yhteytesi.
 

@@ -167,7 +167,7 @@ RDP Bağlantı Ayarları</string>
     <string name="error_pve_api_unexpected_code">
 Proxmox Sanal Ortamından beklenmeyen yanıt:</string>
     <string name="pro_feature_rdp">
-Pro özelliği olan bir .rdp dosyasını açmaya çalıştığınız anlaşılıyor. Lütfen .rdp dosyalarını destekleyen aRDP Pro\'yu satın alarak projeye destek olun. Başlat iletişim kutusunda aRDP Pro sürümüne bir bağlantı mevcuttur.</string>
+Pro özelliği olan bir .rdp dosyasını açmaya çalıştığınız anlaşılıyor. Lütfen .rdp dosyalarını destekleyen FanRDP\'yu satın alarak projeye destek olun. Başlat iletişim kutusunda FanRDP sürümüne bir bağlantı mevcuttur.</string>
     <string name="vnc_connection_settings">
 VNC Bağlantı Ayarları</string>
     <string name="spice_address_caption_hint">
@@ -445,10 +445,10 @@ Ayarları Dışa Aktarma</string>
     <string name="save_as_copy">
 Kopya Olarak Kaydet</string>
     <string name="rdp_intro_text">
-Genel olarak aRDP\'yi ve açık kaynaklı yazılımı desteklediğiniz için teşekkür ederiz!aRDP\'yi kullanma konusunda yardım için Menüdeki Yardım öğelerine ve uygulamanın pazardaki açıklamasına bakın.
+Genel olarak FanRDP\'yi ve açık kaynaklı yazılımı desteklediğiniz için teşekkür ederiz!FanRDP\'yi kullanma konusunda yardım için Menüdeki Yardım öğelerine ve uygulamanın pazardaki açıklamasına bakın.
 &lt;br&gt;
 &lt;br&gt;
-aRDP özelliklerinin mevcut listesi şunları içerir:
+FanRDP özelliklerinin mevcut listesi şunları içerir:
 &lt;br&gt;
 - Düz RDP, SSH üzerinden tünellenen RDP.
 &lt;br&gt;
@@ -704,7 +704,7 @@ Giriş Modu Yardımı</string>
     <string name="input_method_single_handed">
 Tek El</string>
     <string name="rdp_intro_title">
-aRDP: Sezgisel, güvenli RDP istemcisi</string>
+FanRDP: Sezgisel, güvenli RDP istemcisi</string>
     <string name="rdp_connection_screen_help_text">
 Bir bağlantı eklediğinizde veya düzenlediğinizde bir bağlantı yapılandırma sayfası göreceksiniz. Burada yeni bir RDP bağlantısı kurabilir veya önceden var olan bir bağlantıyı seçebilirsiniz. Üstte bağlantıyı kaydetmenizi sağlayan bir düğme bulunur. Bağlantınızı yapılandıracağınız yer burasıdır.
 
@@ -1044,7 +1044,7 @@ Sola sürükleme modu - sürüklemek/seçmek için kaydırın, durdurmak için p
     <string name="ssh_x11vnc_customize">
 AutoX\'i yapılandırma</string>
     <string name="ad_donate_text_rdp">
-Açık Kaynak projesinin desteğinize ihtiyacı var! Ses yönlendirmeyi destekleyen aRDP Pro\'yu satın alarak bize bağış yapın.aRDP Pro ve diğer uygulamalarımıza bağlantılar için aşağıya bakın.</string>
+Açık Kaynak projesinin desteğinize ihtiyacı var! Ses yönlendirmeyi destekleyen FanRDP\'yu satın alarak bize bağış yapın.FanRDP ve diğer uygulamalarımıza bağlantılar için aşağıya bakın.</string>
     <string name="show">
 Göstermek</string>
     <string name="error_ssh_could_not_send_sudo_pwd">

@@ -85,7 +85,7 @@
     <string name="ad_donate_text2">Versiunea Pro va permite sa dezactivati acest dialog si va ofera acces la functionalitati suplimentare.</string>
     <string name="ad_donate_text3">Daca doriti sa sustineti proiectul in continuare, urmati linkurile de mai jos pentru aplicatii client pentru: </string>
     <string name="ad_donate_text_vnc">Proiectul Open Source are nevoie de sprijinul dvs.! Faceti o donatie cumparand bVNC Pro. Mai jos gasiti linkuri catre bVNC Pro si celelalte aplicatii ale noastre.</string>
-    <string name="ad_donate_text_rdp">Proiectul Open Source are nevoie de sprijinul dvs.! Faceti o donatie cumparand aRDP Pro, care suporta redirectionarea sunetului. Mai jos gasiti linkuri catre aRDP Pro si celelalte aplicatii ale noastre.</string>
+    <string name="ad_donate_text_rdp">Proiectul Open Source are nevoie de sprijinul dvs.! Faceti o donatie cumparand FanRDP, care suporta redirectionarea sunetului. Mai jos gasiti linkuri catre FanRDP si celelalte aplicatii ale noastre.</string>
     <string name="ad_donate_text_spice">Pentru conexiuni Proxmox si oVirt, va rugam faceti o donatie proiectului cumparand Opaque sau aSPICE Pro. Versiunea gratuita a aSPICE suporta doar conexiuni directe la masinile virtuale KVM. Mai jos gasiti linkuri catre Opaque si aSPICE Pro, precum si celelalte aplicatii ale noastre.</string>
 
     <string name="address_caption">Server VNC</string>
@@ -452,7 +452,7 @@ Daca cautati o imbunatatire rapida a performantei, incercati sa setati Modul de 
     <string name="pro_feature_mfa">Se pare ca serverul dvs. are activata autentificarea cu mai multi factori. Va rugam sustineti proiectul cumparand versiunea Pro care are suport pentru aceasta functionalitate. Un link catre versiunea Pro este disponibil in dialogul de start.</string>
     <string name="pro_feature_intro">Se pare ca folositi o functionalitate Pro. Va rugam sustineti proiectul cumparand versiunea Pro care are suport pentru aceasta functionalitate. Va rugam verificati dialogul introductiv pentru linkuri catre aplicatia corecta.</string>
     <string name="pro_feature_generic">Se pare ca folositi o functionalitate Pro. Va rugam sustineti proiectul cumparand versiunea Pro care are suport pentru aceasta functionalitate. Un link catre versiunea Pro este disponibil in dialogul de start.</string>
-    <string name="pro_feature_rdp">Se pare ca ati incercat sa deschideti un fisier .rdp care este o functionalitate Pro. Va rugam sustineti proiectul cumparand aRDP Pro, care suporta fisiere .rdp. Un link catre versiunea aRDP Pro este disponibil in dialogul de start.</string>
+    <string name="pro_feature_rdp">Se pare ca ati incercat sa deschideti un fisier .rdp care este o functionalitate Pro. Va rugam sustineti proiectul cumparand FanRDP, care suporta fisiere .rdp. Un link catre versiunea FanRDP este disponibil in dialogul de start.</string>
     <string name="pro_feature_spice">Se pare ca ati incercat sa deschideti un fisier .vv. Daca doriti sa salvati conexiuni la Proxmox sau oVirt direct in aplicatie si sa deschideti si fisiere .vv, luati in considerare achizitionarea Opaque. Daca aveti nevoie doar de suport pentru fisiere .vv, puteti obtine aSPICE Pro. Gasiti linkuri catre ambele aplicatii in dialogul de start.</string>
 
     <string name="rdp_address_caption_hint">Server RDP</string>
@@ -480,10 +480,10 @@ Daca cautati o imbunatatire rapida a performantei, incercati sa setati Modul de 
     <string name="rdp_security_tls">Securitate TLS</string>
     <string name="rdp_security_nla">Autentificare la Nivel de Retea</string>
     <string name="rdp_intro_text">
-Multumim ca sustineti aRDP si software-ul open-source in general! Pentru ajutor cu utilizarea aRDP, vedeti elementele de Ajutor din Meniu si descrierea aplicatiei din magazin.
+Multumim ca sustineti FanRDP si software-ul open-source in general! Pentru ajutor cu utilizarea FanRDP, vedeti elementele de Ajutor din Meniu si descrierea aplicatiei din magazin.
 &lt;br&gt;
 &lt;br&gt;
-Lista curenta de functionalitati aRDP include:
+Lista curenta de functionalitati FanRDP include:
 &lt;br&gt;
 - RDP simplu, RDP tunelat prin SSH.
 &lt;br&gt;
@@ -531,7 +531,7 @@ Lista curenta de functionalitati aRDP include:
 &lt;br&gt;
 &lt;br&gt;
 Probleme cunoscute:</string>
-    <string name="rdp_intro_title">aRDP: Client RDP intuitiv si securizat</string>
+    <string name="rdp_intro_title">FanRDP: Client RDP intuitiv si securizat</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Cand adaugati sau editati o conexiune, veti vedea o pagina de configurare a conexiunii. Aici puteti configura o noua conexiune RDP, sau alege una preexistenta. In partea de sus este un buton care va permite sa salvati conexiunea. Mai jos este locul unde va configurati conexiunea.
 

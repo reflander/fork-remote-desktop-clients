@@ -82,7 +82,7 @@
     <string name="ad_donate_text2">Pro આવૃત્તિ તમને આ ડાયલૉગ અક્ષમ કરવા અને વધારાની સુવિધાઓ ઍક્સેસ કરવા દે છે.</string>
     <string name="ad_donate_text3">જો તમે પ્રોજેક્ટ વધુ સમર્થ કરવા ઇચ્છો, તો ક્લાયન્ટ ઍપ્સ માટેની લિંક્સ અહીં જુઓ: </string>
     <string name="ad_donate_text_vnc">ઑપન સોર્સ પ્રોજેક્ટ ને તમારા સમર્થ ની જરૂર છે! bVNC Pro ખરીદીને દાન કરો. bVNC Pro અને અન્ય ઍપ્સ ની લિંક્સ નીચે જુઓ.</string>
-    <string name="ad_donate_text_rdp">ઑપન સોર્સ પ્રોજેક્ટ ને તમારા સમર્થ ની જરૂર છે! aRDP Pro ખરીદીને દાન કરો, જે સાઉન્ડ રીડાયરેક્શન સમર્થ છે. aRDP Pro અને અન્ય ઍપ્સ ની લિંક્સ નીચે જુઓ.</string>
+    <string name="ad_donate_text_rdp">ઑપન સોર્સ પ્રોજેક્ટ ને તમારા સમર્થ ની જરૂર છે! FanRDP ખરીદીને દાન કરો, જે સાઉન્ડ રીડાયરેક્શન સમર્થ છે. FanRDP અને અન્ય ઍપ્સ ની લિંક્સ નીચે જુઓ.</string>
     <string name="ad_donate_text_spice">Proxmox અને oVirt કનેક્શન માટે, Opaque અથવા aSPICE Pro ખરીદીને પ્રોજેક્ટ ને દાન કરો. aSPICE ની ફ્રી આવૃત્તિ ફક્ત KVM વર્ચ્યુઅલ મશીનો સાથે સીધા કનેક્શન સમર્થ છે. Opaque અને aSPICE Pro ની લિંક્સ, તેમ જ અન્ય ઍપ્સ, નીચે જુઓ.</string>
     <string name="address_caption">VNC સર્વર</string>
     <string name="address_caption_hint">VNC સર્વર</string>
@@ -431,7 +431,7 @@ bVNC ની સુવિધાઓ ની વર્તમાન સૂચિ:
     <string name="pro_feature_mfa">તમારા server ઉપર multi-factor authentication active. Pro version ખરીદી project support. Start dialog ઉપર Pro link.</string>
     <string name="pro_feature_intro">Pro feature ઉપયોગ. Pro version ખરીદી project support. Intro dialog ઉપર correct app link.</string>
     <string name="pro_feature_generic">Pro feature ઉપયોગ. Pro version ખરીદી project support. Start dialog ઉપર Pro link.</string>
-    <string name="pro_feature_rdp">.rdp file ખોલવા try. Pro feature. aRDP Pro ખરીદી project support, .rdp files સમર્થ. Start dialog ઉપર aRDP Pro link.</string>
+    <string name="pro_feature_rdp">.rdp file ખોલવા try. Pro feature. FanRDP ખરીદી project support, .rdp files સમર્થ. Start dialog ઉપર FanRDP link.</string>
     <string name="pro_feature_spice">.vv file ખોલવા try. Proxmox/oVirt connections save અને .vv files, Opaque. ફક્ત .vv file, aSPICE Pro. Start dialog ઉપર links.</string>
     <string name="rdp_address_caption_hint">RDP Server</string>
     <string name="rdp_adv_console_mode">Console Mode</string>
@@ -493,10 +493,10 @@ bVNC ની સુવિધાઓ ની વર્તમાન સૂચિ:
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-aRDP અને open-source software ને support બદલ આભાર! aRDP ઉપયોગ સહાય, Menu Help items અને market description.
+FanRDP અને open-source software ને support બદલ આભાર! FanRDP ઉપયોગ સહાય, Menu Help items અને market description.
 &lt;br&gt;
 &lt;br&gt;
-aRDP ની સુવિધાઓ:
+FanRDP ની સુવિધાઓ:
 &lt;br&gt;
 - Plain RDP, RDP tunneled over SSH.
 &lt;br&gt;
@@ -544,7 +544,7 @@ aRDP ની સુવિધાઓ:
 &lt;br&gt;
 &lt;br&gt;
 જાણીતી સમસ્યાઓ:</string>
-    <string name="rdp_intro_title">aRDP: સ્વાભાવિક, સુરક્ષિત RDP client</string>
+    <string name="rdp_intro_title">FanRDP: સ્વાભાવિક, સુરક્ષિત RDP client</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 connection ઉમેરો/edit ઉપર, connection configuration page. નવું RDP connection ગોઠવો, અથવા હાલનું. ઉપર save button. નીચે configure.
 

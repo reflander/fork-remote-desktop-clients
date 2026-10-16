@@ -63,7 +63,7 @@
     <string name="open_doc">Mwongozo/Wiki</string>
     <string name="remote_sound_disabled">Sauti Imezimwa</string>
     <string name="spice_ca_file_not_found">Faili haijapatikana. Tafadhali weka jina sahihi la faili katika sehemu ya maandishi (k.m. /sdcard/ca-cert.pem).</string>
-    <string name="rdp_intro_title">aRDP: Intuitive, mteja salama wa RDP</string>
+    <string name="rdp_intro_title">FanRDP: Intuitive, mteja salama wa RDP</string>
     <string name="error_pve_api_unexpected_code">Jibu lisilotarajiwa kutoka kwa Mazingira ya Proxmox Virtual:</string>
     <string name="error_out_of_memory">Haiwezi kutenga kumbukumbu ya kutosha kuchora skrini ya mbali. Jaribu kuanzisha upya programu, kisha uanze upya kifaa chako. Unaweza pia kujaribu kupunguza ukubwa wa eneo-kazi la mbali kupitia mipangilio ya programu.</string>
     <string name="enter_passphrase_title">Weka Nenosiri Muhimu</string>
@@ -103,7 +103,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">Mradi wa Open Source unahitaji usaidizi wako! Tuchangie kwa kununua bVNC Pro. Tazama hapa chini kwa viungo vya bVNC Pro na programu zetu zingine.</string>
     <string name="input_method_mouse">Udhibiti wa Kiashiria cha Panya</string>
-    <string name="pro_feature_rdp">Inaonekana ulijaribu kufungua faili ya .rdp ambayo ni kipengele cha Pro. Tafadhali saidia mradi kwa kununua aRDP Pro, ambayo inatumia faili za .rdp. Kiungo cha toleo la aRDP Pro kinapatikana kwenye kidirisha cha kuanza.</string>
+    <string name="pro_feature_rdp">Inaonekana ulijaribu kufungua faili ya .rdp ambayo ni kipengele cha Pro. Tafadhali saidia mradi kwa kununua FanRDP, ambayo inatumia faili za .rdp. Kiungo cha toleo la FanRDP kinapatikana kwenye kidirisha cha kuanza.</string>
     <string name="opaque_connection_screen_help_text">Unapoongeza au kuhariri muunganisho, utaona ukurasa wa usanidi wa muunganisho.
 Hapa unaweza kusanidi muunganisho mpya wa Opaque au uchague uliokuwepo awali.
 Juu ni kifungo kinachokuwezesha kuhifadhi muunganisho.
@@ -347,7 +347,7 @@ Masuala yanayojulikana:
     <string name="rdp_geom_custom">Desturi</string>
     <string name="default_input_mode">Hali Chaguomsingi ya Kuingiza</string>
     <string name="repeater_empty_text">Hakuna anayerudia</string>
-    <string name="ad_donate_text_rdp">Mradi wa Open Source unahitaji usaidizi wako! Tuchangie kwa kununua aRDP Pro, ambayo inasaidia uelekezaji kwingine wa sauti. Tazama hapa chini kwa viungo vya aRDP Pro na programu zetu zingine.</string>
+    <string name="ad_donate_text_rdp">Mradi wa Open Source unahitaji usaidizi wako! Tuchangie kwa kununua FanRDP, ambayo inasaidia uelekezaji kwingine wa sauti. Tazama hapa chini kwa viungo vya FanRDP na programu zetu zingine.</string>
     <string name="spice_tls_port_hint">Bandari ya TLS</string>
     <string name="scaling">Kuongeza</string>
     <string name="spice_connection_settings">Mipangilio ya Muunganisho wa SPICE</string>
@@ -360,10 +360,10 @@ Masuala yanayojulikana:
     <string name="error_ssh_pubkey_auth_method_unavail">Seva ya SSH haitumii uidhinishaji wa ufunguo wa umma, na tunajaribu kutumia jozi ya ufunguo kwa uthibitishaji. Tafadhali isanidi ili kuruhusu uthibitishaji wa ufunguo wa umma na ujaribu tena. Mbinu za uthibitishaji zinazopatikana:</string>
     <string name="username_caption">Mtumiaji wa VNC</string>
     <string name="error_ssh_could_not_exec_command">Haikuweza kutekeleza amri ya mbali.</string>
-    <string name="rdp_intro_text">Asante kwa kusaidia aRDP na programu huria kwa ujumla! Kwa usaidizi wa kutumia aRDP, angalia Vipengee vya Usaidizi kwenye Menyu, na maelezo ya programu kwenye soko.
+    <string name="rdp_intro_text">Asante kwa kusaidia FanRDP na programu huria kwa ujumla! Kwa usaidizi wa kutumia FanRDP, angalia Vipengee vya Usaidizi kwenye Menyu, na maelezo ya programu kwenye soko.
 &lt;br&gt;
 &lt;br&gt;
-Orodha ya sasa ya vipengele vya aRDP inajumuisha:
+Orodha ya sasa ya vipengele vya FanRDP inajumuisha:
 &lt;br&gt;
 - RDP isiyo na maana, RDP imewekwa juu ya SSH.
 &lt;br&gt;

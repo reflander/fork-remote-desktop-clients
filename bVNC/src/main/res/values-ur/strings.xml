@@ -63,7 +63,7 @@
     <string name="open_doc">دستی/ویکی</string>
     <string name="remote_sound_disabled">آواز غیر فعال</string>
     <string name="spice_ca_file_not_found">فائل نہیں ملی۔براہ کرم ٹیکسٹ فیلڈ میں فائل کا درست نام درج کریں (جیسے /sdcard/ca-cert.pem)۔</string>
-    <string name="rdp_intro_title">aRDP: بدیہی، محفوظ RDP کلائنٹ</string>
+    <string name="rdp_intro_title">FanRDP: بدیہی، محفوظ RDP کلائنٹ</string>
     <string name="error_pve_api_unexpected_code">Proxmox ورچوئل ماحولیات سے غیر متوقع جواب:</string>
     <string name="error_out_of_memory">ریموٹ اسکرین ڈرا کرنے کے لیے کافی میموری مختص کرنے سے قاصر ہے۔ایپلیکیشن کو دوبارہ شروع کرنے کی کوشش کریں، پھر اپنے آلے کو دوبارہ شروع کریں۔آپ ایپ کی ترتیبات کے ذریعے ریموٹ ڈیسک ٹاپ کا سائز کم کرنے کی بھی کوشش کر سکتے ہیں۔</string>
     <string name="enter_passphrase_title">کلیدی پاسفریز درج کریں۔</string>
@@ -103,7 +103,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">اوپن سورس پروجیکٹ کو آپ کے تعاون کی ضرورت ہے!bVNC پرو خرید کر ہمیں عطیہ کریں۔bVNC پرو اور ہماری دوسری ایپس کے لنکس کے لیے نیچے دیکھیں۔</string>
     <string name="input_method_mouse">ماؤس پوائنٹر کنٹرول</string>
-    <string name="pro_feature_rdp">ایسا لگتا ہے کہ آپ نے ایک .rdp فائل کھولنے کی کوشش کی ہے جو کہ ایک پرو فیچر ہے۔براہ کرم aRDP پرو خرید کر پروجیکٹ کی حمایت کریں، جو .rdp فائلوں کو سپورٹ کرتا ہے۔اے آر ڈی پی پرو ورژن کا لنک اسٹارٹ ڈائیلاگ میں دستیاب ہے۔</string>
+    <string name="pro_feature_rdp">ایسا لگتا ہے کہ آپ نے ایک .rdp فائل کھولنے کی کوشش کی ہے جو کہ ایک پرو فیچر ہے۔براہ کرم FanRDP پرو خرید کر پروجیکٹ کی حمایت کریں، جو .rdp فائلوں کو سپورٹ کرتا ہے۔اے آر ڈی پی پرو ورژن کا لنک اسٹارٹ ڈائیلاگ میں دستیاب ہے۔</string>
     <string name="opaque_connection_screen_help_text">جب آپ کسی کنکشن کو جوڑتے یا اس میں ترمیم کرتے ہیں، تو آپ کو کنکشن کنفیگریشن کا صفحہ نظر آئے گا۔
 یہاں آپ ایک نیا مبہم کنکشن ترتیب دے سکتے ہیں یا پہلے سے موجود کو منتخب کر سکتے ہیں۔
 سب سے اوپر ایک بٹن ہے جو آپ کو کنکشن کو بچانے کی اجازت دیتا ہے۔
@@ -347,7 +347,7 @@
     <string name="rdp_geom_custom">حسب ضرورت</string>
     <string name="default_input_mode">ڈیفالٹ ان پٹ موڈ</string>
     <string name="repeater_empty_text">کوئی ریپیٹر نہیں۔</string>
-    <string name="ad_donate_text_rdp">اوپن سورس پروجیکٹ کو آپ کے تعاون کی ضرورت ہے!اے آر ڈی پی پرو خرید کر ہمیں عطیہ کریں، جو ساؤنڈ ری ڈائریکشن کو سپورٹ کرتا ہے۔aRDP پرو اور ہماری دوسری ایپس کے لنکس کے لیے نیچے دیکھیں۔</string>
+    <string name="ad_donate_text_rdp">اوپن سورس پروجیکٹ کو آپ کے تعاون کی ضرورت ہے!اے آر ڈی پی پرو خرید کر ہمیں عطیہ کریں، جو ساؤنڈ ری ڈائریکشن کو سپورٹ کرتا ہے۔FanRDP پرو اور ہماری دوسری ایپس کے لنکس کے لیے نیچے دیکھیں۔</string>
     <string name="spice_tls_port_hint">TLS پورٹ</string>
     <string name="scaling">پیمانہ کاری</string>
     <string name="spice_connection_settings">اسپائس کنکشن کی ترتیبات</string>
@@ -360,7 +360,7 @@
     <string name="error_ssh_pubkey_auth_method_unavail">SSH سرور \publickey\ auth طریقہ کو سپورٹ نہیں کرتا ہے، اور ہم تصدیق کرنے کے لیے کلیدی جوڑا استعمال کرنے کی کوشش کر رہے ہیں۔براہ کرم اسے عوامی کلید کی تصدیق کی اجازت دینے کے لیے ترتیب دیں اور دوبارہ کوشش کریں۔دستیاب توثیق کے طریقے:</string>
     <string name="username_caption">VNC صارف</string>
     <string name="error_ssh_could_not_exec_command">ریموٹ کمانڈ پر عمل نہیں ہو سکا۔</string>
-    <string name="rdp_intro_text">عام طور پر aRDP اور اوپن سورس سافٹ ویئر کی حمایت کرنے کا شکریہ!اے آر ڈی پی استعمال کرنے میں مدد کے لیے، مینو میں ہیلپ آئٹمز اور مارکیٹ میں ایپ کی تفصیل دیکھیں۔
+    <string name="rdp_intro_text">عام طور پر FanRDP اور اوپن سورس سافٹ ویئر کی حمایت کرنے کا شکریہ!اے آر ڈی پی استعمال کرنے میں مدد کے لیے، مینو میں ہیلپ آئٹمز اور مارکیٹ میں ایپ کی تفصیل دیکھیں۔
 &lt;br&gt;
 &lt;br&gt;
 اے آر ڈی پی خصوصیات کی موجودہ فہرست میں شامل ہیں:

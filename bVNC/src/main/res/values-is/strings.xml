@@ -63,7 +63,7 @@
     <string name="open_doc">Handbók/Wiki</string>
     <string name="remote_sound_disabled">Hljóð óvirkt</string>
     <string name="spice_ca_file_not_found">Skrá fannst ekki. Vinsamlega sláðu inn gilt skráarnafn í textareitinn (t.d. /sdcard/ca-cert.pem).</string>
-    <string name="rdp_intro_title">aRDP: Leiðandi, öruggur RDP viðskiptavinur</string>
+    <string name="rdp_intro_title">FanRDP: Leiðandi, öruggur RDP viðskiptavinur</string>
     <string name="error_pve_api_unexpected_code">Óvænt svar frá Proxmox sýndarumhverfi:</string>
     <string name="error_out_of_memory">Ekki er hægt að úthluta nægu minni til að teikna ytri skjá. Prófaðu að endurræsa forritið og endurræstu síðan tækið. Þú getur líka prófað að minnka stærð ytra skjáborðsins í gegnum forritastillingarnar.</string>
     <string name="enter_passphrase_title">Sláðu inn lykilorðasetningu</string>
@@ -102,7 +102,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">Open Source verkefnið þarf þinn stuðning! Gefðu okkur með því að kaupa bVNC Pro. Sjá hér að neðan fyrir tengla á bVNC Pro og önnur öpp okkar.</string>
     <string name="input_method_mouse">Stjórna músarbendi</string>
-    <string name="pro_feature_rdp">Það lítur út fyrir að þú hafir reynt að opna .rdp skrá sem er Pro eiginleiki. Vinsamlegast styrktu verkefnið með því að kaupa aRDP Pro, sem styður .rdp skrár. Tengill á aRDP Pro útgáfu er fáanlegur í upphafsglugganum.</string>
+    <string name="pro_feature_rdp">Það lítur út fyrir að þú hafir reynt að opna .rdp skrá sem er Pro eiginleiki. Vinsamlegast styrktu verkefnið með því að kaupa FanRDP, sem styður .rdp skrár. Tengill á FanRDP útgáfu er fáanlegur í upphafsglugganum.</string>
     <string name="opaque_connection_screen_help_text">Þegar þú bætir við eða breytir tengingu muntu sjá tengingarstillingarsíðu.
 Hér getur þú sett upp nýja ógagnsæi tengingu eða valið þá sem fyrir er.
 Efst er hnappur sem gerir þér kleift að vista tenginguna.
@@ -346,7 +346,7 @@ Allar inntaksstillingar:
     <string name="rdp_geom_custom">Sérsniðin</string>
     <string name="default_input_mode">Sjálfgefin inntaksstilling</string>
     <string name="repeater_empty_text">Enginn endurvarpar</string>
-    <string name="ad_donate_text_rdp">Open Source verkefnið þarf þinn stuðning! Gefðu okkur með því að kaupa aRDP Pro, sem styður umvísun hljóðs. Sjá hér að neðan fyrir tengla á aRDP Pro og önnur öpp okkar.</string>
+    <string name="ad_donate_text_rdp">Open Source verkefnið þarf þinn stuðning! Gefðu okkur með því að kaupa FanRDP, sem styður umvísun hljóðs. Sjá hér að neðan fyrir tengla á FanRDP og önnur öpp okkar.</string>
     <string name="spice_tls_port_hint">TLS höfn</string>
     <string name="scaling">Skala</string>
     <string name="spice_connection_settings">SPICE tengistillingar</string>
@@ -359,10 +359,10 @@ Allar inntaksstillingar:
     <string name="error_ssh_pubkey_auth_method_unavail">SSH þjónninn styður ekki \publickey\ auðkenningaraðferðina og við erum að reyna að nota lyklapar til að auðkenna. Vinsamlega stilltu það til að leyfa auðkenningu almenningslykils og reyndu aftur. Tiltækar heimildaraðferðir:</string>
     <string name="username_caption">VNC notandi</string>
     <string name="error_ssh_could_not_exec_command">Gat ekki framkvæmt fjarskipun.</string>
-    <string name="rdp_intro_text">Þakka þér fyrir að styðja aRDP og opinn hugbúnað almennt! Fyrir hjálp við notkun aRDP, sjáðu hjálparatriði í valmyndinni og lýsingu á appinu á markaðnum.
+    <string name="rdp_intro_text">Þakka þér fyrir að styðja FanRDP og opinn hugbúnað almennt! Fyrir hjálp við notkun FanRDP, sjáðu hjálparatriði í valmyndinni og lýsingu á appinu á markaðnum.
 &lt;br&gt;
 &lt;br&gt;
-Núverandi listi yfir aRDP eiginleika inniheldur:
+Núverandi listi yfir FanRDP eiginleika inniheldur:
 &lt;br&gt;
 - Venjulegur RDP, RDP göng yfir SSH.
 &lt;br&gt;

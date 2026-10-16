@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">Versi Pro memungkinkan Anda menonaktifkan dialog ini dan memberi Anda akses ke fitur tambahan.</string>
     <string name="ad_donate_text3">Jika Anda ingin mendukung proyek lebih lanjut, ikuti tautan berikut untuk tautan ke aplikasi klien untuk: </string>
     <string name="ad_donate_text_vnc">Proyek Open Source membutuhkan dukungan Anda! Donasikan kepada kami dengan membeli bVNC Pro. Lihat di bawah untuk tautan ke bVNC Pro dan aplikasi kami lainnya.</string>
-    <string name="ad_donate_text_rdp">Proyek Open Source membutuhkan dukungan Anda! Donasikan kepada kami dengan membeli aRDP Pro, yang mendukung pengalihan suara. Lihat di bawah untuk tautan ke aRDP Pro dan aplikasi kami lainnya.</string>
+    <string name="ad_donate_text_rdp">Proyek Open Source membutuhkan dukungan Anda! Donasikan kepada kami dengan membeli FanRDP, yang mendukung pengalihan suara. Lihat di bawah untuk tautan ke FanRDP dan aplikasi kami lainnya.</string>
     <string name="ad_donate_text_spice">Untuk koneksi Proxmox dan oVirt, harap donasikan ke proyek dengan membeli Opaque atau aSPICE Pro. Versi Gratis aSPICE hanya mendukung koneksi langsung ke mesin virtual KVM. Lihat di bawah untuk tautan ke Opaque dan aSPICE Pro, serta aplikasi kami lainnya.</string>
 
     <string name="address_caption">Server VNC</string>
@@ -490,7 +490,7 @@ Jika Anda mencari peningkatan kinerja cepat, coba atur Mode Warna ke nilai yang 
     <string name="pro_feature_mfa">Sepertinya server Anda mengaktifkan autentikasi multi-faktor. Harap dukung proyek dengan membeli versi Pro yang mendukung fitur ini. Tautan ke versi Pro tersedia di dialog awal.</string>
     <string name="pro_feature_intro">Sepertinya Anda menggunakan fitur Pro. Harap dukung proyek dengan membeli versi Pro yang mendukung fitur ini. Harap periksa dialog intro untuk tautan ke aplikasi yang benar.</string>
     <string name="pro_feature_generic">Sepertinya Anda menggunakan fitur Pro. Harap dukung proyek dengan membeli versi Pro yang mendukung fitur ini. Tautan ke versi Pro tersedia di dialog awal.</string>
-    <string name="pro_feature_rdp">Sepertinya Anda mencoba membuka file .rdp yang merupakan fitur Pro. Harap dukung proyek dengan membeli aRDP Pro, yang mendukung file .rdp. Tautan ke versi aRDP Pro tersedia di dialog awal.</string>
+    <string name="pro_feature_rdp">Sepertinya Anda mencoba membuka file .rdp yang merupakan fitur Pro. Harap dukung proyek dengan membeli FanRDP, yang mendukung file .rdp. Tautan ke versi FanRDP tersedia di dialog awal.</string>
     <string name="pro_feature_spice">Sepertinya Anda mencoba membuka file .vv. Jika Anda ingin menyimpan koneksi ke Proxmox atau oVirt langsung di dalam aplikasi dan juga ingin membuka file .vv, pertimbangkan untuk membeli Opaque. Jika Anda hanya memerlukan dukungan file .vv, Anda bisa mendapatkan aSPICE Pro. Temukan tautan ke kedua aplikasi di dialog awal.</string>
 
     <string name="rdp_address_caption_hint">Server RDP</string>
@@ -553,10 +553,10 @@ Jika Anda mencari peningkatan kinerja cepat, coba atur Mode Warna ke nilai yang 
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Terima kasih telah mendukung aRDP dan perangkat lunak open-source secara umum! Untuk bantuan penggunaan aRDP, lihat item Bantuan di Menu, dan deskripsi aplikasi di market.
+Terima kasih telah mendukung FanRDP dan perangkat lunak open-source secara umum! Untuk bantuan penggunaan FanRDP, lihat item Bantuan di Menu, dan deskripsi aplikasi di market.
 &lt;br&gt;
 &lt;br&gt;
-Daftar fitur aRDP saat ini meliputi:
+Daftar fitur FanRDP saat ini meliputi:
 &lt;br&gt;
 - RDP Biasa, RDP ditolong melalui SSH.
 &lt;br&gt;
@@ -604,7 +604,7 @@ Daftar fitur aRDP saat ini meliputi:
 &lt;br&gt;
 &lt;br&gt;
 Masalah yang diketahui:</string>
-    <string name="rdp_intro_title">aRDP: Klien RDP yang intuitif dan aman</string>
+    <string name="rdp_intro_title">FanRDP: Klien RDP yang intuitif dan aman</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Saat Anda menambahkan atau mengedit koneksi, Anda akan melihat halaman konfigurasi koneksi. Di sini Anda dapat mengatur koneksi RDP baru, atau memilih yang sudah ada. Di bagian atas terdapat tombol yang memungkinkan Anda menyimpan koneksi. Di bawahnya adalah tempat Anda mengonfigurasi koneksi Anda.
 

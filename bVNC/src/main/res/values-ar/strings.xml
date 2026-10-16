@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">النسخة المدفوعة تتيح لك تعطيل هذا الحوار وتمنحك إمكانية الوصول إلى ميزات إضافية.</string>
     <string name="ad_donate_text3">إذا كنت ترغب في دعم المشروع أكثر، اتبع الروابط التالية لتطبيقات العملاء: </string>
     <string name="ad_donate_text_vnc">المشروع مفتوح المصدر يحتاج دعمك! تبرع لنا بشراء bVNC Pro. انظر أدناه لروابط bVNC Pro وتطبيقاتنا الأخرى.</string>
-    <string name="ad_donate_text_rdp">المشروع مفتوح المصدر يحتاج دعمك! تبرع لنا بشراء aRDP Pro، الذي يدعم إعادة توجيه الصوت. انظر أدناه لروابط aRDP Pro وتطبيقاتنا الأخرى.</string>
+    <string name="ad_donate_text_rdp">المشروع مفتوح المصدر يحتاج دعمك! تبرع لنا بشراء FanRDP، الذي يدعم إعادة توجيه الصوت. انظر أدناه لروابط FanRDP وتطبيقاتنا الأخرى.</string>
     <string name="ad_donate_text_spice">لاتصالات Proxmox وoVirt، يرجى التبرع للمشروع بشراء Opaque أو aSPICE Pro. النسخة المجانية من aSPICE تدعم فقط الاتصالات المباشرة بالأجهزة الافتراضية KVM. انظر أدناه لروابط Opaque وaSPICE Pro وتطبيقاتنا الأخرى.</string>
 
     <string name="address_caption">خادم VNC</string>
@@ -490,7 +490,7 @@
     <string name="pro_feature_mfa">يبدو أن خادمك يحتوي على مصادقة متعددة العوامل مفعّلة. يرجى دعم المشروع بشراء النسخة المدفوعة التي تدعم هذه الميزة. رابط النسخة المدفوعة متاح في حوار البداية.</string>
     <string name="pro_feature_intro">يبدو أنك تستخدم ميزة من النسخة المدفوعة. يرجى دعم المشروع بشراء النسخة المدفوعة التي تدعم هذه الميزة. يرجى مراجعة حوار المقدمة لروابط التطبيق الصحيح.</string>
     <string name="pro_feature_generic">يبدو أنك تستخدم ميزة من النسخة المدفوعة. يرجى دعم المشروع بشراء النسخة المدفوعة التي تدعم هذه الميزة. رابط النسخة المدفوعة متاح في حوار البداية.</string>
-    <string name="pro_feature_rdp">يبدو أنك حاولت فتح ملف .rdp وهي ميزة من النسخة المدفوعة. يرجى دعم المشروع بشراء aRDP Pro، الذي يدعم ملفات .rdp. رابط نسخة aRDP Pro متاح في حوار البداية.</string>
+    <string name="pro_feature_rdp">يبدو أنك حاولت فتح ملف .rdp وهي ميزة من النسخة المدفوعة. يرجى دعم المشروع بشراء FanRDP، الذي يدعم ملفات .rdp. رابط نسخة FanRDP متاح في حوار البداية.</string>
     <string name="pro_feature_spice">يبدو أنك حاولت فتح ملف .vv. إذا أردت حفظ الاتصالات بـ Proxmox أو oVirt مباشرة في التطبيق وفتح ملفات .vv أيضاً، فكّر في شراء Opaque. إذا كنت تحتاج فقط دعم ملفات .vv، يمكنك الحصول على aSPICE Pro. اعثر على روابط كلا التطبيقين في حوار البداية.</string>
 
     <string name="rdp_address_caption_hint">خادم RDP</string>
@@ -553,10 +553,10 @@
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-شكراً لدعمك لـ aRDP والبرمجيات مفتوحة المصدر بشكل عام! للمساعدة في استخدام aRDP، انظر عناصر المساعدة في القائمة وشرح التطبيق في المتجر.
+شكراً لدعمك لـ FanRDP والبرمجيات مفتوحة المصدر بشكل عام! للمساعدة في استخدام FanRDP، انظر عناصر المساعدة في القائمة وشرح التطبيق في المتجر.
 &lt;br&gt;
 &lt;br&gt;
-القائمة الحالية لميزات aRDP تتضمن:
+القائمة الحالية لميزات FanRDP تتضمن:
 &lt;br&gt;
 - RDP عادي، RDP عبر نفق SSH.
 &lt;br&gt;
@@ -604,7 +604,7 @@
 &lt;br&gt;
 &lt;br&gt;
 المشاكل المعروفة:</string>
-    <string name="rdp_intro_title">aRDP: عميل RDP بديهي وآمن</string>
+    <string name="rdp_intro_title">FanRDP: عميل RDP بديهي وآمن</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 عند إضافة اتصال أو تعديله، سترى صفحة ضبط الاتصال. هنا يمكنك إعداد اتصال RDP جديد، أو اختيار اتصال موجود مسبقاً. في الأعلى يوجد زر يتيح لك حفظ الاتصال. بعد ذلك تجد مكان ضبط اتصالك.
 

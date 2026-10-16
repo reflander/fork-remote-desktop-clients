@@ -63,7 +63,7 @@
     <string name="open_doc">Manuál/Wiki</string>
     <string name="remote_sound_disabled">Zvuk je vypnutý</string>
     <string name="spice_ca_file_not_found">Súbor sa nenašiel. Do textového poľa zadajte platný názov súboru (napr. /sdcard/ca-cert.pem).</string>
-    <string name="rdp_intro_title">aRDP: Intuitívny, bezpečný RDP klient</string>
+    <string name="rdp_intro_title">FanRDP: Intuitívny, bezpečný RDP klient</string>
     <string name="error_pve_api_unexpected_code">Neočakávaná odpoveď virtuálneho prostredia Proxmox:</string>
     <string name="error_out_of_memory">Nedá sa vyhradiť dostatok pamäte na vykreslenie vzdialenej obrazovky. Skúste reštartovať aplikáciu a potom reštartujte zariadenie. Môžete tiež skúsiť zmenšiť veľkosť vzdialenej pracovnej plochy prostredníctvom nastavení aplikácie.</string>
     <string name="enter_passphrase_title">Zadajte prístupovú frázu kľúča</string>
@@ -103,7 +103,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">Projekt Open Source potrebuje vašu podporu! Prispejte nám kúpou bVNC Pro. Nižšie nájdete odkazy na bVNC Pro a naše ďalšie aplikácie.</string>
     <string name="input_method_mouse">Ovládanie ukazovateľa myši</string>
-    <string name="pro_feature_rdp">Zdá sa, že ste sa pokúsili otvoriť súbor .rdp, čo je funkcia Pro. Podporte projekt zakúpením aRDP Pro, ktorý podporuje súbory .rdp. V úvodnom dialógovom okne je k dispozícii odkaz na verziu aRDP Pro.</string>
+    <string name="pro_feature_rdp">Zdá sa, že ste sa pokúsili otvoriť súbor .rdp, čo je funkcia Pro. Podporte projekt zakúpením FanRDP, ktorý podporuje súbory .rdp. V úvodnom dialógovom okne je k dispozícii odkaz na verziu FanRDP.</string>
     <string name="opaque_connection_screen_help_text">Keď pridáte alebo upravíte pripojenie, zobrazí sa konfiguračná stránka pripojenia.
 Tu môžete nastaviť nové nepriehľadné pripojenie alebo vybrať už existujúce.
 V hornej časti je tlačidlo, ktoré umožňuje uložiť pripojenie.
@@ -347,7 +347,7 @@ Známe problémy:
     <string name="rdp_geom_custom">Vlastné</string>
     <string name="default_input_mode">Predvolený režim vstupu</string>
     <string name="repeater_empty_text">Žiadny opakovač</string>
-    <string name="ad_donate_text_rdp">Projekt Open Source potrebuje vašu podporu! Prispejte nám kúpou aRDP Pro, ktorý podporuje presmerovanie zvuku. Nižšie nájdete odkazy na aRDP Pro a naše ďalšie aplikácie.</string>
+    <string name="ad_donate_text_rdp">Projekt Open Source potrebuje vašu podporu! Prispejte nám kúpou FanRDP, ktorý podporuje presmerovanie zvuku. Nižšie nájdete odkazy na FanRDP a naše ďalšie aplikácie.</string>
     <string name="spice_tls_port_hint">Port TLS</string>
     <string name="scaling">Škálovanie</string>
     <string name="spice_connection_settings">Nastavenia pripojenia SPICE</string>
@@ -360,10 +360,10 @@ Známe problémy:
     <string name="error_ssh_pubkey_auth_method_unavail">Server SSH nepodporuje metódu \publickey\ auth a na autentifikáciu sa pokúšame použiť pár kľúčov. Nakonfigurujte ho tak, aby povolil autentifikáciu verejným kľúčom a skúste to znova. Dostupné metódy autorizácie:</string>
     <string name="username_caption">Používateľ VNC</string>
     <string name="error_ssh_could_not_exec_command">Nepodarilo sa vykonať vzdialený príkaz.</string>
-    <string name="rdp_intro_text">Ďakujeme, že podporujete aRDP a softvér s otvoreným zdrojovým kódom vo všeobecnosti! Ak potrebujete pomoc s používaním aRDP, pozrite si položky Pomocníka v ponuke a popis aplikácie na trhu.
+    <string name="rdp_intro_text">Ďakujeme, že podporujete FanRDP a softvér s otvoreným zdrojovým kódom vo všeobecnosti! Ak potrebujete pomoc s používaním FanRDP, pozrite si položky Pomocníka v ponuke a popis aplikácie na trhu.
 &lt;br&gt;
 &lt;br&gt;
-Aktuálny zoznam funkcií aRDP zahŕňa:
+Aktuálny zoznam funkcií FanRDP zahŕňa:
 &lt;br&gt;
 - Obyčajný RDP, RDP tunelovaný cez SSH.
 &lt;br&gt;

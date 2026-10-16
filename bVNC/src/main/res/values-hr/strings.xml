@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">Pro verzija vam omogućuje onemogućavanje ovog dijaloga i pristup dodatnim značajkama.</string>
     <string name="ad_donate_text3">Ako biste željeli dalje podržati projekt, slijedite sljedeće veze za klijentske aplikacije: </string>
     <string name="ad_donate_text_vnc">Projekt otvorenog koda treba vašu podršku! Donirajte nam kupnjom bVNC Pro. Pogledajte dolje veze na bVNC Pro i naše ostale aplikacije.</string>
-    <string name="ad_donate_text_rdp">Projekt otvorenog koda treba vašu podršku! Donirajte nam kupnjom aRDP Pro koji podržava preusmjeravanje zvuka. Pogledajte dolje veze na aRDP Pro i naše ostale aplikacije.</string>
+    <string name="ad_donate_text_rdp">Projekt otvorenog koda treba vašu podršku! Donirajte nam kupnjom FanRDP koji podržava preusmjeravanje zvuka. Pogledajte dolje veze na FanRDP i naše ostale aplikacije.</string>
     <string name="ad_donate_text_spice">Za Proxmox i oVirt veze, donirajte projektu kupnjom Opaque ili aSPICE Pro. Besplatna verzija aSPICE podržava samo izravne veze na KVM virtualne strojeve. Pogledajte dolje veze na Opaque i aSPICE Pro, kao i naše ostale aplikacije.</string>
 
     <string name="address_caption">VNC poslužitelj</string>
@@ -490,7 +490,7 @@ Ako tražite brzo poboljšanje performansi, pokušajte postaviti način boja na 
     <string name="pro_feature_mfa">Čini se da vaš poslužitelj ima omogućenu višefaktorsku autentifikaciju. Podržite projekt kupnjom Pro verzije koja podržava ovu značajku. Veza na Pro verziju dostupna je u uvodnom dijalogu.</string>
     <string name="pro_feature_intro">Čini se da koristite Pro značajku. Podržite projekt kupnjom Pro verzije koja podržava ovu značajku. Provjerite uvodni dijalog za veze na ispravnu aplikaciju.</string>
     <string name="pro_feature_generic">Čini se da koristite Pro značajku. Podržite projekt kupnjom Pro verzije koja podržava ovu značajku. Veza na Pro verziju dostupna je u uvodnom dijalogu.</string>
-    <string name="pro_feature_rdp">Izgleda da ste pokušali otvoriti .rdp datoteku što je Pro značajka. Podržite projekt kupnjom aRDP Pro koji podržava .rdp datoteke. Veza na aRDP Pro verziju dostupna je u uvodnom dijalogu.</string>
+    <string name="pro_feature_rdp">Izgleda da ste pokušali otvoriti .rdp datoteku što je Pro značajka. Podržite projekt kupnjom FanRDP koji podržava .rdp datoteke. Veza na FanRDP verziju dostupna je u uvodnom dijalogu.</string>
     <string name="pro_feature_spice">Izgleda da ste pokušali otvoriti .vv datoteku. Ako biste željeli spremati veze na Proxmox ili oVirt izravno u aplikaciji i otvarati .vv datoteke, razmislite o kupnji Opaque. Ako trebate samo podršku za .vv datoteke, možete nabaviti aSPICE Pro. Pronađite veze na obje aplikacije u uvodnom dijalogu.</string>
 
     <string name="rdp_address_caption_hint">RDP poslužitelj</string>
@@ -553,10 +553,10 @@ Ako tražite brzo poboljšanje performansi, pokušajte postaviti način boja na 
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Hvala vam što podržavate aRDP i softver otvorenog koda općenito! Za pomoć pri korištenju aRDP-a pogledajte stavke Pomoć u izborniku i opis aplikacije u tržištu.
+Hvala vam što podržavate FanRDP i softver otvorenog koda općenito! Za pomoć pri korištenju FanRDP-a pogledajte stavke Pomoć u izborniku i opis aplikacije u tržištu.
 &lt;br&gt;
 &lt;br&gt;
-Trenutni popis aRDP značajki uključuje:
+Trenutni popis FanRDP značajki uključuje:
 &lt;br&gt;
 - Obični RDP, RDP tuneliran preko SSH-a.
 &lt;br&gt;
@@ -604,7 +604,7 @@ Trenutni popis aRDP značajki uključuje:
 &lt;br&gt;
 &lt;br&gt;
 Poznati problemi:</string>
-    <string name="rdp_intro_title">aRDP: Intuitivni, sigurni RDP klijent</string>
+    <string name="rdp_intro_title">FanRDP: Intuitivni, sigurni RDP klijent</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Kada dodajete ili uređujete vezu, vidjet ćete stranicu za konfiguraciju veze. Ovdje možete postaviti novu RDP vezu ili odabrati postojeću. Na vrhu je gumb koji vam omogućuje spremanje veze. Ispod toga je mjesto gdje konfigurirate svoju vezu.
 

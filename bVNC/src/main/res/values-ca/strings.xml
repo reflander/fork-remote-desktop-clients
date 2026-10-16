@@ -89,7 +89,7 @@
     <string name="ad_donate_text2">La versió Pro us permet desactivar aquest diàleg i us dóna accés a funcionalitats addicionals.</string>
     <string name="ad_donate_text3">Si voleu donar suport addicional al projecte, seguiu els enllaços següents per als clients d\'aplicacions de: </string>
     <string name="ad_donate_text_vnc">El projecte de codi obert necessita el vostre suport! Feu una donació comprant bVNC Pro. Vegeu a continuació els enllaços a bVNC Pro i les nostres altres aplicacions.</string>
-    <string name="ad_donate_text_rdp">El projecte de codi obert necessita el vostre suport! Feu una donació comprant aRDP Pro, que admet la redirecció de so. Vegeu a continuació els enllaços a aRDP Pro i les nostres altres aplicacions.</string>
+    <string name="ad_donate_text_rdp">El projecte de codi obert necessita el vostre suport! Feu una donació comprant FanRDP, que admet la redirecció de so. Vegeu a continuació els enllaços a FanRDP i les nostres altres aplicacions.</string>
     <string name="ad_donate_text_spice">Per a connexions a Proxmox i oVirt, feu una donació al projecte comprant Opaque o aSPICE Pro. La versió gratuïta d\'aSPICE només admet connexions directes a màquines virtuals KVM. Vegeu a continuació els enllaços a Opaque i aSPICE Pro, i a les nostres altres aplicacions.</string>
 
     <string name="address_caption">Servidor VNC</string>
@@ -490,7 +490,7 @@ Si busqueu un augment de rendiment ràpid, proveu de configurar el mode de color
     <string name="pro_feature_mfa">Sembla que el vostre servidor té l\'autenticació multifactor activada. Doneu suport al projecte comprant la versió Pro, que admet aquesta funcionalitat. Un enllaç a la versió Pro és disponible al diàleg d\'inici.</string>
     <string name="pro_feature_intro">Sembla que esteu utilitzant una funcionalitat Pro. Doneu suport al projecte comprant la versió Pro, que admet aquesta funcionalitat. Consulteu el diàleg d\'introducció per als enllaços a l\'aplicació correcta.</string>
     <string name="pro_feature_generic">Sembla que esteu utilitzant una funcionalitat Pro. Doneu suport al projecte comprant la versió Pro, que admet aquesta funcionalitat. Un enllaç a la versió Pro és disponible al diàleg d\'inici.</string>
-    <string name="pro_feature_rdp">Sembla que heu intentat obrir un fitxer .rdp, que és una funcionalitat Pro. Doneu suport al projecte comprant aRDP Pro, que admet fitxers .rdp. Un enllaç a la versió aRDP Pro és disponible al diàleg d\'inici.</string>
+    <string name="pro_feature_rdp">Sembla que heu intentat obrir un fitxer .rdp, que és una funcionalitat Pro. Doneu suport al projecte comprant FanRDP, que admet fitxers .rdp. Un enllaç a la versió FanRDP és disponible al diàleg d\'inici.</string>
     <string name="pro_feature_spice">Sembla que heu intentat obrir un fitxer .vv. Si voleu desar connexions a Proxmox o oVirt directament a l\'aplicació i també voleu obrir fitxers .vv, considereu comprar Opaque. Si només necessiteu compatibilitat amb fitxers .vv, podeu obtenir aSPICE Pro. Trobareu enllaços a les dues aplicacions al diàleg d\'inici.</string>
 
     <string name="rdp_address_caption_hint">Servidor RDP</string>
@@ -553,10 +553,10 @@ Si busqueu un augment de rendiment ràpid, proveu de configurar el mode de color
         <item>@string/rdp_geom_custom</item>
     </string-array>
     <string name="rdp_intro_text">
-Gràcies per donar suport a aRDP i al programari de codi obert en general! Per obtenir ajuda per usar aRDP, consulteu els elements d\'ajuda del Menú i la descripció de l\'aplicació al mercat.
+Gràcies per donar suport a FanRDP i al programari de codi obert en general! Per obtenir ajuda per usar FanRDP, consulteu els elements d\'ajuda del Menú i la descripció de l\'aplicació al mercat.
 &lt;br&gt;
 &lt;br&gt;
-La llista actual de funcions d\'aRDP inclou:
+La llista actual de funcions d\'FanRDP inclou:
 &lt;br&gt;
 - RDP bàsic, RDP tunnelitzat sobre SSH.
 &lt;br&gt;
@@ -604,7 +604,7 @@ La llista actual de funcions d\'aRDP inclou:
 &lt;br&gt;
 &lt;br&gt;
 Problemes coneguts:</string>
-    <string name="rdp_intro_title">aRDP: Client RDP intuïtiu i segur</string>
+    <string name="rdp_intro_title">FanRDP: Client RDP intuïtiu i segur</string>
     <string name="rdp_connection_screen_help_text" tools:ignore="TypographyOther">"
 Quan afegiu o editeu una connexió, veureu una pàgina de configuració de connexió. Aquí podeu configurar una nova connexió RDP o triar-ne una d\'existent. A la part superior hi ha un botó per desar la connexió. A continuació és on configureu la connexió.
 

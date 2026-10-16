@@ -63,7 +63,7 @@
     <string name="open_doc">मॅन्युअल/विकी</string>
     <string name="remote_sound_disabled">ध्वनी अक्षम</string>
     <string name="spice_ca_file_not_found">फाइल सापडली नाही.कृपया मजकूर फील्डमध्ये वैध फाइल नाव प्रविष्ट करा (उदा. /sdcard/ca-cert.pem).</string>
-    <string name="rdp_intro_title">aRDP: अंतर्ज्ञानी, सुरक्षित RDP क्लायंट</string>
+    <string name="rdp_intro_title">FanRDP: अंतर्ज्ञानी, सुरक्षित RDP क्लायंट</string>
     <string name="error_pve_api_unexpected_code">Proxmox आभासी पर्यावरणाकडून अनपेक्षित प्रतिसाद:</string>
     <string name="error_out_of_memory">रिमोट स्क्रीन काढण्यासाठी पुरेशी मेमरी वाटप करण्यात अक्षम.अनुप्रयोग रीस्टार्ट करण्याचा प्रयत्न करा, नंतर तुमचे डिव्हाइस रीस्टार्ट करा.तुम्ही ॲप सेटिंग्जद्वारे रिमोट डेस्कटॉपचा आकार कमी करण्याचा प्रयत्न देखील करू शकता.</string>
     <string name="enter_passphrase_title">की सांकेतिक वाक्यांश प्रविष्ट करा</string>
@@ -103,7 +103,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">मुक्त स्रोत प्रकल्पाला तुमच्या समर्थनाची गरज आहे!bVNC प्रो खरेदी करून आम्हाला देणगी द्या.bVNC प्रो आणि आमच्या इतर ॲप्सच्या लिंक्ससाठी खाली पहा.</string>
     <string name="input_method_mouse">माउस पॉइंटर नियंत्रण</string>
-    <string name="pro_feature_rdp">असे दिसते की तुम्ही प्रो वैशिष्ट्य असलेली .rdp फाइल उघडण्याचा प्रयत्न केला आहे.कृपया aRDP प्रो खरेदी करून प्रकल्पाला समर्थन द्या, जे .rdp फाइल्सना समर्थन देते.एआरडीपी प्रो आवृत्तीची लिंक स्टार्ट डायलॉगमध्ये उपलब्ध आहे.</string>
+    <string name="pro_feature_rdp">असे दिसते की तुम्ही प्रो वैशिष्ट्य असलेली .rdp फाइल उघडण्याचा प्रयत्न केला आहे.कृपया FanRDP प्रो खरेदी करून प्रकल्पाला समर्थन द्या, जे .rdp फाइल्सना समर्थन देते.एआरडीपी प्रो आवृत्तीची लिंक स्टार्ट डायलॉगमध्ये उपलब्ध आहे.</string>
     <string name="opaque_connection_screen_help_text">तुम्ही कनेक्शन जोडता किंवा संपादित करता तेव्हा तुम्हाला कनेक्शन कॉन्फिगरेशन पृष्ठ दिसेल.
 येथे तुम्ही नवीन अपारदर्शक कनेक्शन सेट करू शकता किंवा आधीच अस्तित्वात असलेले कनेक्शन निवडू शकता.
 शीर्षस्थानी एक बटण आहे जे आपल्याला कनेक्शन जतन करण्यास अनुमती देते.
@@ -347,7 +347,7 @@
     <string name="rdp_geom_custom">सानुकूल</string>
     <string name="default_input_mode">डीफॉल्ट इनपुट मोड</string>
     <string name="repeater_empty_text">रिपीटर नाही</string>
-    <string name="ad_donate_text_rdp">मुक्त स्रोत प्रकल्पाला तुमच्या समर्थनाची गरज आहे!aRDP प्रो खरेदी करून आम्हाला देणगी द्या, जे ध्वनी पुनर्निर्देशनास समर्थन देते.aRDP प्रो आणि आमच्या इतर ॲप्सच्या लिंक्ससाठी खाली पहा.</string>
+    <string name="ad_donate_text_rdp">मुक्त स्रोत प्रकल्पाला तुमच्या समर्थनाची गरज आहे!FanRDP प्रो खरेदी करून आम्हाला देणगी द्या, जे ध्वनी पुनर्निर्देशनास समर्थन देते.FanRDP प्रो आणि आमच्या इतर ॲप्सच्या लिंक्ससाठी खाली पहा.</string>
     <string name="spice_tls_port_hint">TLS पोर्ट</string>
     <string name="scaling">स्केलिंग</string>
     <string name="spice_connection_settings">SPICE कनेक्शन सेटिंग्ज</string>
@@ -360,7 +360,7 @@
     <string name="error_ssh_pubkey_auth_method_unavail">SSH सर्व्हर \publickey\ auth पद्धतीला समर्थन देत नाही, आणि आम्ही प्रमाणित करण्यासाठी की-जोडी वापरण्याचा प्रयत्न करत आहोत.कृपया पब्लिककी ऑथेंटिकेशनला अनुमती देण्यासाठी ते कॉन्फिगर करा आणि पुन्हा प्रयत्न करा.उपलब्ध प्रमाणीकरण पद्धती:</string>
     <string name="username_caption">VNC वापरकर्ता</string>
     <string name="error_ssh_could_not_exec_command">रिमोट कमांड कार्यान्वित करू शकलो नाही.</string>
-    <string name="rdp_intro_text">सर्वसाधारणपणे aRDP आणि मुक्त-स्रोत सॉफ्टवेअरला समर्थन दिल्याबद्दल धन्यवाद!aRDP वापरण्यात मदतीसाठी, मेनूमधील मदत आयटम आणि मार्केटमधील ॲपचे वर्णन पहा.
+    <string name="rdp_intro_text">सर्वसाधारणपणे FanRDP आणि मुक्त-स्रोत सॉफ्टवेअरला समर्थन दिल्याबद्दल धन्यवाद!FanRDP वापरण्यात मदतीसाठी, मेनूमधील मदत आयटम आणि मार्केटमधील ॲपचे वर्णन पहा.
 &lt;br&gt;
 &lt;br&gt;
 एआरडीपी वैशिष्ट्यांच्या सध्याच्या यादीमध्ये हे समाविष्ट आहे:

@@ -63,7 +63,7 @@
     <string name="open_doc">Manual/Wiki</string>
     <string name="remote_sound_disabled">Bunyi Dilumpuhkan</string>
     <string name="spice_ca_file_not_found">Fail tidak ditemui. Sila masukkan nama fail yang sah dalam medan teks (cth. /sdcard/ca-cert.pem).</string>
-    <string name="rdp_intro_title">aRDP: Pelanggan RDP yang intuitif dan selamat</string>
+    <string name="rdp_intro_title">FanRDP: Pelanggan RDP yang intuitif dan selamat</string>
     <string name="error_pve_api_unexpected_code">Sambutan yang tidak dijangka daripada Persekitaran Maya Proxmox:</string>
     <string name="error_out_of_memory">Tidak dapat memperuntukkan memori yang mencukupi untuk melukis skrin jauh. Cuba mulakan semula aplikasi, kemudian mulakan semula peranti anda. Anda juga boleh cuba mengurangkan saiz desktop jauh melalui tetapan apl.</string>
     <string name="enter_passphrase_title">Masukkan Frasa Laluan Utama</string>
@@ -103,7 +103,7 @@
     <string name="control_check">Ctrl</string>
     <string name="ad_donate_text_vnc">Projek Sumber Terbuka memerlukan sokongan anda! Sumbangkan kepada kami dengan membeli bVNC Pro. Lihat di bawah untuk pautan ke bVNC Pro dan apl kami yang lain.</string>
     <string name="input_method_mouse">Kawalan Penunjuk Tetikus</string>
-    <string name="pro_feature_rdp">Nampaknya anda cuba membuka fail .rdp yang merupakan ciri Pro. Sila sokong projek dengan membeli aRDP Pro, yang menyokong fail .rdp. Pautan ke versi aRDP Pro tersedia dalam dialog mula.</string>
+    <string name="pro_feature_rdp">Nampaknya anda cuba membuka fail .rdp yang merupakan ciri Pro. Sila sokong projek dengan membeli FanRDP, yang menyokong fail .rdp. Pautan ke versi FanRDP tersedia dalam dialog mula.</string>
     <string name="opaque_connection_screen_help_text">Apabila anda menambah atau mengedit sambungan, anda akan melihat halaman konfigurasi sambungan.
 Di sini anda boleh menyediakan sambungan Legap baharu atau memilih sambungan yang sedia ada.
 Di bahagian atas terdapat butang yang membolehkan anda menyimpan sambungan.
@@ -347,7 +347,7 @@ Isu yang diketahui:
     <string name="rdp_geom_custom">Adat</string>
     <string name="default_input_mode">Mod Input Lalai</string>
     <string name="repeater_empty_text">Tiada pengulang</string>
-    <string name="ad_donate_text_rdp">Projek Sumber Terbuka memerlukan sokongan anda! Derma kepada kami dengan membeli aRDP Pro, yang menyokong pengalihan bunyi. Lihat di bawah untuk pautan ke aRDP Pro dan apl kami yang lain.</string>
+    <string name="ad_donate_text_rdp">Projek Sumber Terbuka memerlukan sokongan anda! Derma kepada kami dengan membeli FanRDP, yang menyokong pengalihan bunyi. Lihat di bawah untuk pautan ke FanRDP dan apl kami yang lain.</string>
     <string name="spice_tls_port_hint">Pelabuhan TLS</string>
     <string name="scaling">Penskalaan</string>
     <string name="spice_connection_settings">Tetapan Sambungan SPICE</string>
@@ -360,10 +360,10 @@ Isu yang diketahui:
     <string name="error_ssh_pubkey_auth_method_unavail">Pelayan SSH tidak menyokong kaedah pengesahan \publickey\ dan kami cuba menggunakan pasangan kunci untuk mengesahkan. Sila konfigurasikannya untuk membenarkan pengesahan kunci awam dan cuba lagi. Kaedah pengesahan yang tersedia:</string>
     <string name="username_caption">Pengguna VNC</string>
     <string name="error_ssh_could_not_exec_command">Tidak dapat melaksanakan arahan jauh.</string>
-    <string name="rdp_intro_text">Terima kasih kerana menyokong aRDP dan perisian sumber terbuka secara umum! Untuk mendapatkan bantuan menggunakan aRDP, lihat item Bantuan dalam Menu dan perihalan apl di pasaran.
+    <string name="rdp_intro_text">Terima kasih kerana menyokong FanRDP dan perisian sumber terbuka secara umum! Untuk mendapatkan bantuan menggunakan FanRDP, lihat item Bantuan dalam Menu dan perihalan apl di pasaran.
 &lt;br&gt;
 &lt;br&gt;
-Senarai semasa ciri aRDP termasuk:
+Senarai semasa ciri FanRDP termasuk:
 &lt;br&gt;
 - RDP biasa, RDP terowong atas SSH.
 &lt;br&gt;
