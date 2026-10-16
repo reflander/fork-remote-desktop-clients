@@ -88,6 +88,7 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
     // as a long-press right-click. We therefore track the last quick tap ourselves and, in
     // onLongPress, if a quick tap just preceded the current press, treat it as a LEFT-button drag.
     private static final long DOUBLE_TAP_FALLBACK_MS = 400;   // 1st tap-up -> 2nd tap-down window
+    private static final float DOUBLE_TAP_FALLBACK_SLOP = 120f; // how far apart the two taps may be
     private static final long QUICK_TAP_MS = 400;             // down-up duration that counts as a tap
     private static final float QUICK_TAP_MOVE_SLOP = 60f;     // max movement while tapping
     private long lastTapUpTime = 0;
@@ -208,8 +209,8 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
         // LEFT-button drag instead of a right-click — this makes the double-tap drag reliable.
         boolean isDoubleTapHold = (lastTapUpTime != 0
                 && currentDownTime - lastTapUpTime <= DOUBLE_TAP_FALLBACK_MS
-                && Math.abs(currentDownX - lastTapUpX) <= 80
-                && Math.abs(currentDownY - lastTapUpY) <= 80);
+                && Math.abs(currentDownX - lastTapUpX) <= DOUBLE_TAP_FALLBACK_SLOP
+                && Math.abs(currentDownY - lastTapUpY) <= DOUBLE_TAP_FALLBACK_SLOP);
         if (isDoubleTapHold) {
             GeneralUtils.debugLog(debugLogging, TAG, "onLongPress: double-tap-hold (fallback) -> left drag");
             lastTapUpTime = 0; // consume the tap so it only counts once
@@ -259,6 +260,27 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
             // This would cause the mouse pointer to jump to another place suddenly.
             // Hence, we ignore onScroll after scaling until we lift all pointers up.
             if (twoFingers || inSwiping) {
+                return true;
+            }
+
+            // FanRDP: "double-tap then hold and drag". When the user double-taps and the second tap
+            // is held, the finger usually starts moving right away to drag. That movement cancels a
+            // long-press and, if the taps are not crisp enough for onDoubleTap, becomes this plain
+            // mouse-move onScroll. If a quick tap just preceded the current press, treat it as a
+            // LEFT-button drag instead of a mouse move — this is what makes the double-tap drag
+            // reliable.
+            if (lastTapUpTime != 0
+                    && e1 != null
+                    && e1.getEventTime() - lastTapUpTime <= DOUBLE_TAP_FALLBACK_MS
+                    && Math.abs(e1.getX() - lastTapUpX) <= DOUBLE_TAP_FALLBACK_SLOP
+                    && Math.abs(e1.getY() - lastTapUpY) <= DOUBLE_TAP_FALLBACK_SLOP) {
+                GeneralUtils.debugLog(debugLogging, TAG, "onScroll: double-tap-hold move -> left drag");
+                lastTapUpTime = 0; // consume so it only counts once
+                dragMode = true;
+                dragX = e2.getX();
+                dragY = e2.getY();
+                remoteInput.getPointer().leftButtonDown(getX(e2), getY(e2), meta);
+                viewable.movePanToMakePointerVisible();
                 return true;
             }
 
