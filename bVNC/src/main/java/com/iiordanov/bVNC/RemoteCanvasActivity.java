@@ -56,6 +56,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowInsets;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -153,6 +154,8 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     private FrameLayout canvasLayout;
     private RemoteCanvas canvas;
     private RemoteConnection remoteConnection;
+    // FanRDP: true while the soft keyboard (IME) is visible.
+    private volatile boolean imeVisible = false;
     private MenuItem[] inputModeMenuItems;
     private MenuItem[] scalingModeMenuItems;
     private TouchInputHandler[] inputModeHandlers;
@@ -331,6 +334,19 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         myVibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         View decorView = getWindow().getDecorView();
+        // FanRDP: track whether the soft keyboard (IME) is visible. While it is up, the touchpad
+        // mode pans the desktop with one finger (instead of moving the mouse) so the part of the
+        // desktop hidden behind the keyboard can be brought into view.
+        ViewCompat.setOnApplyWindowInsetsListener(decorView, (v, insets) -> {
+            int imeBottom = 0;
+            if (Build.VERSION.SDK_INT >= 30) {
+                imeBottom = insets.getInsets(WindowInsets.Type.ime()).bottom;
+            } else {
+                imeBottom = insets.getSystemWindowInsetBottom();
+            }
+            imeVisible = imeBottom > 0;
+            return insets;
+        });
         decorView.setOnSystemUiVisibilityChangeListener
                 (visibility -> {
                     try {
@@ -838,6 +854,10 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         }
     }
 
+    public boolean isImeVisible() {
+        return imeVisible;
+    }
+
     /**
      * Set modes on start to match what is specified in the ConnectionBean;
      * color mode (already done) scaling, input mode
@@ -861,6 +881,19 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         canvas.setDrawingCacheEnabled(false);
 
         SamsungDexUtils.INSTANCE.dexMetaKeyCapture(this);
+
+        // FanRDP: in touchpad mode, place the mouse at the center of the visible desktop right
+        // after the connection is established, so the cursor starts in the middle of the screen.
+        if (TouchInputHandlerTouchpad.ID.equals(connection.getInputMode())
+                && remoteConnection != null && canvas != null && handler != null) {
+            handler.postDelayed(() -> {
+                if (remoteConnection != null && canvas != null) {
+                    remoteConnection.getPointer().movePointer(
+                            canvas.absoluteXPosition + canvas.getVisibleDesktopWidth() / 2,
+                            canvas.absoluteYPosition + canvas.getVisibleDesktopHeight() / 2);
+                }
+            }, 400);
+        }
     }
 
     /*

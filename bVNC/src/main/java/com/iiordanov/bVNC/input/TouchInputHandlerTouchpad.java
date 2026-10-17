@@ -19,6 +19,7 @@
 
 
 package com.iiordanov.bVNC.input;
+import com.iiordanov.bVNC.RemoteCanvasActivity;
 import com.undatech.opaque.Viewable;
 
 import android.os.SystemClock;
@@ -350,6 +351,16 @@ public class TouchInputHandlerTouchpad extends TouchInputHandlerGeneric {
             // This would cause the mouse pointer to jump to another place suddenly.
             // Hence, we ignore onScroll after scaling until we lift all pointers up.
             if (twoFingers || inSwiping) {
+                return true;
+            }
+
+            // FanRDP: while the soft keyboard is up, a one-finger swipe pans the desktop view
+            // (instead of moving the mouse), so the part of the desktop hidden behind the
+            // keyboard can be brought into view.
+            if (viewable.getContext() instanceof RemoteCanvasActivity
+                    && ((RemoteCanvasActivity) viewable.getContext()).isImeVisible()) {
+                float scale = viewable.getZoomFactor();
+                viewable.relativePan(Math.round(distanceX * scale), Math.round(distanceY * scale));
                 return true;
             }
 
