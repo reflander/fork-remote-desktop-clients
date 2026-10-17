@@ -344,7 +344,23 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
             } else {
                 imeBottom = insets.getSystemWindowInsetBottom();
             }
-            imeVisible = imeBottom > 0;
+            boolean nowVisible = imeBottom > 0;
+            if (!nowVisible && imeVisible) {
+                // FanRDP: the soft keyboard was just dismissed. In "fit to screen" scaling,
+                // snap the desktop back to its original centered position instead of staying
+                // where the user panned it while the keyboard was up.
+                try {
+                    if (canvas != null && connection != null) {
+                        AbstractScaling scaling = AbstractScaling.getByScaleType(connection.getScaleMode());
+                        if (scaling instanceof FitToScreenScaling) {
+                            scaling.setScaleTypeForActivity(this);
+                        }
+                    }
+                } catch (Exception e) {
+                    Log.d(TAG, "Ignored exception while restoring fit-to-screen position after IME dismissed");
+                }
+            }
+            imeVisible = nowVisible;
             return insets;
         });
         decorView.setOnSystemUiVisibilityChangeListener
