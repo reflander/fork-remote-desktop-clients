@@ -42,7 +42,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.PowerManager;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.os.SystemClock;
@@ -154,9 +153,6 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     private FrameLayout canvasLayout;
     private RemoteCanvas canvas;
     private RemoteConnection remoteConnection;
-    private PowerManager.WakeLock mSessionWakeLock;
-    private boolean keepAliveServiceRequested = false;
-    private boolean keepAliveServiceStarted = false;
     private MenuItem[] inputModeMenuItems;
     private MenuItem[] scalingModeMenuItems;
     private TouchInputHandler[] inputModeHandlers;
@@ -272,16 +268,11 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         canvas.setForegrounded(hasFocus);
         if (hasFocus) {
             controlImmersive();
-            // FanRDP: the foreground keep-alive service may only be started while the activity is
-            // actually in the foreground (Android 12+ restriction). Start it here, once, when a
-            // session is active and background keep-alive is requested.
-            if (keepAliveServiceRequested && !keepAliveServiceStarted) {
-                startKeepAliveService();
-            }
         }
-        // FanRDP: when "Keep Background Connection" is on, track whether the app is in the
-        // background and auto-reconnect the RDP session when returning to the foreground after it
-        // dropped while backgrounded. When the setting is off, behave as a plain disconnect.
+        // FanRDP: track whether the app is in the background, and auto-reconnect the RDP session
+        // when returning to the foreground after it dropped while backgrounded (keep-alive logic
+        // per 9612f0f). Only active while the "Keep Background Connection" setting is enabled;
+        // otherwise behave as a plain disconnect.
         boolean keepBackground = Utils.querySharedPreferenceBoolean(
                 this, Constants.keepBackgroundConnectionTag, Constants.keepBackgroundConnectionDefault);
         if (remoteConnection != null) {
@@ -379,85 +370,11 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
             Log.d(TAG, "OnCreate - initializing session with a REINIT_SESSION message");
             handler.sendEmptyMessage(RemoteClientLibConstants.REINIT_SESSION);
             continueConnecting();
-            // FanRDP: hold a partial wake lock for the whole session so the RDP connection keeps
-            // running (heartbeat/keepalive continue) when the app is sent to the background or the
-            // screen turns off. Without it the connection thread stalls and the server drops the
-            // idle session, which is why the connection used to die on backgrounding.
-            acquireSessionWakeLock();
         } else {
             showConnectionScreenOrExitIfNotReadyForConnecting(connection);
         }
 
         Log.d(TAG, "OnCreate complete");
-    }
-
-    /** FanRDP: keep the CPU awake for the session so the RDP connection survives backgrounding. */
-    private void acquireSessionWakeLock() {
-        // FanRDP: only hold the wake lock when "Keep Background Connection" is enabled.
-        if (!Utils.querySharedPreferenceBoolean(
-                this, Constants.keepBackgroundConnectionTag, Constants.keepBackgroundConnectionDefault)) {
-            return;
-        }
-        // The foreground service must only be started once the activity is actually in the
-        // foreground (Android 12+ forbids starting one from onCreate). We mark it requested here
-        // and actually start it from onWindowFocusChanged. The wake lock itself is safe here.
-        keepAliveServiceRequested = true;
-        try {
-            if (mSessionWakeLock == null) {
-                PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-                mSessionWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "FanRDP:session");
-                mSessionWakeLock.setReferenceCounted(false);
-            }
-            if (!mSessionWakeLock.isHeld()) {
-                mSessionWakeLock.acquire();
-                Log.d(TAG, "Session wake lock acquired.");
-            }
-        } catch (Exception e) {
-            Log.w(TAG, "Could not acquire session wake lock", e);
-        }
-    }
-
-    /** FanRDP: start the foreground keep-alive service once the activity is in the foreground.
-     *  Fully guarded so it can never crash the app (a failure just means no foreground service;
-     *  the wake lock above still keeps the session alive). */
-    private void startKeepAliveService() {
-        try {
-            if (Build.VERSION.SDK_INT >= 33) {
-                requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, 1001);
-            }
-            Intent svc = new Intent(this, SessionKeepAliveService.class);
-            if (Build.VERSION.SDK_INT >= 26) {
-                startForegroundService(svc);
-            } else {
-                startService(svc);
-            }
-            keepAliveServiceStarted = true;
-            Log.d(TAG, "Keep-alive service started.");
-        } catch (Throwable t) {
-            Log.w(TAG, "Could not start keep-alive service", t);
-        }
-    }
-
-    private void stopKeepAliveService() {
-        try {
-            stopService(new Intent(this, SessionKeepAliveService.class));
-        } catch (Throwable t) {
-            Log.w(TAG, "Could not stop keep-alive service", t);
-        } finally {
-            keepAliveServiceRequested = false;
-            keepAliveServiceStarted = false;
-        }
-    }
-
-    private void releaseSessionWakeLock() {
-        try {
-            if (mSessionWakeLock != null && mSessionWakeLock.isHeld()) {
-                mSessionWakeLock.release();
-                Log.d(TAG, "Session wake lock released.");
-            }
-        } catch (Exception e) {
-            Log.w(TAG, "Could not release session wake lock", e);
-        }
     }
 
     private void setApplicationSpecificSettings() {
@@ -902,12 +819,6 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected void onPause() {
         super.onPause();
         Log.i(TAG, "onPause called.");
-        // FanRDP: mark the session as backgrounded the moment the app is pausing, so that if the
-        // RDP connection drops right at this point, the auto-reconnect-on-resume path is armed.
-        if (remoteConnection != null && Utils.querySharedPreferenceBoolean(
-                this, Constants.keepBackgroundConnectionTag, Constants.keepBackgroundConnectionDefault)) {
-            remoteConnection.isBackgrounded = true;
-        }
         try {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(canvas.getWindowToken(), 0);
@@ -920,12 +831,6 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume called.");
-        // FanRDP: backup trigger for the foreground keep-alive service (the primary trigger is
-        // onWindowFocusChanged). onResume means the activity is in the foreground, so starting a
-        // foreground service here is allowed even on Android 12+. The flags make it run only once.
-        if (keepAliveServiceRequested && !keepAliveServiceStarted) {
-            startKeepAliveService();
-        }
         try {
             canvas.postInvalidateDelayed(600);
         } catch (NullPointerException e) {
@@ -1281,8 +1186,6 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         if (remoteConnection != null) {
             remoteConnection.closeConnection();
         }
-        releaseSessionWakeLock();
-        stopKeepAliveService();
         Utils.justFinish(this);
     }
 
@@ -1335,8 +1238,6 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected void onDestroy() {
         super.onDestroy();
         Log.i(TAG, "onDestroy called.");
-        releaseSessionWakeLock();
-        stopKeepAliveService();
         if (remoteConnection != null)
             remoteConnection.closeConnection();
         System.gc();
