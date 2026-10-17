@@ -1173,7 +1173,8 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         } else if (itemId == R.id.itemZoomable || itemId == R.id.itemOneToOne || itemId == R.id.itemFitToScreen) {
             AbstractScaling.getById(item.getItemId()).setScaleTypeForActivity(this);
             item.setChecked(true);
-            showPanningState(false);
+            // FanRDP: removed the bottom "showPanningState" explanation (input-mode description
+            // snackbar) that popped up when changing the scaling mode.
             return true;
         } else if (itemId == R.id.itemCenterMouse) {
             remoteConnection.getPointer().movePointer(canvas.absoluteXPosition + canvas.getVisibleDesktopWidth() / 2,
@@ -1276,26 +1277,11 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
         System.gc();
     }
 
+    // FanRDP: the input-mode description snackbar ("showPanningState") has been removed
+    // entirely — it popped up as a "mouse mode" explanation whenever the scaling mode or
+    // the input mode changed. The method is kept as a no-op so any leftover call sites
+    // compile, but nothing is shown anymore.
     public void showPanningState(boolean showLonger) {
-        if (showLonger) {
-            final Snackbar t = Utils.makeMessage(canvas, touchInputHandler.getDescription(), Snackbar.LENGTH_LONG);
-            TimerTask tt = new TimerTask() {
-                @Override
-                public void run() {
-                    t.show();
-                    try {
-                        Thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        Log.d(TAG, "Ignored InterruptedException during showPanningState");
-                    }
-                    t.show();
-                }
-            };
-            new Timer().schedule(tt, 2000);
-            t.show();
-        } else {
-            Utils.showMessage(canvas, touchInputHandler.getDescription(), Snackbar.LENGTH_SHORT);
-        }
     }
 
     /*

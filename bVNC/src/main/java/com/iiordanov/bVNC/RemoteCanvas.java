@@ -593,8 +593,16 @@ public class RemoteCanvas extends AppCompatImageView implements Viewable {
     public boolean relativePan(float dX, float dY) {
         Log.d(TAG, "relativePan: " + dX + ", " + dY);
 
+        // FanRDP: while the soft keyboard is up, allow panning even when the current
+        // scaling mode (e.g. "fit to screen") normally does not permit it, so the part
+        // of the desktop hidden behind the keyboard can be brought into view.
+        boolean imeActive = false;
+        if (getContext() instanceof RemoteCanvasActivity) {
+            imeActive = ((RemoteCanvasActivity) getContext()).isImeVisible();
+        }
+
         // We only pan if the current scaling is able to pan.
-        if (canvasZoomer != null && !canvasZoomer.isAbleToPan())
+        if (canvasZoomer != null && !canvasZoomer.isAbleToPan() && !imeActive)
             return false;
 
         double scale = getZoomFactor();
