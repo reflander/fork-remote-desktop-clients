@@ -51,7 +51,6 @@ import java.util.List;
  */
 public class aRDP extends MainConfiguration {
     private Spinner spinnerRdpGeometry;
-    private EditText rdpDomain;
     private ToggleButton rdpGatewayEnabled;
     private LinearLayout layoutRdpGatewaySettings;
     private EditText rdpGatewayHostname;
@@ -96,7 +95,6 @@ public class aRDP extends MainConfiguration {
 
     private void initializeRdpSpecificConnectionParameters() {
         textUsername = findViewById(R.id.textUsername);
-        rdpDomain = findViewById(R.id.rdpDomain);
     }
 
     private void initializeAdvancedSettings() {
@@ -224,7 +222,6 @@ public class aRDP extends MainConfiguration {
     @SuppressLint("SetTextI18n")
     private void setRdpSpecificSettingsFromSelected() {
         textUsername.setText(selected.getUserName());
-        rdpDomain.setText(selected.getRdpDomain());
         boolean isRdpGatewayEnabled = selected.getRdpGatewayEnabled();
         rdpGatewayEnabled.setChecked(isRdpGatewayEnabled);
         layoutRdpGatewaySettings.setVisibility(isRdpGatewayEnabled ? View.VISIBLE : View.GONE);
@@ -278,7 +275,6 @@ public class aRDP extends MainConfiguration {
 
     private void updateSelectedRdpSpecificSettingsFromViews() {
         selected.setUserName(textUsername.getText().toString());
-        selected.setRdpDomain(rdpDomain.getText().toString());
         selected.setRdpGatewayEnabled(rdpGatewayEnabled.isChecked());
         selected.setRdpGatewayHostname(rdpGatewayHostname.getText().toString());
         try {

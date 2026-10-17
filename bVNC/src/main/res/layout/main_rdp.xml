@@ -300,24 +300,6 @@
                         android:layout_height="wrap_content"
                         android:imeOptions="actionNext"
                         android:inputType="textNoSuggestions|textVisiblePassword"
-                        android:nextFocusDown="@+id/rdpDomain"
-                        android:singleLine="true" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="@string/rdp_domain_hint">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/rdpDomain"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:imeOptions="actionNext"
-                        android:inputType="textNoSuggestions|textVisiblePassword"
                         android:nextFocusDown="@+id/textPASSWORD"
                         android:singleLine="true" />
 
